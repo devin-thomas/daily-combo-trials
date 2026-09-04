@@ -1,15 +1,18 @@
 {% extends "base.html" %}
+{% from "_icons.html" import icon with context %}
 {% block title %}Games | Daily Combo Trials{% endblock %}
 {% block content %}
 <section class="page-heading">
-  <h1>Games</h1>
+  <div class="heading-line">{{ icon('gamepad-2') }}<h1>Games</h1></div>
 </section>
 
 <section class="game-grid" aria-label="Included games">
   {% for game in games %}
     <a class="game-tile" href="{{ url_for('game_detail', game_slug=game.slug) }}">
+      <span class="game-tile-top">{{ icon('gamepad-2') }}<span>Roster</span></span>
       <span class="game-tile-title">{{ game.title }}</span>
-      <span class="game-tile-count">{{ game.eligible_characters|length }} playable characters</span>
+      <span class="game-tile-count">{{ icon('user-round') }}<span>{{ game.eligible_characters|length }} playable characters</span></span>
+      <span class="game-tile-arrow">{{ icon('arrow-up-right') }}</span>
     </a>
   {% endfor %}
 </section>

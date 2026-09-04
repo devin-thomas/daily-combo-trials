@@ -1,23 +1,24 @@
 {% extends "base.html" %}
+{% from "_icons.html" import icon with context %}
 {% block title %}Recommendation history | Daily Combo Trials{% endblock %}
 {% block content %}
 <section class="page-heading">
-  <h1>Recommendation history</h1>
+  <div class="heading-line">{{ icon('history') }}<h1>Recommendation history</h1></div>
 </section>
 
 <section class="history-list" aria-label="History entries">
   {% for entry in entries %}
     {% if entry.resolved %}
       <a class="history-row" href="{{ url_for('character_detail', game_slug=entry.resolved[0].slug, character_slug=entry.resolved[1].slug) }}">
-        <time datetime="{{ entry.record.day }}">{{ entry.record.day }}</time>
-        <span class="history-game">{{ entry.resolved[0].title }}</span>
-        <span class="history-character">{{ entry.resolved[1].name }}</span>
-        <span class="arrow" aria-hidden="true">&#8599;</span>
+        <span class="history-date">{{ icon('calendar-days') }}<time datetime="{{ entry.record.day }}">{{ entry.record.day }}</time></span>
+        <span class="history-game">{{ icon('gamepad-2') }}<span>{{ entry.resolved[0].title }}</span></span>
+        <span class="history-character">{{ icon('user-round') }}<span>{{ entry.resolved[1].name }}</span></span>
+        <span class="history-arrow">{{ icon('arrow-up-right') }}</span>
       </a>
     {% else %}
       <div class="history-row is-missing">
-        <time datetime="{{ entry.record.day }}">{{ entry.record.day }}</time>
-        <span>Catalog entry unavailable</span>
+        <span class="history-date">{{ icon('calendar-days') }}<time datetime="{{ entry.record.day }}">{{ entry.record.day }}</time></span>
+        <span class="history-missing">{{ icon('info') }}<span>Catalog entry unavailable</span></span>
       </div>
     {% endif %}
   {% endfor %}

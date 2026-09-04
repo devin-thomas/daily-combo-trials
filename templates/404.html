@@ -1,13 +1,14 @@
 {% extends "base.html" %}
+{% from "_icons.html" import icon with context %}
 {% block title %}Page not found | Daily Combo Trials{% endblock %}
 {% block content %}
 <section class="error-page">
-  <span class="error-code">404</span>
+  <span class="error-code">{{ icon('info') }}<span>404</span></span>
   <h1>Page not found</h1>
   <p>That page is not part of the challenge catalog.</p>
   <div class="challenge-actions">
-    <a class="button button-primary" href="{{ url_for('home') }}">Back to today's challenge</a>
-    <a class="button button-secondary" href="{{ url_for('games') }}">Browse games</a>
+    <a class="button button-primary" href="{{ url_for('home') }}">{{ icon('calendar-days') }}<span>Back to today's challenge</span></a>
+    <a class="button button-secondary" href="{{ url_for('games') }}">{{ icon('gamepad-2') }}<span>Browse games</span></a>
   </div>
 </section>
 {% endblock %}

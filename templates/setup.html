@@ -1,15 +1,15 @@
 {% extends "base.html" %}
+{% from "_icons.html" import icon with context %}
 {% block title %}Supabase connection | Daily Combo Trials{% endblock %}
 {% block content %}
 <section class="page-heading setup-heading">
-  <p class="kicker">Supabase connection</p>
-  <h1>Add the database</h1>
+  <div class="heading-line">{{ icon('database') }}<h1>Add the database</h1></div>
 </section>
 
 <section class="setup-grid" aria-label="Supabase connection">
   <article class="setup-panel">
     <p class="setup-instructions">In Connect, choose Direct, then Transaction pooler. Paste the copied string with <code>[YOUR-PASSWORD]</code> below and enter the password separately. The saved value stays encrypted locally.</p>
-    <a class="setup-source-link" href="https://supabase.com/dashboard/project/elrngwxjmmjfpdedesha" target="_blank" rel="noreferrer">Open Supabase</a>
+    <a class="setup-source-link" href="https://supabase.com/dashboard/project/elrngwxjmmjfpdedesha" target="_blank" rel="noreferrer">{{ icon('external-link') }}<span>Open Supabase</span></a>
 
     {% if error %}
       <div class="setup-message setup-message-error" role="alert">{{ error }}</div>
@@ -23,13 +23,13 @@
       <label for="database-password">Database password</label>
       <input id="database-password" name="database_password" type="password" autocomplete="new-password" spellcheck="false">
       <p class="form-help">The password is encoded for the URI automatically. Leave it blank only when the pasted string already contains the password.</p>
-      <button class="button button-primary" type="submit">Save connection</button>
+      <button class="button button-primary" type="submit">{{ icon('check') }}<span>Save connection</span></button>
     </form>
   </article>
 
   <aside class="setup-panel setup-status" aria-labelledby="setup-status-title">
     {% if status %}
-      <h2 id="setup-status-title">Saved</h2>
+      <h2 id="setup-status-title">{{ icon('check') }}<span>Saved</span></h2>
       <dl class="status-list">
         <div><dt>Host</dt><dd>{{ status.host }}</dd></div>
         <div><dt>Port</dt><dd>{{ status.port or "default" }}</dd></div>
@@ -38,10 +38,10 @@
       <p class="setup-footnote">Only safe connection details are shown; the password is never displayed.</p>
       <form method="post" action="{{ url_for('setup_clear') }}">
         <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-        <button class="button button-secondary" type="submit">Remove saved value</button>
+        <button class="button button-secondary" type="submit">{{ icon('database') }}<span>Remove saved value</span></button>
       </form>
     {% else %}
-      <h2 id="setup-status-title">Not saved</h2>
+      <h2 id="setup-status-title">{{ icon('database') }}<span>Not saved</span></h2>
     {% endif %}
   </aside>
 </section>

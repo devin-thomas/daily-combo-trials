@@ -1,37 +1,41 @@
 {% extends "base.html" %}
+{% from "_icons.html" import icon with context %}
 {% block title %}{{ character.name }} | {{ game.title }}{% endblock %}
 {% block content %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-  <a href="{{ url_for('games') }}">Games</a>
-  <span aria-hidden="true">/</span>
-  <a href="{{ url_for('game_detail', game_slug=game.slug) }}">{{ game.title }}</a>
-  <span aria-hidden="true">/</span>
+  <a href="{{ url_for('games') }}">{{ icon('gamepad-2') }}<span>Games</span></a>
+  {{ icon('chevron-right') }}
+  <a href="{{ url_for('game_detail', game_slug=game.slug) }}">{{ icon('book-open') }}<span>{{ game.title }}</span></a>
+  {{ icon('chevron-right') }}
   <span>{{ character.name }}</span>
 </nav>
 
 <section class="character-page">
-  <div class="character-portrait {% if not character.art_url %}portrait-fallback{% endif %}" {% if not character.art_url %}role="img" aria-label="Artwork unavailable for {{ character.name }}"{% endif %}>
+  <div class="character-portrait {% if not character.art_url %}portrait-fallback{% endif %}">
     {% if character.art_url %}
-      <img src="{{ character.art_url }}" alt="{{ character.art_alt or character.name ~ ' from ' ~ game.title }}">
-    {% else %}
-      <span aria-hidden="true">{{ character.name[0] }}</span>
-      <small>Artwork unavailable</small>
+      <img data-art-image="true" data-fallback-target="character-art-fallback" src="{{ character.art_url }}" alt="{{ character.art_alt or character.name ~ ' from ' ~ game.title }}">
     {% endif %}
+    <div id="character-art-fallback" class="art-fallback" role="img" aria-label="Artwork unavailable for {{ character.name }}" {% if character.art_url %}hidden{% endif %}>
+      <span class="portrait-fallback-icon">{{ icon('image') }}</span>
+      <span class="portrait-initial" aria-hidden="true">{{ character.name[0] }}</span>
+      <small>{{ icon('info') }}<span>Artwork unavailable</span></small>
+    </div>
   </div>
   <div class="character-copy">
+    <p class="game-context">{{ icon('gamepad-2') }}<span>{{ game.title }}</span></p>
     <h1>{{ character.name }}</h1>
-    <p class="mission">Complete every combo trial for this character.</p>
+    <p class="mission">{{ icon('target') }}<span>Complete every combo trial for this character.</span></p>
     {% if character.description %}
       <p class="description">{{ character.description }}</p>
     {% else %}
       <p class="missing-copy">Description not available.</p>
     {% endif %}
     <div class="source-links">
-      {% if character.description_source_url %}<a href="{{ character.description_source_url }}" target="_blank" rel="noreferrer">Description source</a>{% endif %}
-      {% if character.art_source_url %}<a href="{{ character.art_source_url }}" target="_blank" rel="noreferrer">Artwork source</a>{% endif %}
-      {% if game.trial_source_url %}<a href="{{ game.trial_source_url }}" target="_blank" rel="noreferrer">Game reference</a>{% endif %}
+      {% if character.description_source_url %}<a class="source-link" href="{{ character.description_source_url }}" target="_blank" rel="noreferrer">{{ icon('book-open') }}<span>Description source</span></a>{% endif %}
+      {% if character.art_source_url %}<a class="source-link" href="{{ character.art_source_url }}" target="_blank" rel="noreferrer">{{ icon('image') }}<span>Artwork source</span></a>{% endif %}
+      {% if game.trial_source_url %}<a class="source-link" href="{{ game.trial_source_url }}" target="_blank" rel="noreferrer">{{ icon('external-link') }}<span>Game reference</span></a>{% endif %}
     </div>
-    <a class="button button-primary inline-button" href="{{ url_for('game_detail', game_slug=game.slug) }}">Back to {{ game.title }}</a>
+    <a class="button button-primary inline-button" href="{{ url_for('game_detail', game_slug=game.slug) }}">{{ icon('arrow-left') }}<span>Back to {{ game.title }}</span></a>
   </div>
 </section>
 {% endblock %}

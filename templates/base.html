@@ -1,4 +1,5 @@
 <!doctype html>
+{% from "_icons.html" import icon with context %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,20 +8,24 @@
     <meta name="description" content="A daily combo trial challenge for fighting game practice.">
     <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
     <link rel="icon" href="{{ url_for('static', path='favicon.svg') }}" type="image/svg+xml">
+    <script src="{{ url_for('static', path='site.js') }}" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="site-header">
         <a class="brand" href="{{ url_for('home') }}" aria-label="Daily Combo Trials home">
-          <span class="brand-top">DAILY</span>
-          <span class="brand-bottom">COMBO TRIALS</span>
+          <span class="brand-mark">{{ icon('sparkles') }}</span>
+          <span class="brand-wordmark">
+            <span class="brand-top">DAILY</span>
+            <span class="brand-bottom">COMBO TRIALS</span>
+          </span>
         </a>
         {% if request.url.path != '/setup' %}
           <nav class="site-nav" aria-label="Primary navigation">
-            <a href="{{ url_for('home') }}">Today</a>
-            <a href="{{ url_for('history') }}">History</a>
-            <a href="{{ url_for('games') }}">Games</a>
+            <a href="{{ url_for('home') }}" {% if request.url.path == '/' %}aria-current="page"{% endif %}>{{ icon('house') }}<span>Today</span></a>
+            <a href="{{ url_for('history') }}" {% if request.url.path == '/history' %}aria-current="page"{% endif %}>{{ icon('history') }}<span>History</span></a>
+            <a href="{{ url_for('games') }}" {% if request.url.path.startswith('/games') %}aria-current="page"{% endif %}>{{ icon('gamepad-2') }}<span>Games</span></a>
           </nav>
         {% endif %}
       </header>
@@ -31,7 +36,7 @@
 
       {% if request.url.path != '/setup' and request.app.state.setup_enabled %}
         <footer class="site-footer">
-          <a href="{{ url_for('setup') }}">Private setup</a>
+          <a href="{{ url_for('setup') }}">{{ icon('database') }}<span>Private setup</span></a>
         </footer>
       {% endif %}
     </div>
