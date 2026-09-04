@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "_icons.html" import icon with context %}
+{% from "_source_links.html" import source_link, game_reference_link with context %}
 {% block title %}{{ character.name }} | {{ game.title }}{% endblock %}
 {% block content %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -31,9 +32,9 @@
       <p class="missing-copy">Description not available.</p>
     {% endif %}
     <div class="source-links">
-      {% if character.description_source_url %}<a class="source-link" href="{{ character.description_source_url }}" target="_blank" rel="noreferrer">{{ icon('book-open') }}<span>Description source</span></a>{% endif %}
-      {% if character.art_source_url %}<a class="source-link" href="{{ character.art_source_url }}" target="_blank" rel="noreferrer">{{ icon('image') }}<span>Artwork source</span></a>{% endif %}
-      {% if game.trial_source_url %}<a class="source-link" href="{{ game.trial_source_url }}" target="_blank" rel="noreferrer">{{ icon('external-link') }}<span>Game reference</span></a>{% endif %}
+      {{ source_link(character.description_source_url, 'Description source') }}
+      {{ source_link(character.art_source_url, 'Artwork source') }}
+      {{ game_reference_link(game) }}
     </div>
     <a class="button button-primary inline-button" href="{{ url_for('game_detail', game_slug=game.slug) }}">{{ icon('arrow-left') }}<span>Back to {{ game.title }}</span></a>
   </div>

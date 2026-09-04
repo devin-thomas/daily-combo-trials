@@ -499,7 +499,33 @@ h1 {
 }
 
 .source-link .icon,
-.text-link .icon { font-size: 1rem; }
+.text-link .icon,
+.setup-source-link .icon { font-size: 1rem; }
+
+.source-link .source-brand-icon,
+.text-link .source-brand-icon,
+.setup-source-link .source-brand-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.source-link .source-external-icon,
+.text-link .source-external-icon,
+.setup-source-link .source-external-icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  opacity: 0.7;
+}
+
+.source-brand-icon.brand-steam { color: #66c0f4; }
+.source-brand-icon.brand-supercombo { color: var(--lime); }
+.source-brand-icon.brand-blazblue { color: #68c7ff; }
+.source-brand-icon.brand-dustloop { color: #ffad62; }
+.source-brand-icon.brand-gbl { color: #c9a6ff; }
+.source-brand-icon.brand-tekken { color: #ff715d; }
+.source-brand-icon.brand-playstation { color: #70b9ff; }
+.source-brand-icon.brand-capcom { color: #80a8ff; }
+.source-brand-icon.brand-supabase { color: #63e6a5; }
 
 .source-link:hover,
 .source-link:focus-visible,

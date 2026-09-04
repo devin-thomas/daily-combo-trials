@@ -1,3 +1,4 @@
 {% macro icon(name, label=None, class_name='') -%}
-  <span class="icon {{ class_name }}" style="--icon-url: url('{{ url_for('static', path='icons/lucide-' ~ name ~ '.svg') }}')" {% if label %}role="img" aria-label="{{ label }}"{% else %}aria-hidden="true"{% endif %}></span>
+  {% set icon_path = ('icons/brands/' ~ name[6:] ~ '.svg') if name.startswith('brand-') else ('icons/lucide-' ~ name ~ '.svg') %}
+  <span class="icon {{ class_name }}" style="--icon-url: url('{{ url_for('static', path=icon_path) }}')" {% if label %}role="img" aria-label="{{ label }}"{% else %}aria-hidden="true"{% endif %}></span>
 {%- endmacro %}

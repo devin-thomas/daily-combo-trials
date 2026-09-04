@@ -16,6 +16,7 @@ from fastapi.templating import Jinja2Templates
 
 from .catalog import Catalog, Character, Game, load_catalog
 from .database import Database, assignment_ref
+from .links import game_reference_label, source_brand_name, source_icon_name
 from .secret_store import SecretStore, SecretStoreError, compose_database_url
 from .selection import ChallengeRef, choose_challenge
 
@@ -119,6 +120,13 @@ def create_app(
     site_database = database or Database()
     site_secret_store = secret_store or SecretStore()
     templates = Jinja2Templates(directory=str(ROOT / "templates"))
+    templates.env.globals.update(
+        {
+            "game_reference_label": game_reference_label,
+            "source_brand_name": source_brand_name,
+            "source_icon_name": source_icon_name,
+        }
+    )
 
     app = FastAPI(title="Daily Combo Trials")
     app.state.catalog = site_catalog

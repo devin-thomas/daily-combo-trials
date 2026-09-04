@@ -9,6 +9,7 @@ import pytest
 
 from combo_site.catalog import Catalog, Character, Game, load_catalog
 from combo_site.database import DailyAssignment, Database
+from combo_site.links import game_reference_label, source_brand_name, source_icon_name
 from combo_site.main import _central_day, create_app
 from combo_site.secret_store import SecretStore, compose_database_url
 from combo_site.selection import ChallengeRef, choose_challenge
@@ -212,6 +213,50 @@ def test_public_copy_has_no_redundant_labels(local_test_dir: Path) -> None:
     finally:
         client.close()
         database.close()
+
+
+def test_external_links_show_brand_and_keep_game_reference_copy_honest(local_test_dir: Path) -> None:
+    client, database = make_client(local_test_dir)
+    try:
+        character = client.get("/games/street-fighter-6/characters/ryu")
+        assert character.status_code == 200
+        assert "/static/icons/brands/supercombo.svg" in character.text
+        assert "/static/icons/brands/steam.svg" in character.text
+        assert character.text.count("/static/icons/lucide-external-link.svg") >= 3
+        assert "Open on Steam" in character.text
+        assert 'aria-label="Description source - SuperCombo"' in character.text
+
+        tekken = client.get("/games/tekken-8")
+        assert tekken.status_code == 200
+        assert "Open game reference" in tekken.text
+        assert "Open on Steam" not in tekken.text
+        assert "/static/icons/brands/tekken.svg" in tekken.text
+        assert 'aria-label="Open game reference - TEKKEN"' in tekken.text
+    finally:
+        client.close()
+        database.close()
+
+
+def test_source_brand_mapping_covers_catalog_domains() -> None:
+    expected = {
+        "https://store.steampowered.com/app/1/": ("brand-steam", "Steam"),
+        "https://wiki.supercombo.gg/w/character": ("brand-supercombo", "SuperCombo"),
+        "https://blazblue.wiki/wiki/character": ("brand-blazblue", "BlazBlue Wiki"),
+        "https://www.dustloop.com/w/character": ("brand-dustloop", "Dustloop"),
+        "https://wiki.gbl.gg/w/character": ("brand-gbl", "GBL Wiki"),
+        "https://tekken.com/fighters": ("brand-tekken", "TEKKEN"),
+        "https://blog.playstation.com/article": ("brand-playstation", "PlayStation"),
+        "https://game.capcom.com/fighters": ("brand-capcom", "Capcom"),
+        "https://supabase.com/dashboard": ("brand-supabase", "Supabase"),
+    }
+
+    for url, (icon_name, brand_name) in expected.items():
+        assert source_icon_name(url) == icon_name
+        assert source_brand_name(url) == brand_name
+        assert (ROOT / "static" / "icons" / "brands" / f"{icon_name.removeprefix('brand-')}.svg").is_file()
+
+    assert game_reference_label("https://store.steampowered.com/app/1/") == "Open on Steam"
+    assert game_reference_label("https://tekken.com/fighters") == "Open game reference"
 
 
 def test_every_catalog_game_and_character_has_a_route(local_test_dir: Path) -> None:

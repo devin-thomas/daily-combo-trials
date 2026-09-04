@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "_icons.html" import icon with context %}
+{% from "_source_links.html" import source_link with context %}
 {% block title %}Supabase connection | Daily Combo Trials{% endblock %}
 {% block content %}
 <section class="page-heading setup-heading">
@@ -9,7 +10,7 @@
 <section class="setup-grid" aria-label="Supabase connection">
   <article class="setup-panel">
     <p class="setup-instructions">In Connect, choose Direct, then Transaction pooler. Paste the copied string with <code>[YOUR-PASSWORD]</code> below and enter the password separately. The saved value stays encrypted locally.</p>
-    <a class="setup-source-link" href="https://supabase.com/dashboard/project/elrngwxjmmjfpdedesha" target="_blank" rel="noreferrer">{{ icon('external-link') }}<span>Open Supabase</span></a>
+    {{ source_link('https://supabase.com/dashboard/project/elrngwxjmmjfpdedesha', 'Open Supabase', 'setup-source-link') }}
 
     {% if error %}
       <div class="setup-message setup-message-error" role="alert">{{ error }}</div>

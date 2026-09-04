@@ -1,0 +1,4 @@
+Steam, PlayStation, and Supabase marks are adapted from Simple Icons:
+https://github.com/simple-icons/simple-icons
+
+The remaining files are compact local source badges for community or series destinations. Brand names and marks remain the property of their respective owners.
