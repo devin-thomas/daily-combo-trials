@@ -1,6 +1,8 @@
 from datetime import date, datetime, timezone
 from pathlib import Path
+import re
 import tempfile
+import unicodedata
 
 from fastapi.testclient import TestClient
 import pytest
@@ -60,6 +62,31 @@ def test_catalog_contains_all_initial_games_and_playable_rosters() -> None:
     assert len(catalog.games) == 17
     assert all(game.eligible_characters for game in catalog.games)
     assert len(catalog.candidates) > len(catalog.games)
+
+
+def test_catalog_rosters_are_alphabetized_and_every_character_has_local_art() -> None:
+    catalog = load_catalog(CATALOG_PATH)
+
+    for game in catalog.games:
+        names = [character.name for character in game.eligible_characters]
+        assert names == sorted(
+            names,
+            key=lambda name: (
+                re.sub(
+                    r"[^a-z0-9]+",
+                    " ",
+                    unicodedata.normalize("NFKD", name)
+                    .encode("ascii", "ignore")
+                    .decode("ascii")
+                    .casefold(),
+                ).strip(),
+                name.casefold(),
+            ),
+        )
+        for character in game.eligible_characters:
+            expected_url = f"/static/art/{game.steam_appid}/{character.slug}.webp"
+            assert character.art_url == expected_url
+            assert (ROOT / "static" / expected_url.removeprefix("/static/")).is_file()
 
 
 def test_selection_is_game_first_and_respects_exclusion() -> None:

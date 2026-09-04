@@ -71,6 +71,11 @@ def slugify(value: str) -> str:
     return slug
 
 
+def _alphabetical_name_key(value: str) -> tuple[str, str]:
+    normalized = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii").casefold()
+    return re.sub(r"[^a-z0-9]+", " ", normalized).strip(), normalized
+
+
 def _require_text(raw: Any, field: str, context: str) -> str:
     if not isinstance(raw, str) or not raw.strip():
         raise CatalogError(f"{context} requires a non-empty {field}")
@@ -154,8 +159,13 @@ def load_catalog(path: Path) -> Catalog:
         if not isinstance(raw_characters, list) or not raw_characters:
             raise CatalogError(f"{context} requires a non-empty characters array")
         characters = tuple(
-            _parse_character(raw_character, f"{context} {title!r}", character_index)
-            for character_index, raw_character in enumerate(raw_characters, start=1)
+            sorted(
+                (
+                    _parse_character(raw_character, f"{context} {title!r}", character_index)
+                    for character_index, raw_character in enumerate(raw_characters, start=1)
+                ),
+                key=lambda character: _alphabetical_name_key(character.name),
+            )
         )
         character_slugs = [character.slug for character in characters]
         if len(character_slugs) != len(set(character_slugs)):

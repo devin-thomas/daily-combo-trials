@@ -6,11 +6,307 @@
       "steam_appid": 45760,
       "trial_source_url": "https://store.steampowered.com/app/45760/",
       "characters": [
-        "Abel", "Adon", "Akuma", "Balrog", "Blanka", "Cammy", "C. Viper", "Chun-Li", "Cody",
-        "Dan", "Decapre", "Dee Jay", "Dhalsim", "Dudley", "E. Honda", "El Fuerte", "Elena",
-        "Fei Long", "Gen", "Gouken", "Guile", "Guy", "Hakan", "Hugo", "Ibuki", "Juri",
-        "Ken", "M. Bison", "Makoto", "Oni", "Poison", "R. Mika", "Rufus", "Ryu", "Sagat",
-        "Sakura", "Seth", "T. Hawk", "Vega", "Yang", "Yun", "Zangief", "Evil Ryu"
+        {
+          "slug": "abel",
+          "name": "Abel",
+          "art_url": "/static/art/45760/abel.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Abel",
+          "art_alt": "Abel from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "adon",
+          "name": "Adon",
+          "art_url": "/static/art/45760/adon.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Adon",
+          "art_alt": "Adon from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "akuma",
+          "name": "Akuma",
+          "art_url": "/static/art/45760/akuma.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Akuma",
+          "art_alt": "Akuma from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "balrog",
+          "name": "Balrog",
+          "art_url": "/static/art/45760/balrog.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Balrog",
+          "art_alt": "Balrog from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "blanka",
+          "name": "Blanka",
+          "art_url": "/static/art/45760/blanka.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Blanka",
+          "art_alt": "Blanka from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "c-viper",
+          "name": "C. Viper",
+          "art_url": "/static/art/45760/c-viper.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/C._Viper",
+          "art_alt": "C. Viper from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "cammy",
+          "name": "Cammy",
+          "art_url": "/static/art/45760/cammy.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Cammy",
+          "art_alt": "Cammy from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "chun-li",
+          "name": "Chun-Li",
+          "art_url": "/static/art/45760/chun-li.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Chun-Li",
+          "art_alt": "Chun-Li from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "cody",
+          "name": "Cody",
+          "art_url": "/static/art/45760/cody.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Cody",
+          "art_alt": "Cody from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "dan",
+          "name": "Dan",
+          "art_url": "/static/art/45760/dan.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Dan",
+          "art_alt": "Dan from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "decapre",
+          "name": "Decapre",
+          "art_url": "/static/art/45760/decapre.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Decapre",
+          "art_alt": "Decapre from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "dee-jay",
+          "name": "Dee Jay",
+          "art_url": "/static/art/45760/dee-jay.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Dee_Jay",
+          "art_alt": "Dee Jay from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "dhalsim",
+          "name": "Dhalsim",
+          "art_url": "/static/art/45760/dhalsim.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Dhalsim",
+          "art_alt": "Dhalsim from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "dudley",
+          "name": "Dudley",
+          "art_url": "/static/art/45760/dudley.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Dudley",
+          "art_alt": "Dudley from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "e-honda",
+          "name": "E. Honda",
+          "art_url": "/static/art/45760/e-honda.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/E._Honda",
+          "art_alt": "E. Honda from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "el-fuerte",
+          "name": "El Fuerte",
+          "art_url": "/static/art/45760/el-fuerte.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/El_Fuerte",
+          "art_alt": "El Fuerte from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "elena",
+          "name": "Elena",
+          "art_url": "/static/art/45760/elena.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Elena",
+          "art_alt": "Elena from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "evil-ryu",
+          "name": "Evil Ryu",
+          "art_url": "/static/art/45760/evil-ryu.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Evil_Ryu",
+          "art_alt": "Evil Ryu from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "fei-long",
+          "name": "Fei Long",
+          "art_url": "/static/art/45760/fei-long.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Fei_Long",
+          "art_alt": "Fei Long from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "gen",
+          "name": "Gen",
+          "art_url": "/static/art/45760/gen.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Gen",
+          "art_alt": "Gen from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "gouken",
+          "name": "Gouken",
+          "art_url": "/static/art/45760/gouken.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Gouken",
+          "art_alt": "Gouken from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "guile",
+          "name": "Guile",
+          "art_url": "/static/art/45760/guile.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Guile",
+          "art_alt": "Guile from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "guy",
+          "name": "Guy",
+          "art_url": "/static/art/45760/guy.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Guy",
+          "art_alt": "Guy from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "hakan",
+          "name": "Hakan",
+          "art_url": "/static/art/45760/hakan.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Hakan",
+          "art_alt": "Hakan from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "hugo",
+          "name": "Hugo",
+          "art_url": "/static/art/45760/hugo.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Hugo",
+          "art_alt": "Hugo from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "ibuki",
+          "name": "Ibuki",
+          "art_url": "/static/art/45760/ibuki.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Ibuki",
+          "art_alt": "Ibuki from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "juri",
+          "name": "Juri",
+          "art_url": "/static/art/45760/juri.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Juri",
+          "art_alt": "Juri from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "ken",
+          "name": "Ken",
+          "art_url": "/static/art/45760/ken.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Ken",
+          "art_alt": "Ken from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "m-bison",
+          "name": "M. Bison",
+          "art_url": "/static/art/45760/m-bison.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/M._Bison",
+          "art_alt": "M. Bison from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "makoto",
+          "name": "Makoto",
+          "art_url": "/static/art/45760/makoto.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Makoto",
+          "art_alt": "Makoto from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "oni",
+          "name": "Oni",
+          "art_url": "/static/art/45760/oni.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Oni",
+          "art_alt": "Oni from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "poison",
+          "name": "Poison",
+          "art_url": "/static/art/45760/poison.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Poison",
+          "art_alt": "Poison from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "r-mika",
+          "name": "R. Mika",
+          "art_url": "/static/art/45760/r-mika.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/R.Mika",
+          "art_alt": "R. Mika from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "rufus",
+          "name": "Rufus",
+          "art_url": "/static/art/45760/rufus.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Rufus",
+          "art_alt": "Rufus from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "ryu",
+          "name": "Ryu",
+          "art_url": "/static/art/45760/ryu.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Ryu",
+          "art_alt": "Ryu from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "sagat",
+          "name": "Sagat",
+          "art_url": "/static/art/45760/sagat.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Sagat",
+          "art_alt": "Sagat from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "sakura",
+          "name": "Sakura",
+          "art_url": "/static/art/45760/sakura.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Sakura",
+          "art_alt": "Sakura from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "seth",
+          "name": "Seth",
+          "art_url": "/static/art/45760/seth.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Seth",
+          "art_alt": "Seth from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "t-hawk",
+          "name": "T. Hawk",
+          "art_url": "/static/art/45760/t-hawk.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/T._Hawk",
+          "art_alt": "T. Hawk from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "vega",
+          "name": "Vega",
+          "art_url": "/static/art/45760/vega.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Vega",
+          "art_alt": "Vega from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "yang",
+          "name": "Yang",
+          "art_url": "/static/art/45760/yang.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Yang",
+          "art_alt": "Yang from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "yun",
+          "name": "Yun",
+          "art_url": "/static/art/45760/yun.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Yun",
+          "art_alt": "Yun from Ultra Street Fighter IV"
+        },
+        {
+          "slug": "zangief",
+          "name": "Zangief",
+          "art_url": "/static/art/45760/zangief.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultra_Street_Fighter_IV/Zangief",
+          "art_alt": "Zangief from Ultra Street Fighter IV"
+        }
       ]
     },
     {
@@ -19,9 +315,132 @@
       "steam_appid": 245170,
       "trial_source_url": "https://store.steampowered.com/app/245170/",
       "characters": [
-        "Annie", "Beowulf", "Big Band", "Black Dahlia", "Cerebella", "Double", "Eliza", "Filia",
-        "Fukua", "Marie", "Ms. Fortune", "Painwheel", "Parasoul", "Peacock", "Robo-Fortune",
-        "Squigly", "Umbrella", "Valentine"
+        {
+          "slug": "annie",
+          "name": "Annie",
+          "art_url": "/static/art/245170/annie.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Annie",
+          "art_alt": "Annie from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "beowulf",
+          "name": "Beowulf",
+          "art_url": "/static/art/245170/beowulf.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Beowulf",
+          "art_alt": "Beowulf from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "big-band",
+          "name": "Big Band",
+          "art_url": "/static/art/245170/big-band.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Big_Band",
+          "art_alt": "Big Band from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "black-dahlia",
+          "name": "Black Dahlia",
+          "art_url": "/static/art/245170/black-dahlia.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Black_Dahlia",
+          "art_alt": "Black Dahlia from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "cerebella",
+          "name": "Cerebella",
+          "art_url": "/static/art/245170/cerebella.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Cerebella",
+          "art_alt": "Cerebella from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "double",
+          "name": "Double",
+          "art_url": "/static/art/245170/double.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Double",
+          "art_alt": "Double from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "eliza",
+          "name": "Eliza",
+          "art_url": "/static/art/245170/eliza.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Eliza",
+          "art_alt": "Eliza from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "filia",
+          "name": "Filia",
+          "art_url": "/static/art/245170/filia.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Filia",
+          "art_alt": "Filia from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "fukua",
+          "name": "Fukua",
+          "art_url": "/static/art/245170/fukua.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Fukua",
+          "art_alt": "Fukua from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "marie",
+          "name": "Marie",
+          "art_url": "/static/art/245170/marie.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Marie",
+          "art_alt": "Marie from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "ms-fortune",
+          "name": "Ms. Fortune",
+          "art_url": "/static/art/245170/ms-fortune.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Ms._Fortune",
+          "art_alt": "Ms. Fortune from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "painwheel",
+          "name": "Painwheel",
+          "art_url": "/static/art/245170/painwheel.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Painwheel",
+          "art_alt": "Painwheel from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "parasoul",
+          "name": "Parasoul",
+          "art_url": "/static/art/245170/parasoul.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Parasoul",
+          "art_alt": "Parasoul from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "peacock",
+          "name": "Peacock",
+          "art_url": "/static/art/245170/peacock.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Peacock",
+          "art_alt": "Peacock from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "robo-fortune",
+          "name": "Robo-Fortune",
+          "art_url": "/static/art/245170/robo-fortune.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Robo-Fortune",
+          "art_alt": "Robo-Fortune from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "squigly",
+          "name": "Squigly",
+          "art_url": "/static/art/245170/squigly.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Squigly",
+          "art_alt": "Squigly from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "umbrella",
+          "name": "Umbrella",
+          "art_url": "/static/art/245170/umbrella.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Umbrella",
+          "art_alt": "Umbrella from Skullgirls 2nd Encore"
+        },
+        {
+          "slug": "valentine",
+          "name": "Valentine",
+          "art_url": "/static/art/245170/valentine.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Skullgirls/Valentine",
+          "art_alt": "Valentine from Skullgirls 2nd Encore"
+        }
       ]
     },
     {
@@ -30,10 +449,146 @@
       "steam_appid": 294810,
       "trial_source_url": "https://store.steampowered.com/app/294810/",
       "characters": [
-        "Ragna the Bloodedge", "Jin Kisaragi", "Noel Vermillion", "Rachel Alucard", "Taokaka",
-        "Iron Tager", "Bang Shishigami", "Carl Clover", "Hakumen", "Lambda-11", "Tsubaki Yayoi",
-        "Hazama", "Mu-12", "Makoto Nanaya", "Valkenhayn R. Hellsing", "Platinum the Trinity",
-        "Relius Clover", "Es", "Mai Natsume", "Izayoi"
+        {
+          "slug": "bang-shishigami",
+          "name": "Bang Shishigami",
+          "art_url": "/static/art/294810/bang-shishigami.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Bang_Shishigami",
+          "art_alt": "Bang Shishigami from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "carl-clover",
+          "name": "Carl Clover",
+          "art_url": "/static/art/294810/carl-clover.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Carl_Clover",
+          "art_alt": "Carl Clover from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "es",
+          "name": "Es",
+          "art_url": "/static/art/294810/es.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Es",
+          "art_alt": "Es from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "hakumen",
+          "name": "Hakumen",
+          "art_url": "/static/art/294810/hakumen.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hakumen",
+          "art_alt": "Hakumen from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "hazama",
+          "name": "Hazama",
+          "art_url": "/static/art/294810/hazama.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hazama",
+          "art_alt": "Hazama from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "iron-tager",
+          "name": "Iron Tager",
+          "art_url": "/static/art/294810/iron-tager.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Iron_Tager",
+          "art_alt": "Iron Tager from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "izayoi",
+          "name": "Izayoi",
+          "art_url": "/static/art/294810/izayoi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Izayoi",
+          "art_alt": "Izayoi from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "jin-kisaragi",
+          "name": "Jin Kisaragi",
+          "art_url": "/static/art/294810/jin-kisaragi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Jin_Kisaragi",
+          "art_alt": "Jin Kisaragi from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "lambda-11",
+          "name": "Lambda-11",
+          "art_url": "/static/art/294810/lambda-11.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Lambda-11",
+          "art_alt": "Lambda-11 from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "mai-natsume",
+          "name": "Mai Natsume",
+          "art_url": "/static/art/294810/mai-natsume.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mai_Natsume",
+          "art_alt": "Mai Natsume from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "makoto-nanaya",
+          "name": "Makoto Nanaya",
+          "art_url": "/static/art/294810/makoto-nanaya.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Makoto_Nanaya",
+          "art_alt": "Makoto Nanaya from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "mu-12",
+          "name": "Mu-12",
+          "art_url": "/static/art/294810/mu-12.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mu-12",
+          "art_alt": "Mu-12 from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "noel-vermillion",
+          "name": "Noel Vermillion",
+          "art_url": "/static/art/294810/noel-vermillion.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Noel_Vermillion",
+          "art_alt": "Noel Vermillion from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "platinum-the-trinity",
+          "name": "Platinum the Trinity",
+          "art_url": "/static/art/294810/platinum-the-trinity.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Platinum_the_Trinity",
+          "art_alt": "Platinum the Trinity from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "rachel-alucard",
+          "name": "Rachel Alucard",
+          "art_url": "/static/art/294810/rachel-alucard.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Rachel_Alucard",
+          "art_alt": "Rachel Alucard from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "ragna-the-bloodedge",
+          "name": "Ragna the Bloodedge",
+          "art_url": "/static/art/294810/ragna-the-bloodedge.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Ragna_the_Bloodedge",
+          "art_alt": "Ragna the Bloodedge from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "relius-clover",
+          "name": "Relius Clover",
+          "art_url": "/static/art/294810/relius-clover.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Relius_Clover",
+          "art_alt": "Relius Clover from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "taokaka",
+          "name": "Taokaka",
+          "art_url": "/static/art/294810/taokaka.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Taokaka",
+          "art_alt": "Taokaka from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "tsubaki-yayoi",
+          "name": "Tsubaki Yayoi",
+          "art_url": "/static/art/294810/tsubaki-yayoi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Tsubaki_Yayoi",
+          "art_alt": "Tsubaki Yayoi from BlazBlue: Continuum Shift Extend"
+        },
+        {
+          "slug": "valkenhayn-r-hellsing",
+          "name": "Valkenhayn R. Hellsing",
+          "art_url": "/static/art/294810/valkenhayn-r-hellsing.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Valkenhayn_R._Hellsing",
+          "art_alt": "Valkenhayn R. Hellsing from BlazBlue: Continuum Shift Extend"
+        }
       ]
     },
     {
@@ -42,11 +597,307 @@
       "steam_appid": 310950,
       "trial_source_url": "https://store.steampowered.com/app/310950/",
       "characters": [
-        "Ryu", "Ken", "Chun-Li", "Cammy", "Nash", "M. Bison", "Birdie", "Rashid", "Karin",
-        "R. Mika", "Vega", "Dhalsim", "F.A.N.G", "Laura", "Zangief", "Guile", "Alex", "Balrog",
-        "Ibuki", "Juri", "Urien", "Akuma", "Kolin", "Ed", "Abigail", "Menat", "Zeku", "Sakura",
-        "Blanka", "Falke", "G", "Sagat", "Kage", "E. Honda", "Lucia", "Poison", "Gill", "Seth",
-        "Dan", "Rose", "Oro", "Luke", "Eleven"
+        {
+          "slug": "abigail",
+          "name": "Abigail",
+          "art_url": "/static/art/310950/abigail.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Abigail",
+          "art_alt": "Abigail from Street Fighter V"
+        },
+        {
+          "slug": "akuma",
+          "name": "Akuma",
+          "art_url": "/static/art/310950/akuma.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Akuma",
+          "art_alt": "Akuma from Street Fighter V"
+        },
+        {
+          "slug": "alex",
+          "name": "Alex",
+          "art_url": "/static/art/310950/alex.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Alex",
+          "art_alt": "Alex from Street Fighter V"
+        },
+        {
+          "slug": "balrog",
+          "name": "Balrog",
+          "art_url": "/static/art/310950/balrog.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Balrog",
+          "art_alt": "Balrog from Street Fighter V"
+        },
+        {
+          "slug": "birdie",
+          "name": "Birdie",
+          "art_url": "/static/art/310950/birdie.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Birdie",
+          "art_alt": "Birdie from Street Fighter V"
+        },
+        {
+          "slug": "blanka",
+          "name": "Blanka",
+          "art_url": "/static/art/310950/blanka.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Blanka",
+          "art_alt": "Blanka from Street Fighter V"
+        },
+        {
+          "slug": "cammy",
+          "name": "Cammy",
+          "art_url": "/static/art/310950/cammy.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Cammy",
+          "art_alt": "Cammy from Street Fighter V"
+        },
+        {
+          "slug": "chun-li",
+          "name": "Chun-Li",
+          "art_url": "/static/art/310950/chun-li.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Chun-Li",
+          "art_alt": "Chun-Li from Street Fighter V"
+        },
+        {
+          "slug": "dan",
+          "name": "Dan",
+          "art_url": "/static/art/310950/dan.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Dan",
+          "art_alt": "Dan from Street Fighter V"
+        },
+        {
+          "slug": "dhalsim",
+          "name": "Dhalsim",
+          "art_url": "/static/art/310950/dhalsim.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Dhalsim",
+          "art_alt": "Dhalsim from Street Fighter V"
+        },
+        {
+          "slug": "e-honda",
+          "name": "E. Honda",
+          "art_url": "/static/art/310950/e-honda.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/E.Honda",
+          "art_alt": "E. Honda from Street Fighter V"
+        },
+        {
+          "slug": "ed",
+          "name": "Ed",
+          "art_url": "/static/art/310950/ed.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Ed",
+          "art_alt": "Ed from Street Fighter V"
+        },
+        {
+          "slug": "eleven",
+          "name": "Eleven",
+          "art_url": "/static/art/310950/eleven.webp",
+          "art_source_url": "https://game.capcom.com/cfn/sfv/column/130747?lang=en",
+          "art_alt": "Eleven from Street Fighter V"
+        },
+        {
+          "slug": "f-a-n-g",
+          "name": "F.A.N.G",
+          "art_url": "/static/art/310950/f-a-n-g.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/F.A.N.G",
+          "art_alt": "F.A.N.G from Street Fighter V"
+        },
+        {
+          "slug": "falke",
+          "name": "Falke",
+          "art_url": "/static/art/310950/falke.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Falke",
+          "art_alt": "Falke from Street Fighter V"
+        },
+        {
+          "slug": "g",
+          "name": "G",
+          "art_url": "/static/art/310950/g.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/G",
+          "art_alt": "G from Street Fighter V"
+        },
+        {
+          "slug": "gill",
+          "name": "Gill",
+          "art_url": "/static/art/310950/gill.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Gill",
+          "art_alt": "Gill from Street Fighter V"
+        },
+        {
+          "slug": "guile",
+          "name": "Guile",
+          "art_url": "/static/art/310950/guile.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Guile",
+          "art_alt": "Guile from Street Fighter V"
+        },
+        {
+          "slug": "ibuki",
+          "name": "Ibuki",
+          "art_url": "/static/art/310950/ibuki.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Ibuki",
+          "art_alt": "Ibuki from Street Fighter V"
+        },
+        {
+          "slug": "juri",
+          "name": "Juri",
+          "art_url": "/static/art/310950/juri.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Juri",
+          "art_alt": "Juri from Street Fighter V"
+        },
+        {
+          "slug": "kage",
+          "name": "Kage",
+          "art_url": "/static/art/310950/kage.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Kage",
+          "art_alt": "Kage from Street Fighter V"
+        },
+        {
+          "slug": "karin",
+          "name": "Karin",
+          "art_url": "/static/art/310950/karin.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Karin",
+          "art_alt": "Karin from Street Fighter V"
+        },
+        {
+          "slug": "ken",
+          "name": "Ken",
+          "art_url": "/static/art/310950/ken.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Ken",
+          "art_alt": "Ken from Street Fighter V"
+        },
+        {
+          "slug": "kolin",
+          "name": "Kolin",
+          "art_url": "/static/art/310950/kolin.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Kolin",
+          "art_alt": "Kolin from Street Fighter V"
+        },
+        {
+          "slug": "laura",
+          "name": "Laura",
+          "art_url": "/static/art/310950/laura.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Laura",
+          "art_alt": "Laura from Street Fighter V"
+        },
+        {
+          "slug": "lucia",
+          "name": "Lucia",
+          "art_url": "/static/art/310950/lucia.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Lucia",
+          "art_alt": "Lucia from Street Fighter V"
+        },
+        {
+          "slug": "luke",
+          "name": "Luke",
+          "art_url": "/static/art/310950/luke.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Luke",
+          "art_alt": "Luke from Street Fighter V"
+        },
+        {
+          "slug": "m-bison",
+          "name": "M. Bison",
+          "art_url": "/static/art/310950/m-bison.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/M.Bison",
+          "art_alt": "M. Bison from Street Fighter V"
+        },
+        {
+          "slug": "menat",
+          "name": "Menat",
+          "art_url": "/static/art/310950/menat.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Menat",
+          "art_alt": "Menat from Street Fighter V"
+        },
+        {
+          "slug": "nash",
+          "name": "Nash",
+          "art_url": "/static/art/310950/nash.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Nash",
+          "art_alt": "Nash from Street Fighter V"
+        },
+        {
+          "slug": "oro",
+          "name": "Oro",
+          "art_url": "/static/art/310950/oro.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Oro",
+          "art_alt": "Oro from Street Fighter V"
+        },
+        {
+          "slug": "poison",
+          "name": "Poison",
+          "art_url": "/static/art/310950/poison.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Poison",
+          "art_alt": "Poison from Street Fighter V"
+        },
+        {
+          "slug": "r-mika",
+          "name": "R. Mika",
+          "art_url": "/static/art/310950/r-mika.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/R.Mika",
+          "art_alt": "R. Mika from Street Fighter V"
+        },
+        {
+          "slug": "rashid",
+          "name": "Rashid",
+          "art_url": "/static/art/310950/rashid.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Rashid",
+          "art_alt": "Rashid from Street Fighter V"
+        },
+        {
+          "slug": "rose",
+          "name": "Rose",
+          "art_url": "/static/art/310950/rose.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Rose",
+          "art_alt": "Rose from Street Fighter V"
+        },
+        {
+          "slug": "ryu",
+          "name": "Ryu",
+          "art_url": "/static/art/310950/ryu.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Ryu",
+          "art_alt": "Ryu from Street Fighter V"
+        },
+        {
+          "slug": "sagat",
+          "name": "Sagat",
+          "art_url": "/static/art/310950/sagat.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Sagat",
+          "art_alt": "Sagat from Street Fighter V"
+        },
+        {
+          "slug": "sakura",
+          "name": "Sakura",
+          "art_url": "/static/art/310950/sakura.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Sakura",
+          "art_alt": "Sakura from Street Fighter V"
+        },
+        {
+          "slug": "seth",
+          "name": "Seth",
+          "art_url": "/static/art/310950/seth.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Seth",
+          "art_alt": "Seth from Street Fighter V"
+        },
+        {
+          "slug": "urien",
+          "name": "Urien",
+          "art_url": "/static/art/310950/urien.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Urien",
+          "art_alt": "Urien from Street Fighter V"
+        },
+        {
+          "slug": "vega",
+          "name": "Vega",
+          "art_url": "/static/art/310950/vega.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Vega",
+          "art_alt": "Vega from Street Fighter V"
+        },
+        {
+          "slug": "zangief",
+          "name": "Zangief",
+          "art_url": "/static/art/310950/zangief.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Zangief",
+          "art_alt": "Zangief from Street Fighter V"
+        },
+        {
+          "slug": "zeku",
+          "name": "Zeku",
+          "art_url": "/static/art/310950/zeku.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_V/Zeku",
+          "art_alt": "Zeku from Street Fighter V"
+        }
       ]
     },
     {
@@ -55,12 +906,314 @@
       "steam_appid": 357190,
       "trial_source_url": "https://store.steampowered.com/app/357190/",
       "characters": [
-        "Akuma", "Amaterasu", "Arthur", "Chris Redfield", "Chun-Li", "C. Viper", "Dante", "Deadpool",
-        "Doctor Doom", "Dormammu", "Felicia", "Firebrand", "Frank West", "Ghost Rider", "Hawkeye",
-        "Hulk", "Iron Fist", "Iron Man", "Jill Valentine", "Magneto", "Mike Haggar", "Morrigan",
-        "Nemesis", "Nova", "Phoenix", "Phoenix Wright", "Rocket Raccoon", "She-Hulk", "Shuma-Gorath",
-        "Spider-Man", "Spencer", "Storm", "Strider Hiryu", "Super-Skrull", "Taskmaster", "Thor",
-        "Trish", "Tron Bonne", "Vergil", "Viewtiful Joe", "Wesker", "Wolverine", "X-23", "Zero"
+        {
+          "slug": "akuma",
+          "name": "Akuma",
+          "art_url": "/static/art/357190/akuma.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Akuma",
+          "art_alt": "Akuma from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "amaterasu",
+          "name": "Amaterasu",
+          "art_url": "/static/art/357190/amaterasu.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Amaterasu",
+          "art_alt": "Amaterasu from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "arthur",
+          "name": "Arthur",
+          "art_url": "/static/art/357190/arthur.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Arthur",
+          "art_alt": "Arthur from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "c-viper",
+          "name": "C. Viper",
+          "art_url": "/static/art/357190/c-viper.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/C._Viper",
+          "art_alt": "C. Viper from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "chris-redfield",
+          "name": "Chris Redfield",
+          "art_url": "/static/art/357190/chris-redfield.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Chris",
+          "art_alt": "Chris Redfield from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "chun-li",
+          "name": "Chun-Li",
+          "art_url": "/static/art/357190/chun-li.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/UMVC3/Chun-Li",
+          "art_alt": "Chun-Li from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "dante",
+          "name": "Dante",
+          "art_url": "/static/art/357190/dante.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Dante",
+          "art_alt": "Dante from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "deadpool",
+          "name": "Deadpool",
+          "art_url": "/static/art/357190/deadpool.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Deadpool",
+          "art_alt": "Deadpool from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "doctor-doom",
+          "name": "Doctor Doom",
+          "art_url": "/static/art/357190/doctor-doom.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Doctor_Doom",
+          "art_alt": "Doctor Doom from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "dormammu",
+          "name": "Dormammu",
+          "art_url": "/static/art/357190/dormammu.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Dormammu",
+          "art_alt": "Dormammu from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "felicia",
+          "name": "Felicia",
+          "art_url": "/static/art/357190/felicia.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Felicia",
+          "art_alt": "Felicia from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "firebrand",
+          "name": "Firebrand",
+          "art_url": "/static/art/357190/firebrand.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Firebrand",
+          "art_alt": "Firebrand from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "frank-west",
+          "name": "Frank West",
+          "art_url": "/static/art/357190/frank-west.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Frank_West",
+          "art_alt": "Frank West from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "ghost-rider",
+          "name": "Ghost Rider",
+          "art_url": "/static/art/357190/ghost-rider.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Ghost_Rider",
+          "art_alt": "Ghost Rider from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "hawkeye",
+          "name": "Hawkeye",
+          "art_url": "/static/art/357190/hawkeye.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Hawkeye",
+          "art_alt": "Hawkeye from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "hulk",
+          "name": "Hulk",
+          "art_url": "/static/art/357190/hulk.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Hulk",
+          "art_alt": "Hulk from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "iron-fist",
+          "name": "Iron Fist",
+          "art_url": "/static/art/357190/iron-fist.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Iron_Fist",
+          "art_alt": "Iron Fist from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "iron-man",
+          "name": "Iron Man",
+          "art_url": "/static/art/357190/iron-man.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Iron_Man",
+          "art_alt": "Iron Man from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "jill-valentine",
+          "name": "Jill Valentine",
+          "art_url": "/static/art/357190/jill-valentine.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Jill",
+          "art_alt": "Jill Valentine from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "magneto",
+          "name": "Magneto",
+          "art_url": "/static/art/357190/magneto.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Magneto",
+          "art_alt": "Magneto from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "mike-haggar",
+          "name": "Mike Haggar",
+          "art_url": "/static/art/357190/mike-haggar.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Haggar",
+          "art_alt": "Mike Haggar from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "morrigan",
+          "name": "Morrigan",
+          "art_url": "/static/art/357190/morrigan.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Morrigan",
+          "art_alt": "Morrigan from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "nemesis",
+          "name": "Nemesis",
+          "art_url": "/static/art/357190/nemesis.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/UMVC3/Nemesis",
+          "art_alt": "Nemesis from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "nova",
+          "name": "Nova",
+          "art_url": "/static/art/357190/nova.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Nova",
+          "art_alt": "Nova from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "phoenix",
+          "name": "Phoenix",
+          "art_url": "/static/art/357190/phoenix.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Phoenix",
+          "art_alt": "Phoenix from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "phoenix-wright",
+          "name": "Phoenix Wright",
+          "art_url": "/static/art/357190/phoenix-wright.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Phoenix_Wright",
+          "art_alt": "Phoenix Wright from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "rocket-raccoon",
+          "name": "Rocket Raccoon",
+          "art_url": "/static/art/357190/rocket-raccoon.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Rocket_Raccoon",
+          "art_alt": "Rocket Raccoon from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "she-hulk",
+          "name": "She-Hulk",
+          "art_url": "/static/art/357190/she-hulk.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/UMVC3/She-Hulk",
+          "art_alt": "She-Hulk from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "shuma-gorath",
+          "name": "Shuma-Gorath",
+          "art_url": "/static/art/357190/shuma-gorath.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Shuma-Gorath",
+          "art_alt": "Shuma-Gorath from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "spencer",
+          "name": "Spencer",
+          "art_url": "/static/art/357190/spencer.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Spencer",
+          "art_alt": "Spencer from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "spider-man",
+          "name": "Spider-Man",
+          "art_url": "/static/art/357190/spider-man.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Spider-Man",
+          "art_alt": "Spider-Man from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "storm",
+          "name": "Storm",
+          "art_url": "/static/art/357190/storm.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Storm",
+          "art_alt": "Storm from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "strider-hiryu",
+          "name": "Strider Hiryu",
+          "art_url": "/static/art/357190/strider-hiryu.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/UMVC3/Strider_Hiryu",
+          "art_alt": "Strider Hiryu from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "super-skrull",
+          "name": "Super-Skrull",
+          "art_url": "/static/art/357190/super-skrull.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Super-Skrull",
+          "art_alt": "Super-Skrull from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "taskmaster",
+          "name": "Taskmaster",
+          "art_url": "/static/art/357190/taskmaster.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Taskmaster",
+          "art_alt": "Taskmaster from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "thor",
+          "name": "Thor",
+          "art_url": "/static/art/357190/thor.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Thor",
+          "art_alt": "Thor from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "trish",
+          "name": "Trish",
+          "art_url": "/static/art/357190/trish.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Trish",
+          "art_alt": "Trish from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "tron-bonne",
+          "name": "Tron Bonne",
+          "art_url": "/static/art/357190/tron-bonne.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/UMVC3/Tron",
+          "art_alt": "Tron Bonne from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "vergil",
+          "name": "Vergil",
+          "art_url": "/static/art/357190/vergil.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Vergil",
+          "art_alt": "Vergil from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "viewtiful-joe",
+          "name": "Viewtiful Joe",
+          "art_url": "/static/art/357190/viewtiful-joe.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Viewtiful_Joe",
+          "art_alt": "Viewtiful Joe from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "wesker",
+          "name": "Wesker",
+          "art_url": "/static/art/357190/wesker.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Wesker",
+          "art_alt": "Wesker from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "wolverine",
+          "name": "Wolverine",
+          "art_url": "/static/art/357190/wolverine.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Wolverine",
+          "art_alt": "Wolverine from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "x-23",
+          "name": "X-23",
+          "art_url": "/static/art/357190/x-23.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/X-23",
+          "art_alt": "X-23 from Ultimate Marvel vs. Capcom 3"
+        },
+        {
+          "slug": "zero",
+          "name": "Zero",
+          "art_url": "/static/art/357190/zero.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Ultimate_Marvel_vs_Capcom_3/Zero",
+          "art_alt": "Zero from Ultimate Marvel vs. Capcom 3"
+        }
       ]
     },
     {
@@ -69,9 +1222,139 @@
       "steam_appid": 376300,
       "trial_source_url": "https://store.steampowered.com/app/376300/",
       "characters": [
-        "Sol Badguy", "Ky Kiske", "May", "Millia Rage", "Zato-1", "Potemkin", "Chipp Zanuff",
-        "Faust", "Slayer", "I-No", "Venom", "Ramlethal Valentine", "Sin Kiske", "Elphelt Valentine",
-        "Bedman", "Leo Whitefang", "Johnny", "Jack-O'", "Raven"
+        {
+          "slug": "bedman",
+          "name": "Bedman",
+          "art_url": "/static/art/376300/bedman.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Bedman",
+          "art_alt": "Bedman from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "chipp-zanuff",
+          "name": "Chipp Zanuff",
+          "art_url": "/static/art/376300/chipp-zanuff.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Chipp_Zanuff",
+          "art_alt": "Chipp Zanuff from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "elphelt-valentine",
+          "name": "Elphelt Valentine",
+          "art_url": "/static/art/376300/elphelt-valentine.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Elphelt_Valentine",
+          "art_alt": "Elphelt Valentine from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "faust",
+          "name": "Faust",
+          "art_url": "/static/art/376300/faust.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Faust",
+          "art_alt": "Faust from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "i-no",
+          "name": "I-No",
+          "art_url": "/static/art/376300/i-no.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/I-No",
+          "art_alt": "I-No from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "jack-o",
+          "name": "Jack-O'",
+          "art_url": "/static/art/376300/jack-o.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Jack-O%27",
+          "art_alt": "Jack-O' from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "johnny",
+          "name": "Johnny",
+          "art_url": "/static/art/376300/johnny.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Johnny",
+          "art_alt": "Johnny from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "ky-kiske",
+          "name": "Ky Kiske",
+          "art_url": "/static/art/376300/ky-kiske.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Ky_Kiske",
+          "art_alt": "Ky Kiske from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "leo-whitefang",
+          "name": "Leo Whitefang",
+          "art_url": "/static/art/376300/leo-whitefang.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Leo_Whitefang",
+          "art_alt": "Leo Whitefang from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "may",
+          "name": "May",
+          "art_url": "/static/art/376300/may.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/May",
+          "art_alt": "May from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "millia-rage",
+          "name": "Millia Rage",
+          "art_url": "/static/art/376300/millia-rage.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Millia_Rage",
+          "art_alt": "Millia Rage from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "potemkin",
+          "name": "Potemkin",
+          "art_url": "/static/art/376300/potemkin.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Potemkin",
+          "art_alt": "Potemkin from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "ramlethal-valentine",
+          "name": "Ramlethal Valentine",
+          "art_url": "/static/art/376300/ramlethal-valentine.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Ramlethal_Valentine",
+          "art_alt": "Ramlethal Valentine from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "raven",
+          "name": "Raven",
+          "art_url": "/static/art/376300/raven.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Raven",
+          "art_alt": "Raven from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "sin-kiske",
+          "name": "Sin Kiske",
+          "art_url": "/static/art/376300/sin-kiske.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Sin_Kiske",
+          "art_alt": "Sin Kiske from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "slayer",
+          "name": "Slayer",
+          "art_url": "/static/art/376300/slayer.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Slayer",
+          "art_alt": "Slayer from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "sol-badguy",
+          "name": "Sol Badguy",
+          "art_url": "/static/art/376300/sol-badguy.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Sol_Badguy",
+          "art_alt": "Sol Badguy from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "venom",
+          "name": "Venom",
+          "art_url": "/static/art/376300/venom.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Venom",
+          "art_alt": "Venom from GUILTY GEAR Xrd -SIGN-"
+        },
+        {
+          "slug": "zato-1",
+          "name": "Zato-1",
+          "art_url": "/static/art/376300/zato-1.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD/Zato-1",
+          "art_alt": "Zato-1 from GUILTY GEAR Xrd -SIGN-"
+        }
       ]
     },
     {
@@ -80,11 +1363,209 @@
       "steam_appid": 388750,
       "trial_source_url": "https://store.steampowered.com/app/388750/",
       "characters": [
-        "Ragna the Bloodedge", "Jin Kisaragi", "Noel Vermillion", "Rachel Alucard", "Iron Tager",
-        "Taokaka", "Bang Shishigami", "Carl Clover", "Hakumen", "Lambda-11", "Tsubaki Yayoi",
-        "Hazama", "Mu-12", "Makoto Nanaya", "Valkenhayn R. Hellsing", "Platinum the Trinity",
-        "Relius Clover", "Amane Nishiki", "Bullet", "Azrael", "Izayoi", "Kagura Mutsuki",
-        "Terumi", "Kokonoe", "Celica A. Mercury", "Nine the Phantom", "Es", "Mai Natsume", "Hibiki Kohaku"
+        {
+          "slug": "amane-nishiki",
+          "name": "Amane Nishiki",
+          "art_url": "/static/art/388750/amane-nishiki.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Amane_Nishiki",
+          "art_alt": "Amane Nishiki from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "azrael",
+          "name": "Azrael",
+          "art_url": "/static/art/388750/azrael.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Azrael",
+          "art_alt": "Azrael from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "bang-shishigami",
+          "name": "Bang Shishigami",
+          "art_url": "/static/art/388750/bang-shishigami.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Bang_Shishigami",
+          "art_alt": "Bang Shishigami from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "bullet",
+          "name": "Bullet",
+          "art_url": "/static/art/388750/bullet.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Bullet",
+          "art_alt": "Bullet from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "carl-clover",
+          "name": "Carl Clover",
+          "art_url": "/static/art/388750/carl-clover.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Carl_Clover",
+          "art_alt": "Carl Clover from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "celica-a-mercury",
+          "name": "Celica A. Mercury",
+          "art_url": "/static/art/388750/celica-a-mercury.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Celica_A._Mercury",
+          "art_alt": "Celica A. Mercury from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "es",
+          "name": "Es",
+          "art_url": "/static/art/388750/es.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Es",
+          "art_alt": "Es from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "hakumen",
+          "name": "Hakumen",
+          "art_url": "/static/art/388750/hakumen.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hakumen",
+          "art_alt": "Hakumen from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "hazama",
+          "name": "Hazama",
+          "art_url": "/static/art/388750/hazama.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hazama",
+          "art_alt": "Hazama from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "hibiki-kohaku",
+          "name": "Hibiki Kohaku",
+          "art_url": "/static/art/388750/hibiki-kohaku.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hibiki_Kohaku",
+          "art_alt": "Hibiki Kohaku from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "iron-tager",
+          "name": "Iron Tager",
+          "art_url": "/static/art/388750/iron-tager.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Iron_Tager",
+          "art_alt": "Iron Tager from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "izayoi",
+          "name": "Izayoi",
+          "art_url": "/static/art/388750/izayoi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Izayoi",
+          "art_alt": "Izayoi from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "jin-kisaragi",
+          "name": "Jin Kisaragi",
+          "art_url": "/static/art/388750/jin-kisaragi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Jin_Kisaragi",
+          "art_alt": "Jin Kisaragi from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "kagura-mutsuki",
+          "name": "Kagura Mutsuki",
+          "art_url": "/static/art/388750/kagura-mutsuki.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Kagura_Mutsuki",
+          "art_alt": "Kagura Mutsuki from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "kokonoe",
+          "name": "Kokonoe",
+          "art_url": "/static/art/388750/kokonoe.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Kokonoe",
+          "art_alt": "Kokonoe from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "lambda-11",
+          "name": "Lambda-11",
+          "art_url": "/static/art/388750/lambda-11.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Lambda-11",
+          "art_alt": "Lambda-11 from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "mai-natsume",
+          "name": "Mai Natsume",
+          "art_url": "/static/art/388750/mai-natsume.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mai_Natsume",
+          "art_alt": "Mai Natsume from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "makoto-nanaya",
+          "name": "Makoto Nanaya",
+          "art_url": "/static/art/388750/makoto-nanaya.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Makoto_Nanaya",
+          "art_alt": "Makoto Nanaya from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "mu-12",
+          "name": "Mu-12",
+          "art_url": "/static/art/388750/mu-12.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mu-12",
+          "art_alt": "Mu-12 from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "nine-the-phantom",
+          "name": "Nine the Phantom",
+          "art_url": "/static/art/388750/nine-the-phantom.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Nine_the_Phantom",
+          "art_alt": "Nine the Phantom from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "noel-vermillion",
+          "name": "Noel Vermillion",
+          "art_url": "/static/art/388750/noel-vermillion.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Noel_Vermillion",
+          "art_alt": "Noel Vermillion from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "platinum-the-trinity",
+          "name": "Platinum the Trinity",
+          "art_url": "/static/art/388750/platinum-the-trinity.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Platinum_the_Trinity",
+          "art_alt": "Platinum the Trinity from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "rachel-alucard",
+          "name": "Rachel Alucard",
+          "art_url": "/static/art/388750/rachel-alucard.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Rachel_Alucard",
+          "art_alt": "Rachel Alucard from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "ragna-the-bloodedge",
+          "name": "Ragna the Bloodedge",
+          "art_url": "/static/art/388750/ragna-the-bloodedge.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Ragna_the_Bloodedge",
+          "art_alt": "Ragna the Bloodedge from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "relius-clover",
+          "name": "Relius Clover",
+          "art_url": "/static/art/388750/relius-clover.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Relius_Clover",
+          "art_alt": "Relius Clover from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "taokaka",
+          "name": "Taokaka",
+          "art_url": "/static/art/388750/taokaka.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Taokaka",
+          "art_alt": "Taokaka from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "terumi",
+          "name": "Terumi",
+          "art_url": "/static/art/388750/terumi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Yuuki_Terumi",
+          "art_alt": "Terumi from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "tsubaki-yayoi",
+          "name": "Tsubaki Yayoi",
+          "art_url": "/static/art/388750/tsubaki-yayoi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Tsubaki_Yayoi",
+          "art_alt": "Tsubaki Yayoi from BlazBlue: Chronophantasma Extend"
+        },
+        {
+          "slug": "valkenhayn-r-hellsing",
+          "name": "Valkenhayn R. Hellsing",
+          "art_url": "/static/art/388750/valkenhayn-r-hellsing.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Valkenhayn_R._Hellsing",
+          "art_alt": "Valkenhayn R. Hellsing from BlazBlue: Chronophantasma Extend"
+        }
       ]
     },
     {
@@ -93,10 +1574,181 @@
       "steam_appid": 520440,
       "trial_source_url": "https://store.steampowered.com/app/520440/",
       "characters": [
-        "Sol Badguy", "Ky Kiske", "May", "Millia Rage", "Zato-1", "Potemkin", "Chipp Zanuff",
-        "Faust", "Slayer", "Venom", "I-No", "Ramlethal Valentine", "Sin Kiske", "Elphelt Valentine",
-        "Leo Whitefang", "Johnny", "Jack-O'", "Jam Kuradoberi", "Raven", "Kum Haehyun", "Dizzy",
-        "Answer", "Baiken", "Bedman", "Axl Low"
+        {
+          "slug": "answer",
+          "name": "Answer",
+          "art_url": "/static/art/520440/answer.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Answer",
+          "art_alt": "Answer from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "axl-low",
+          "name": "Axl Low",
+          "art_url": "/static/art/520440/axl-low.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Axl_Low",
+          "art_alt": "Axl Low from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "baiken",
+          "name": "Baiken",
+          "art_url": "/static/art/520440/baiken.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Baiken",
+          "art_alt": "Baiken from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "bedman",
+          "name": "Bedman",
+          "art_url": "/static/art/520440/bedman.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Bedman",
+          "art_alt": "Bedman from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "chipp-zanuff",
+          "name": "Chipp Zanuff",
+          "art_url": "/static/art/520440/chipp-zanuff.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Chipp_Zanuff",
+          "art_alt": "Chipp Zanuff from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "dizzy",
+          "name": "Dizzy",
+          "art_url": "/static/art/520440/dizzy.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Dizzy",
+          "art_alt": "Dizzy from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "elphelt-valentine",
+          "name": "Elphelt Valentine",
+          "art_url": "/static/art/520440/elphelt-valentine.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Elphelt_Valentine",
+          "art_alt": "Elphelt Valentine from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "faust",
+          "name": "Faust",
+          "art_url": "/static/art/520440/faust.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Faust",
+          "art_alt": "Faust from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "i-no",
+          "name": "I-No",
+          "art_url": "/static/art/520440/i-no.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/I-No",
+          "art_alt": "I-No from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "jack-o",
+          "name": "Jack-O'",
+          "art_url": "/static/art/520440/jack-o.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Jack-O%27",
+          "art_alt": "Jack-O' from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "jam-kuradoberi",
+          "name": "Jam Kuradoberi",
+          "art_url": "/static/art/520440/jam-kuradoberi.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Jam_Kuradoberi",
+          "art_alt": "Jam Kuradoberi from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "johnny",
+          "name": "Johnny",
+          "art_url": "/static/art/520440/johnny.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Johnny",
+          "art_alt": "Johnny from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "kum-haehyun",
+          "name": "Kum Haehyun",
+          "art_url": "/static/art/520440/kum-haehyun.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Kum_Haehyun",
+          "art_alt": "Kum Haehyun from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "ky-kiske",
+          "name": "Ky Kiske",
+          "art_url": "/static/art/520440/ky-kiske.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Ky_Kiske",
+          "art_alt": "Ky Kiske from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "leo-whitefang",
+          "name": "Leo Whitefang",
+          "art_url": "/static/art/520440/leo-whitefang.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Leo_Whitefang",
+          "art_alt": "Leo Whitefang from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "may",
+          "name": "May",
+          "art_url": "/static/art/520440/may.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/May",
+          "art_alt": "May from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "millia-rage",
+          "name": "Millia Rage",
+          "art_url": "/static/art/520440/millia-rage.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Millia_Rage",
+          "art_alt": "Millia Rage from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "potemkin",
+          "name": "Potemkin",
+          "art_url": "/static/art/520440/potemkin.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Potemkin",
+          "art_alt": "Potemkin from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "ramlethal-valentine",
+          "name": "Ramlethal Valentine",
+          "art_url": "/static/art/520440/ramlethal-valentine.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Ramlethal_Valentine",
+          "art_alt": "Ramlethal Valentine from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "raven",
+          "name": "Raven",
+          "art_url": "/static/art/520440/raven.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Raven",
+          "art_alt": "Raven from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "sin-kiske",
+          "name": "Sin Kiske",
+          "art_url": "/static/art/520440/sin-kiske.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Sin_Kiske",
+          "art_alt": "Sin Kiske from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "slayer",
+          "name": "Slayer",
+          "art_url": "/static/art/520440/slayer.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Slayer",
+          "art_alt": "Slayer from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "sol-badguy",
+          "name": "Sol Badguy",
+          "art_url": "/static/art/520440/sol-badguy.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Sol_Badguy",
+          "art_alt": "Sol Badguy from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "venom",
+          "name": "Venom",
+          "art_url": "/static/art/520440/venom.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Venom",
+          "art_alt": "Venom from GUILTY GEAR Xrd REV 2"
+        },
+        {
+          "slug": "zato-1",
+          "name": "Zato-1",
+          "art_url": "/static/art/520440/zato-1.webp",
+          "art_source_url": "https://www.dustloop.com/w/GGXRD-R2/Zato-1",
+          "art_alt": "Zato-1 from GUILTY GEAR Xrd REV 2"
+        }
       ]
     },
     {
@@ -105,12 +1757,244 @@
       "steam_appid": 586140,
       "trial_source_url": "https://store.steampowered.com/app/586140/",
       "characters": [
-        "Ragna the Bloodedge", "Jin Kisaragi", "Noel Vermillion", "Rachel Alucard", "Iron Tager",
-        "Taokaka", "Bang Shishigami", "Carl Clover", "Hakumen", "Lambda-11", "Tsubaki Yayoi",
-        "Hazama", "Mu-12", "Makoto Nanaya", "Valkenhayn R. Hellsing", "Platinum the Trinity",
-        "Relius Clover", "Amane Nishiki", "Bullet", "Azrael", "Izayoi", "Kagura Mutsuki", "Terumi",
-        "Kokonoe", "Celica A. Mercury", "Es", "Mai Natsume", "Susanoo", "Naoto Kurogane",
-        "Hibiki Kohaku", "Nine the Phantom", "Izanami", "Jubei", "Trinity Glassfille"
+        {
+          "slug": "amane-nishiki",
+          "name": "Amane Nishiki",
+          "art_url": "/static/art/586140/amane-nishiki.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Amane_Nishiki",
+          "art_alt": "Amane Nishiki from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "azrael",
+          "name": "Azrael",
+          "art_url": "/static/art/586140/azrael.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Azrael",
+          "art_alt": "Azrael from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "bang-shishigami",
+          "name": "Bang Shishigami",
+          "art_url": "/static/art/586140/bang-shishigami.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Bang_Shishigami",
+          "art_alt": "Bang Shishigami from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "bullet",
+          "name": "Bullet",
+          "art_url": "/static/art/586140/bullet.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Bullet",
+          "art_alt": "Bullet from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "carl-clover",
+          "name": "Carl Clover",
+          "art_url": "/static/art/586140/carl-clover.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Carl_Clover",
+          "art_alt": "Carl Clover from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "celica-a-mercury",
+          "name": "Celica A. Mercury",
+          "art_url": "/static/art/586140/celica-a-mercury.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Celica_A._Mercury",
+          "art_alt": "Celica A. Mercury from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "es",
+          "name": "Es",
+          "art_url": "/static/art/586140/es.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Es",
+          "art_alt": "Es from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "hakumen",
+          "name": "Hakumen",
+          "art_url": "/static/art/586140/hakumen.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hakumen",
+          "art_alt": "Hakumen from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "hazama",
+          "name": "Hazama",
+          "art_url": "/static/art/586140/hazama.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hazama",
+          "art_alt": "Hazama from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "hibiki-kohaku",
+          "name": "Hibiki Kohaku",
+          "art_url": "/static/art/586140/hibiki-kohaku.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hibiki_Kohaku",
+          "art_alt": "Hibiki Kohaku from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "iron-tager",
+          "name": "Iron Tager",
+          "art_url": "/static/art/586140/iron-tager.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Iron_Tager",
+          "art_alt": "Iron Tager from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "izanami",
+          "name": "Izanami",
+          "art_url": "/static/art/586140/izanami.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Izanami",
+          "art_alt": "Izanami from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "izayoi",
+          "name": "Izayoi",
+          "art_url": "/static/art/586140/izayoi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Izayoi",
+          "art_alt": "Izayoi from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "jin-kisaragi",
+          "name": "Jin Kisaragi",
+          "art_url": "/static/art/586140/jin-kisaragi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Jin_Kisaragi",
+          "art_alt": "Jin Kisaragi from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "jubei",
+          "name": "Jubei",
+          "art_url": "/static/art/586140/jubei.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Jubei",
+          "art_alt": "Jubei from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "kagura-mutsuki",
+          "name": "Kagura Mutsuki",
+          "art_url": "/static/art/586140/kagura-mutsuki.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Kagura_Mutsuki",
+          "art_alt": "Kagura Mutsuki from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "kokonoe",
+          "name": "Kokonoe",
+          "art_url": "/static/art/586140/kokonoe.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Kokonoe",
+          "art_alt": "Kokonoe from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "lambda-11",
+          "name": "Lambda-11",
+          "art_url": "/static/art/586140/lambda-11.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Lambda-11",
+          "art_alt": "Lambda-11 from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "mai-natsume",
+          "name": "Mai Natsume",
+          "art_url": "/static/art/586140/mai-natsume.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mai_Natsume",
+          "art_alt": "Mai Natsume from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "makoto-nanaya",
+          "name": "Makoto Nanaya",
+          "art_url": "/static/art/586140/makoto-nanaya.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Makoto_Nanaya",
+          "art_alt": "Makoto Nanaya from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "mu-12",
+          "name": "Mu-12",
+          "art_url": "/static/art/586140/mu-12.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mu-12",
+          "art_alt": "Mu-12 from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "naoto-kurogane",
+          "name": "Naoto Kurogane",
+          "art_url": "/static/art/586140/naoto-kurogane.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Naoto_Kurogane",
+          "art_alt": "Naoto Kurogane from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "nine-the-phantom",
+          "name": "Nine the Phantom",
+          "art_url": "/static/art/586140/nine-the-phantom.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Nine_the_Phantom",
+          "art_alt": "Nine the Phantom from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "noel-vermillion",
+          "name": "Noel Vermillion",
+          "art_url": "/static/art/586140/noel-vermillion.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Noel_Vermillion",
+          "art_alt": "Noel Vermillion from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "platinum-the-trinity",
+          "name": "Platinum the Trinity",
+          "art_url": "/static/art/586140/platinum-the-trinity.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Platinum_the_Trinity",
+          "art_alt": "Platinum the Trinity from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "rachel-alucard",
+          "name": "Rachel Alucard",
+          "art_url": "/static/art/586140/rachel-alucard.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Rachel_Alucard",
+          "art_alt": "Rachel Alucard from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "ragna-the-bloodedge",
+          "name": "Ragna the Bloodedge",
+          "art_url": "/static/art/586140/ragna-the-bloodedge.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Ragna_the_Bloodedge",
+          "art_alt": "Ragna the Bloodedge from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "relius-clover",
+          "name": "Relius Clover",
+          "art_url": "/static/art/586140/relius-clover.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Relius_Clover",
+          "art_alt": "Relius Clover from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "susanoo",
+          "name": "Susanoo",
+          "art_url": "/static/art/586140/susanoo.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Susanoo",
+          "art_alt": "Susanoo from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "taokaka",
+          "name": "Taokaka",
+          "art_url": "/static/art/586140/taokaka.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Taokaka",
+          "art_alt": "Taokaka from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "terumi",
+          "name": "Terumi",
+          "art_url": "/static/art/586140/terumi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Yuuki_Terumi",
+          "art_alt": "Terumi from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "trinity-glassfille",
+          "name": "Trinity Glassfille",
+          "art_url": "/static/art/586140/trinity-glassfille.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Trinity_Glassfille",
+          "art_alt": "Trinity Glassfille from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "tsubaki-yayoi",
+          "name": "Tsubaki Yayoi",
+          "art_url": "/static/art/586140/tsubaki-yayoi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Tsubaki_Yayoi",
+          "art_alt": "Tsubaki Yayoi from BlazBlue Centralfiction"
+        },
+        {
+          "slug": "valkenhayn-r-hellsing",
+          "name": "Valkenhayn R. Hellsing",
+          "art_url": "/static/art/586140/valkenhayn-r-hellsing.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Valkenhayn_R._Hellsing",
+          "art_alt": "Valkenhayn R. Hellsing from BlazBlue Centralfiction"
+        }
       ]
     },
     {
@@ -119,12 +2003,293 @@
       "steam_appid": 678950,
       "trial_source_url": "https://store.steampowered.com/app/678950/",
       "characters": [
-        "Android 16", "Android 17", "Android 18", "Android 21", "Android 21 (Lab Coat)", "Bardock",
-        "Beerus", "Broly", "Broly (DBS)", "Captain Ginyu", "Cell", "Cooler", "Frieza", "Gohan (Adult)",
-        "Gohan (Teen)", "Goku", "Goku (GT)", "Goku (Super Saiyan 4)", "Goku (Ultra Instinct)",
-        "Goku Black", "Gogeta", "Gogeta (SS4)", "Gotenks", "Janemba", "Jiren", "Kefla", "Kid Buu",
-        "Krillin", "Master Roshi", "Nappa", "Piccolo", "Super Baby 2", "Tien", "Trunks", "Vegeta",
-        "Vegeta (Base)", "Vegeta (Super Saiyan Blue)", "Vegito", "Videl", "Yamcha", "Zamasu (Fused)"
+        {
+          "slug": "android-16",
+          "name": "Android 16",
+          "art_url": "/static/art/678950/android-16.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Android_16",
+          "art_alt": "Android 16 from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "android-17",
+          "name": "Android 17",
+          "art_url": "/static/art/678950/android-17.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Android_17",
+          "art_alt": "Android 17 from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "android-18",
+          "name": "Android 18",
+          "art_url": "/static/art/678950/android-18.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Android_18",
+          "art_alt": "Android 18 from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "android-21",
+          "name": "Android 21",
+          "art_url": "/static/art/678950/android-21.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Android_21",
+          "art_alt": "Android 21 from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "android-21-lab-coat",
+          "name": "Android 21 (Lab Coat)",
+          "art_url": "/static/art/678950/android-21-lab-coat.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Android_21_%28Lab_Coat%29",
+          "art_alt": "Android 21 (Lab Coat) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "bardock",
+          "name": "Bardock",
+          "art_url": "/static/art/678950/bardock.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Bardock",
+          "art_alt": "Bardock from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "beerus",
+          "name": "Beerus",
+          "art_url": "/static/art/678950/beerus.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Beerus",
+          "art_alt": "Beerus from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "broly",
+          "name": "Broly",
+          "art_url": "/static/art/678950/broly.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Broly",
+          "art_alt": "Broly from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "broly-dbs",
+          "name": "Broly (DBS)",
+          "art_url": "/static/art/678950/broly-dbs.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Broly_%28DBS%29",
+          "art_alt": "Broly (DBS) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "captain-ginyu",
+          "name": "Captain Ginyu",
+          "art_url": "/static/art/678950/captain-ginyu.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Captain_Ginyu",
+          "art_alt": "Captain Ginyu from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "cell",
+          "name": "Cell",
+          "art_url": "/static/art/678950/cell.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Cell",
+          "art_alt": "Cell from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "cooler",
+          "name": "Cooler",
+          "art_url": "/static/art/678950/cooler.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Cooler",
+          "art_alt": "Cooler from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "frieza",
+          "name": "Frieza",
+          "art_url": "/static/art/678950/frieza.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Frieza",
+          "art_alt": "Frieza from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "gogeta",
+          "name": "Gogeta",
+          "art_url": "/static/art/678950/gogeta.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Gogeta_%28SSGSS%29",
+          "art_alt": "Gogeta from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "gogeta-ss4",
+          "name": "Gogeta (SS4)",
+          "art_url": "/static/art/678950/gogeta-ss4.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Gogeta_%28SS4%29",
+          "art_alt": "Gogeta (SS4) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "gohan-adult",
+          "name": "Gohan (Adult)",
+          "art_url": "/static/art/678950/gohan-adult.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Gohan_%28Adult%29",
+          "art_alt": "Gohan (Adult) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "gohan-teen",
+          "name": "Gohan (Teen)",
+          "art_url": "/static/art/678950/gohan-teen.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Gohan_%28Teen%29",
+          "art_alt": "Gohan (Teen) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "goku",
+          "name": "Goku",
+          "art_url": "/static/art/678950/goku.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Goku",
+          "art_alt": "Goku from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "goku-black",
+          "name": "Goku Black",
+          "art_url": "/static/art/678950/goku-black.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Goku_Black",
+          "art_alt": "Goku Black from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "goku-gt",
+          "name": "Goku (GT)",
+          "art_url": "/static/art/678950/goku-gt.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Goku_%28GT%29",
+          "art_alt": "Goku (GT) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "goku-super-saiyan-4",
+          "name": "Goku (Super Saiyan 4)",
+          "art_url": "/static/art/678950/goku-super-saiyan-4.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Goku_%28SS4%2C_DAIMA%29",
+          "art_alt": "Goku (Super Saiyan 4) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "goku-ultra-instinct",
+          "name": "Goku (Ultra Instinct)",
+          "art_url": "/static/art/678950/goku-ultra-instinct.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Goku_%28Ultra_Instinct%29",
+          "art_alt": "Goku (Ultra Instinct) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "gotenks",
+          "name": "Gotenks",
+          "art_url": "/static/art/678950/gotenks.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Gotenks",
+          "art_alt": "Gotenks from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "janemba",
+          "name": "Janemba",
+          "art_url": "/static/art/678950/janemba.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Janemba",
+          "art_alt": "Janemba from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "jiren",
+          "name": "Jiren",
+          "art_url": "/static/art/678950/jiren.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Jiren",
+          "art_alt": "Jiren from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "kefla",
+          "name": "Kefla",
+          "art_url": "/static/art/678950/kefla.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Kefla",
+          "art_alt": "Kefla from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "kid-buu",
+          "name": "Kid Buu",
+          "art_url": "/static/art/678950/kid-buu.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Kid_Buu",
+          "art_alt": "Kid Buu from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "krillin",
+          "name": "Krillin",
+          "art_url": "/static/art/678950/krillin.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Krillin",
+          "art_alt": "Krillin from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "master-roshi",
+          "name": "Master Roshi",
+          "art_url": "/static/art/678950/master-roshi.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Master_Roshi",
+          "art_alt": "Master Roshi from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "nappa",
+          "name": "Nappa",
+          "art_url": "/static/art/678950/nappa.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Nappa",
+          "art_alt": "Nappa from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "piccolo",
+          "name": "Piccolo",
+          "art_url": "/static/art/678950/piccolo.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Piccolo",
+          "art_alt": "Piccolo from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "super-baby-2",
+          "name": "Super Baby 2",
+          "art_url": "/static/art/678950/super-baby-2.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Super_Baby_2",
+          "art_alt": "Super Baby 2 from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "tien",
+          "name": "Tien",
+          "art_url": "/static/art/678950/tien.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Tien",
+          "art_alt": "Tien from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "trunks",
+          "name": "Trunks",
+          "art_url": "/static/art/678950/trunks.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Trunks",
+          "art_alt": "Trunks from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "vegeta",
+          "name": "Vegeta",
+          "art_url": "/static/art/678950/vegeta.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Vegeta_%28Super_Saiyan%29",
+          "art_alt": "Vegeta from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "vegeta-base",
+          "name": "Vegeta (Base)",
+          "art_url": "/static/art/678950/vegeta-base.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Vegeta",
+          "art_alt": "Vegeta (Base) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "vegeta-super-saiyan-blue",
+          "name": "Vegeta (Super Saiyan Blue)",
+          "art_url": "/static/art/678950/vegeta-super-saiyan-blue.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Vegeta_%28SSGSS%29",
+          "art_alt": "Vegeta (Super Saiyan Blue) from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "vegito",
+          "name": "Vegito",
+          "art_url": "/static/art/678950/vegito.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Vegito_%28SSGSS%29",
+          "art_alt": "Vegito from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "videl",
+          "name": "Videl",
+          "art_url": "/static/art/678950/videl.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Videl",
+          "art_alt": "Videl from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "yamcha",
+          "name": "Yamcha",
+          "art_url": "/static/art/678950/yamcha.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Yamcha",
+          "art_alt": "Yamcha from DRAGON BALL FighterZ"
+        },
+        {
+          "slug": "zamasu-fused",
+          "name": "Zamasu (Fused)",
+          "art_url": "/static/art/678950/zamasu-fused.webp",
+          "art_source_url": "https://www.dustloop.com/w/DBFZ/Zamasu_%28Fused%29",
+          "art_alt": "Zamasu (Fused) from DRAGON BALL FighterZ"
+        }
       ]
     },
     {
@@ -133,13 +2298,328 @@
       "steam_appid": 702890,
       "trial_source_url": "https://store.steampowered.com/app/702890/",
       "characters": [
-        "Ruby Rose", "Weiss Schnee", "Blake Belladonna", "Yang Xiao Long", "Yu Narukami", "Yosuke Hanamura",
-        "Chie Satonaka", "Yukiko Amagi", "Kanji Tatsumi", "Naoto Shirogane", "Aigis", "Mitsuru Kirijo",
-        "Akihiko Sanada", "Labrys", "Hyde", "Linne", "Waldstein", "Carmine", "Gordeau", "Merkava",
-        "Orie", "Vatista", "Hilda", "Es", "Hazama", "Noel Vermillion", "Rachel Alucard", "Iron Tager",
-        "Jin Kisaragi", "Tsubaki Yayoi", "Hakumen", "Makoto Nanaya", "Mai Natsume", "Azrael", "Nine",
-        "Akatsuki", "Blitztank", "Mika", "Yumi", "Neo Politan", "Adachi", "Elizabeth", "Seth",
-        "Teddie", "Heart Aino", "Naoto Kurogane"
+        {
+          "slug": "adachi",
+          "name": "Adachi",
+          "art_url": "/static/art/702890/adachi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Tohru_Adachi",
+          "art_alt": "Adachi from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "aigis",
+          "name": "Aigis",
+          "art_url": "/static/art/702890/aigis.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Aigis",
+          "art_alt": "Aigis from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "akatsuki",
+          "name": "Akatsuki",
+          "art_url": "/static/art/702890/akatsuki.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Akatsuki",
+          "art_alt": "Akatsuki from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "akihiko-sanada",
+          "name": "Akihiko Sanada",
+          "art_url": "/static/art/702890/akihiko-sanada.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Akihiko_Sanada",
+          "art_alt": "Akihiko Sanada from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "azrael",
+          "name": "Azrael",
+          "art_url": "/static/art/702890/azrael.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Azrael",
+          "art_alt": "Azrael from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "blake-belladonna",
+          "name": "Blake Belladonna",
+          "art_url": "/static/art/702890/blake-belladonna.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Blake_Belladonna",
+          "art_alt": "Blake Belladonna from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "blitztank",
+          "name": "Blitztank",
+          "art_url": "/static/art/702890/blitztank.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Blitztank",
+          "art_alt": "Blitztank from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "carmine",
+          "name": "Carmine",
+          "art_url": "/static/art/702890/carmine.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Carmine",
+          "art_alt": "Carmine from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "chie-satonaka",
+          "name": "Chie Satonaka",
+          "art_url": "/static/art/702890/chie-satonaka.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Chie_Satonaka",
+          "art_alt": "Chie Satonaka from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "elizabeth",
+          "name": "Elizabeth",
+          "art_url": "/static/art/702890/elizabeth.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Elizabeth",
+          "art_alt": "Elizabeth from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "es",
+          "name": "Es",
+          "art_url": "/static/art/702890/es.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Es",
+          "art_alt": "Es from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "gordeau",
+          "name": "Gordeau",
+          "art_url": "/static/art/702890/gordeau.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Gordeau",
+          "art_alt": "Gordeau from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "hakumen",
+          "name": "Hakumen",
+          "art_url": "/static/art/702890/hakumen.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hakumen",
+          "art_alt": "Hakumen from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "hazama",
+          "name": "Hazama",
+          "art_url": "/static/art/702890/hazama.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hazama",
+          "art_alt": "Hazama from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "heart-aino",
+          "name": "Heart Aino",
+          "art_url": "/static/art/702890/heart-aino.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Heart_Aino",
+          "art_alt": "Heart Aino from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "hilda",
+          "name": "Hilda",
+          "art_url": "/static/art/702890/hilda.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hilda",
+          "art_alt": "Hilda from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "hyde",
+          "name": "Hyde",
+          "art_url": "/static/art/702890/hyde.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Hyde",
+          "art_alt": "Hyde from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "iron-tager",
+          "name": "Iron Tager",
+          "art_url": "/static/art/702890/iron-tager.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Iron_Tager",
+          "art_alt": "Iron Tager from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "jin-kisaragi",
+          "name": "Jin Kisaragi",
+          "art_url": "/static/art/702890/jin-kisaragi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Jin_Kisaragi",
+          "art_alt": "Jin Kisaragi from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "kanji-tatsumi",
+          "name": "Kanji Tatsumi",
+          "art_url": "/static/art/702890/kanji-tatsumi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Kanji_Tatsumi",
+          "art_alt": "Kanji Tatsumi from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "labrys",
+          "name": "Labrys",
+          "art_url": "/static/art/702890/labrys.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Labrys",
+          "art_alt": "Labrys from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "linne",
+          "name": "Linne",
+          "art_url": "/static/art/702890/linne.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Linne",
+          "art_alt": "Linne from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "mai-natsume",
+          "name": "Mai Natsume",
+          "art_url": "/static/art/702890/mai-natsume.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mai_Natsume",
+          "art_alt": "Mai Natsume from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "makoto-nanaya",
+          "name": "Makoto Nanaya",
+          "art_url": "/static/art/702890/makoto-nanaya.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Makoto_Nanaya",
+          "art_alt": "Makoto Nanaya from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "merkava",
+          "name": "Merkava",
+          "art_url": "/static/art/702890/merkava.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Merkava",
+          "art_alt": "Merkava from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "mika",
+          "name": "Mika",
+          "art_url": "/static/art/702890/mika.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mika",
+          "art_alt": "Mika from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "mitsuru-kirijo",
+          "name": "Mitsuru Kirijo",
+          "art_url": "/static/art/702890/mitsuru-kirijo.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Mitsuru_Kirijo",
+          "art_alt": "Mitsuru Kirijo from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "naoto-kurogane",
+          "name": "Naoto Kurogane",
+          "art_url": "/static/art/702890/naoto-kurogane.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Naoto_Kurogane",
+          "art_alt": "Naoto Kurogane from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "naoto-shirogane",
+          "name": "Naoto Shirogane",
+          "art_url": "/static/art/702890/naoto-shirogane.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Naoto_Shirogane",
+          "art_alt": "Naoto Shirogane from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "neo-politan",
+          "name": "Neo Politan",
+          "art_url": "/static/art/702890/neo-politan.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Neo_Politan",
+          "art_alt": "Neo Politan from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "nine",
+          "name": "Nine",
+          "art_url": "/static/art/702890/nine.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Nine_the_Phantom",
+          "art_alt": "Nine from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "noel-vermillion",
+          "name": "Noel Vermillion",
+          "art_url": "/static/art/702890/noel-vermillion.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Noel_Vermillion",
+          "art_alt": "Noel Vermillion from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "orie",
+          "name": "Orie",
+          "art_url": "/static/art/702890/orie.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Orie",
+          "art_alt": "Orie from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "rachel-alucard",
+          "name": "Rachel Alucard",
+          "art_url": "/static/art/702890/rachel-alucard.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Rachel_Alucard",
+          "art_alt": "Rachel Alucard from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "ruby-rose",
+          "name": "Ruby Rose",
+          "art_url": "/static/art/702890/ruby-rose.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Ruby_Rose",
+          "art_alt": "Ruby Rose from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "seth",
+          "name": "Seth",
+          "art_url": "/static/art/702890/seth.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Seth",
+          "art_alt": "Seth from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "teddie",
+          "name": "Teddie",
+          "art_url": "/static/art/702890/teddie.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Teddie",
+          "art_alt": "Teddie from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "tsubaki-yayoi",
+          "name": "Tsubaki Yayoi",
+          "art_url": "/static/art/702890/tsubaki-yayoi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Tsubaki_Yayoi",
+          "art_alt": "Tsubaki Yayoi from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "vatista",
+          "name": "Vatista",
+          "art_url": "/static/art/702890/vatista.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Vatista",
+          "art_alt": "Vatista from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "waldstein",
+          "name": "Waldstein",
+          "art_url": "/static/art/702890/waldstein.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Waldstein",
+          "art_alt": "Waldstein from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "weiss-schnee",
+          "name": "Weiss Schnee",
+          "art_url": "/static/art/702890/weiss-schnee.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Weiss_Schnee",
+          "art_alt": "Weiss Schnee from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "yang-xiao-long",
+          "name": "Yang Xiao Long",
+          "art_url": "/static/art/702890/yang-xiao-long.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Yang_Xiao_Long",
+          "art_alt": "Yang Xiao Long from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "yosuke-hanamura",
+          "name": "Yosuke Hanamura",
+          "art_url": "/static/art/702890/yosuke-hanamura.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Yosuke_Hanamura",
+          "art_alt": "Yosuke Hanamura from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "yu-narukami",
+          "name": "Yu Narukami",
+          "art_url": "/static/art/702890/yu-narukami.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Yu_Narukami",
+          "art_alt": "Yu Narukami from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "yukiko-amagi",
+          "name": "Yukiko Amagi",
+          "art_url": "/static/art/702890/yukiko-amagi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Yukiko_Amagi",
+          "art_alt": "Yukiko Amagi from BlazBlue Cross Tag Battle"
+        },
+        {
+          "slug": "yumi",
+          "name": "Yumi",
+          "art_url": "/static/art/702890/yumi.webp",
+          "art_source_url": "https://blazblue.wiki/wiki/Yumi",
+          "art_alt": "Yumi from BlazBlue Cross Tag Battle"
+        }
       ]
     },
     {
@@ -148,9 +2628,174 @@
       "steam_appid": 801630,
       "trial_source_url": "https://store.steampowered.com/app/801630/",
       "characters": [
-        "Hyde", "Linne", "Waldstein", "Carmine", "Orie", "Gordeau", "Merkava", "Vatista", "Seth",
-        "Hilda", "Nanase", "Byakuya", "Yuzehira", "Mika", "Wagner", "Enkidu", "Phonon", "Londrekia",
-        "Akatsuki", "Blitztank", "Chaos", "Kuon", "Kaguya", "Eltnum"
+        {
+          "slug": "akatsuki",
+          "name": "Akatsuki",
+          "art_url": "/static/art/801630/akatsuki.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Akatsuki",
+          "art_alt": "Akatsuki from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "blitztank",
+          "name": "Blitztank",
+          "art_url": "/static/art/801630/blitztank.webp",
+          "art_source_url": "https://www.dustloop.com/w/BBTag/Blitztank",
+          "art_alt": "Blitztank from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "byakuya",
+          "name": "Byakuya",
+          "art_url": "/static/art/801630/byakuya.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Byakuya",
+          "art_alt": "Byakuya from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "carmine",
+          "name": "Carmine",
+          "art_url": "/static/art/801630/carmine.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Carmine",
+          "art_alt": "Carmine from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "chaos",
+          "name": "Chaos",
+          "art_url": "/static/art/801630/chaos.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Chaos",
+          "art_alt": "Chaos from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "eltnum",
+          "name": "Eltnum",
+          "art_url": "/static/art/801630/eltnum.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Eltnum",
+          "art_alt": "Eltnum from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "enkidu",
+          "name": "Enkidu",
+          "art_url": "/static/art/801630/enkidu.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Enkidu",
+          "art_alt": "Enkidu from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "gordeau",
+          "name": "Gordeau",
+          "art_url": "/static/art/801630/gordeau.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Gordeau",
+          "art_alt": "Gordeau from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "hilda",
+          "name": "Hilda",
+          "art_url": "/static/art/801630/hilda.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Hilda",
+          "art_alt": "Hilda from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "hyde",
+          "name": "Hyde",
+          "art_url": "/static/art/801630/hyde.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Hyde",
+          "art_alt": "Hyde from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "kaguya",
+          "name": "Kaguya",
+          "art_url": "/static/art/801630/kaguya.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Kaguya",
+          "art_alt": "Kaguya from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "kuon",
+          "name": "Kuon",
+          "art_url": "/static/art/801630/kuon.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Kuon",
+          "art_alt": "Kuon from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "linne",
+          "name": "Linne",
+          "art_url": "/static/art/801630/linne.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Linne",
+          "art_alt": "Linne from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "londrekia",
+          "name": "Londrekia",
+          "art_url": "/static/art/801630/londrekia.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Londrekia",
+          "art_alt": "Londrekia from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "merkava",
+          "name": "Merkava",
+          "art_url": "/static/art/801630/merkava.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Merkava",
+          "art_alt": "Merkava from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "mika",
+          "name": "Mika",
+          "art_url": "/static/art/801630/mika.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Mika",
+          "art_alt": "Mika from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "nanase",
+          "name": "Nanase",
+          "art_url": "/static/art/801630/nanase.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Nanase",
+          "art_alt": "Nanase from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "orie",
+          "name": "Orie",
+          "art_url": "/static/art/801630/orie.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Orie",
+          "art_alt": "Orie from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "phonon",
+          "name": "Phonon",
+          "art_url": "/static/art/801630/phonon.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Phonon",
+          "art_alt": "Phonon from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "seth",
+          "name": "Seth",
+          "art_url": "/static/art/801630/seth.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Seth",
+          "art_alt": "Seth from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "vatista",
+          "name": "Vatista",
+          "art_url": "/static/art/801630/vatista.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Vatista",
+          "art_alt": "Vatista from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "wagner",
+          "name": "Wagner",
+          "art_url": "/static/art/801630/wagner.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Wagner",
+          "art_alt": "Wagner from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "waldstein",
+          "name": "Waldstein",
+          "art_url": "/static/art/801630/waldstein.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Waldstein",
+          "art_alt": "Waldstein from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        },
+        {
+          "slug": "yuzehira",
+          "name": "Yuzehira",
+          "art_url": "/static/art/801630/yuzehira.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNICLR/Yuzuriha",
+          "art_alt": "Yuzehira from UNDER NIGHT IN-BIRTH Exe:Late[cl-r]"
+        }
       ]
     },
     {
@@ -159,9 +2804,174 @@
       "steam_appid": 1090630,
       "trial_source_url": "https://store.steampowered.com/app/1090630/",
       "characters": [
-        "Gran", "Katalina", "Charlotta", "Lowain", "Ferry", "Lancelot", "Percival", "Metera", "Zeta",
-        "Vaseraga", "Narmaya", "Soriz", "Djeeta", "Zooey", "Belial", "Avatar Belial", "Cagliostro",
-        "Yuel", "Anre", "Eustace", "Seox", "Vira", "Beelzebub", "Nier"
+        {
+          "slug": "anre",
+          "name": "Anre",
+          "art_url": "/static/art/1090630/anre.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Anre",
+          "art_alt": "Anre from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "avatar-belial",
+          "name": "Avatar Belial",
+          "art_url": "/static/art/1090630/avatar-belial.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Avatar_Belial",
+          "art_alt": "Avatar Belial from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "beelzebub",
+          "name": "Beelzebub",
+          "art_url": "/static/art/1090630/beelzebub.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Beelzebub",
+          "art_alt": "Beelzebub from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "belial",
+          "name": "Belial",
+          "art_url": "/static/art/1090630/belial.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Belial",
+          "art_alt": "Belial from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "cagliostro",
+          "name": "Cagliostro",
+          "art_url": "/static/art/1090630/cagliostro.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Cagliostro",
+          "art_alt": "Cagliostro from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "charlotta",
+          "name": "Charlotta",
+          "art_url": "/static/art/1090630/charlotta.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Charlotta",
+          "art_alt": "Charlotta from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "djeeta",
+          "name": "Djeeta",
+          "art_url": "/static/art/1090630/djeeta.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Djeeta",
+          "art_alt": "Djeeta from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "eustace",
+          "name": "Eustace",
+          "art_url": "/static/art/1090630/eustace.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Eustace",
+          "art_alt": "Eustace from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "ferry",
+          "name": "Ferry",
+          "art_url": "/static/art/1090630/ferry.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Ferry",
+          "art_alt": "Ferry from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "gran",
+          "name": "Gran",
+          "art_url": "/static/art/1090630/gran.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Gran",
+          "art_alt": "Gran from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "katalina",
+          "name": "Katalina",
+          "art_url": "/static/art/1090630/katalina.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Katalina",
+          "art_alt": "Katalina from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "lancelot",
+          "name": "Lancelot",
+          "art_url": "/static/art/1090630/lancelot.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Lancelot",
+          "art_alt": "Lancelot from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "lowain",
+          "name": "Lowain",
+          "art_url": "/static/art/1090630/lowain.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Lowain",
+          "art_alt": "Lowain from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "metera",
+          "name": "Metera",
+          "art_url": "/static/art/1090630/metera.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Metera",
+          "art_alt": "Metera from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "narmaya",
+          "name": "Narmaya",
+          "art_url": "/static/art/1090630/narmaya.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Narmaya",
+          "art_alt": "Narmaya from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "nier",
+          "name": "Nier",
+          "art_url": "/static/art/1090630/nier.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVSR/Nier",
+          "art_alt": "Nier from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "percival",
+          "name": "Percival",
+          "art_url": "/static/art/1090630/percival.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Percival",
+          "art_alt": "Percival from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "seox",
+          "name": "Seox",
+          "art_url": "/static/art/1090630/seox.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Seox",
+          "art_alt": "Seox from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "soriz",
+          "name": "Soriz",
+          "art_url": "/static/art/1090630/soriz.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Soriz",
+          "art_alt": "Soriz from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "vaseraga",
+          "name": "Vaseraga",
+          "art_url": "/static/art/1090630/vaseraga.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Vaseraga",
+          "art_alt": "Vaseraga from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "vira",
+          "name": "Vira",
+          "art_url": "/static/art/1090630/vira.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Vira",
+          "art_alt": "Vira from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "yuel",
+          "name": "Yuel",
+          "art_url": "/static/art/1090630/yuel.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Yuel",
+          "art_alt": "Yuel from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "zeta",
+          "name": "Zeta",
+          "art_url": "/static/art/1090630/zeta.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Zeta",
+          "art_alt": "Zeta from Granblue Fantasy: Versus"
+        },
+        {
+          "slug": "zooey",
+          "name": "Zooey",
+          "art_url": "/static/art/1090630/zooey.webp",
+          "art_source_url": "https://www.dustloop.com/w/GBVS/Zooey",
+          "art_alt": "Zooey from Granblue Fantasy: Versus"
+        }
       ]
     },
     {
@@ -171,49 +2981,111 @@
       "trial_source_url": "https://store.steampowered.com/app/1364780/",
       "characters": [
         {
-          "slug": "ryu",
-          "name": "Ryu",
-          "description": "A disciplined wanderer who keeps refining his martial art wherever the road takes him.",
-          "description_source_url": "https://www.streetfighter.com/6/en-us/character/ryu",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/ryu/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/ryu",
-          "art_alt": "Ryu from Street Fighter 6"
+          "slug": "a-k-i",
+          "name": "A.K.I.",
+          "art_url": "/static/art/1364780/a-k-i.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/A.K.I",
+          "art_alt": "A.K.I. from Street Fighter 6"
         },
         {
-          "slug": "luke",
-          "name": "Luke",
-          "description": "A confident contractor who blends modern combat training with a direct, forward-driving style.",
-          "description_source_url": "https://www.streetfighter.com/6/en-us/character/luke",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/luke/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/luke",
-          "art_alt": "Luke from Street Fighter 6"
+          "slug": "akuma",
+          "name": "Akuma",
+          "art_url": "/static/art/1364780/akuma.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Akuma",
+          "art_alt": "Akuma from Street Fighter 6"
+        },
+        {
+          "slug": "blanka",
+          "name": "Blanka",
+          "art_url": "/static/art/1364780/blanka.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Blanka",
+          "art_alt": "Blanka from Street Fighter 6"
+        },
+        {
+          "slug": "cammy",
+          "name": "Cammy",
+          "description": "A Delta Red operative with a relentless fighting style and a past entangled with Shadaloo.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/cammy",
+          "art_url": "/static/art/1364780/cammy.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Cammy",
+          "art_alt": "Cammy from Street Fighter 6"
         },
         {
           "slug": "chun-li",
           "name": "Chun-Li",
           "description": "A former ICPO officer who protects others with disciplined kung fu while building a quieter life.",
           "description_source_url": "https://www.streetfighter.com/6/en-us/character/chunli",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/chunli/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/chunli",
+          "art_url": "/static/art/1364780/chun-li.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Chun-Li",
           "art_alt": "Chun-Li from Street Fighter 6"
+        },
+        {
+          "slug": "dee-jay",
+          "name": "Dee Jay",
+          "art_url": "/static/art/1364780/dee-jay.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dee_Jay",
+          "art_alt": "Dee Jay from Street Fighter 6"
+        },
+        {
+          "slug": "dhalsim",
+          "name": "Dhalsim",
+          "art_url": "/static/art/1364780/dhalsim.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Dhalsim",
+          "art_alt": "Dhalsim from Street Fighter 6"
+        },
+        {
+          "slug": "e-honda",
+          "name": "E. Honda",
+          "art_url": "/static/art/1364780/e-honda.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/E._Honda",
+          "art_alt": "E. Honda from Street Fighter 6"
+        },
+        {
+          "slug": "ed",
+          "name": "Ed",
+          "art_url": "/static/art/1364780/ed.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ed",
+          "art_alt": "Ed from Street Fighter 6"
+        },
+        {
+          "slug": "elena",
+          "name": "Elena",
+          "description": "A cheerful savannah-raised warrior with a gift for healing and a dream of becoming a veterinarian.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/elena",
+          "art_url": "/static/art/1364780/elena.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Elena",
+          "art_alt": "Elena from Street Fighter 6"
         },
         {
           "slug": "guile",
           "name": "Guile",
           "description": "A U.S. Air Force officer and family man who turns precise Sonic Boom fundamentals into a battlefield discipline.",
           "description_source_url": "https://www.streetfighter.com/6/en-us/character/guile",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/guile/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/guile",
+          "art_url": "/static/art/1364780/guile.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Guile",
           "art_alt": "Guile from Street Fighter 6"
         },
-        "Kimberly", "Jamie",
+        {
+          "slug": "jamie",
+          "name": "Jamie",
+          "art_url": "/static/art/1364780/jamie.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Jamie",
+          "art_alt": "Jamie from Street Fighter 6"
+        },
+        {
+          "slug": "jp",
+          "name": "JP",
+          "art_url": "/static/art/1364780/jp.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/JP",
+          "art_alt": "JP from Street Fighter 6"
+        },
         {
           "slug": "juri",
           "name": "Juri",
           "description": "A taekwondo specialist who uses her Feng Shui Engine to turn chaos and cruelty into a game.",
           "description_source_url": "https://www.streetfighter.com/6/en-us/character/juri",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/juri/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/juri",
+          "art_url": "/static/art/1364780/juri.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Juri",
           "art_alt": "Juri from Street Fighter 6"
         },
         {
@@ -221,47 +3093,94 @@
           "name": "Ken",
           "description": "A former national champion who fights with explosive force while rebuilding his life away from the spotlight.",
           "description_source_url": "https://www.streetfighter.com/6/en-us/character/ken",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/ken/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/ken",
+          "art_url": "/static/art/1364780/ken.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ken",
           "art_alt": "Ken from Street Fighter 6"
         },
-        "Blanka", "Dhalsim", "E. Honda", "Dee Jay",
         {
-          "slug": "cammy",
-          "name": "Cammy",
-          "description": "A Delta Red operative with a relentless fighting style and a past entangled with Shadaloo.",
-          "description_source_url": "https://www.streetfighter.com/6/en-us/character/cammy",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/cammy/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/cammy",
-          "art_alt": "Cammy from Street Fighter 6"
+          "slug": "kimberly",
+          "name": "Kimberly",
+          "art_url": "/static/art/1364780/kimberly.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Kimberly",
+          "art_alt": "Kimberly from Street Fighter 6"
         },
-        "Manon", "Marisa", "Lily", "Zangief", "JP", "Rashid", "A.K.I.", "Ed", "Akuma", "M. Bison",
         {
-          "slug": "terry",
-          "name": "Terry",
-          "description": "A legendary South Town fighter who brings relentless power and easygoing confidence to the World Warrior stage.",
-          "description_source_url": "https://www.streetfighter.com/6/en-us/character/terry",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/terry/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/terry",
-          "art_alt": "Terry from Street Fighter 6"
+          "slug": "lily",
+          "name": "Lily",
+          "art_url": "/static/art/1364780/lily.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Lily",
+          "art_alt": "Lily from Street Fighter 6"
+        },
+        {
+          "slug": "luke",
+          "name": "Luke",
+          "description": "A confident contractor who blends modern combat training with a direct, forward-driving style.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/luke",
+          "art_url": "/static/art/1364780/luke.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Luke",
+          "art_alt": "Luke from Street Fighter 6"
+        },
+        {
+          "slug": "m-bison",
+          "name": "M. Bison",
+          "art_url": "/static/art/1364780/m-bison.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/M._Bison",
+          "art_alt": "M. Bison from Street Fighter 6"
         },
         {
           "slug": "mai",
           "name": "Mai",
           "description": "A charming Shiranui-style kunoichi who balances traditional arts, romance, and fierce training.",
           "description_source_url": "https://www.streetfighter.com/6/en-us/character/mai",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/mai/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/mai",
+          "art_url": "/static/art/1364780/mai.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Mai",
           "art_alt": "Mai from Street Fighter 6"
         },
         {
-          "slug": "elena",
-          "name": "Elena",
-          "description": "A cheerful savannah-raised warrior with a gift for healing and a dream of becoming a veterinarian.",
-          "description_source_url": "https://www.streetfighter.com/6/en-us/character/elena",
-          "art_url": "https://www.streetfighter.com/6/assets/images/character/elena/sns.jpg",
-          "art_source_url": "https://www.streetfighter.com/6/en-us/character/elena",
-          "art_alt": "Elena from Street Fighter 6"
+          "slug": "manon",
+          "name": "Manon",
+          "art_url": "/static/art/1364780/manon.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Manon",
+          "art_alt": "Manon from Street Fighter 6"
+        },
+        {
+          "slug": "marisa",
+          "name": "Marisa",
+          "art_url": "/static/art/1364780/marisa.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Marisa",
+          "art_alt": "Marisa from Street Fighter 6"
+        },
+        {
+          "slug": "rashid",
+          "name": "Rashid",
+          "art_url": "/static/art/1364780/rashid.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Rashid",
+          "art_alt": "Rashid from Street Fighter 6"
+        },
+        {
+          "slug": "ryu",
+          "name": "Ryu",
+          "description": "A disciplined wanderer who keeps refining his martial art wherever the road takes him.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/ryu",
+          "art_url": "/static/art/1364780/ryu.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Ryu",
+          "art_alt": "Ryu from Street Fighter 6"
+        },
+        {
+          "slug": "terry",
+          "name": "Terry",
+          "description": "A legendary South Town fighter who brings relentless power and easygoing confidence to the World Warrior stage.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/terry",
+          "art_url": "/static/art/1364780/terry.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Terry",
+          "art_alt": "Terry from Street Fighter 6"
+        },
+        {
+          "slug": "zangief",
+          "name": "Zangief",
+          "art_url": "/static/art/1364780/zangief.webp",
+          "art_source_url": "https://wiki.supercombo.gg/w/Street_Fighter_6/Zangief",
+          "art_alt": "Zangief from Street Fighter 6"
         }
       ]
     },
@@ -272,31 +3191,303 @@
       "trial_source_url": "https://tekken.com/fighters",
       "characters": [
         {
+          "slug": "alisa-bosconovitch",
+          "name": "Alisa Bosconovitch",
+          "art_url": "/static/art/1778820/alisa-bosconovitch.webp",
+          "art_source_url": "https://tekken.com/fighters/alisa-bosconovitch",
+          "art_alt": "Alisa Bosconovitch from TEKKEN 8"
+        },
+        {
+          "slug": "anna-williams",
+          "name": "Anna Williams",
+          "art_url": "/static/art/1778820/anna-williams.webp",
+          "art_source_url": "https://tekken.com/fighters/anna-williams",
+          "art_alt": "Anna Williams from TEKKEN 8"
+        },
+        {
+          "slug": "armor-king",
+          "name": "Armor King",
+          "art_url": "/static/art/1778820/armor-king.webp",
+          "art_source_url": "https://tekken.com/fighters/armor-king",
+          "art_alt": "Armor King from TEKKEN 8"
+        },
+        {
+          "slug": "asuka-kazama",
+          "name": "Asuka Kazama",
+          "art_url": "/static/art/1778820/asuka-kazama.webp",
+          "art_source_url": "https://tekken.com/fighters/asuka-kazama",
+          "art_alt": "Asuka Kazama from TEKKEN 8"
+        },
+        {
+          "slug": "azucena-milagros-ortiz-castillo",
+          "name": "Azucena Milagros Ortiz Castillo",
+          "art_url": "/static/art/1778820/azucena-milagros-ortiz-castillo.webp",
+          "art_source_url": "https://tekken.com/fighters/azucena-milagros-ortiz-castillo",
+          "art_alt": "Azucena Milagros Ortiz Castillo from TEKKEN 8"
+        },
+        {
+          "slug": "bob",
+          "name": "Bob",
+          "art_url": "/static/art/1778820/bob.webp",
+          "art_source_url": "https://tekken.com/fighters/bob",
+          "art_alt": "Bob from TEKKEN 8"
+        },
+        {
+          "slug": "bryan-fury",
+          "name": "Bryan Fury",
+          "art_url": "/static/art/1778820/bryan-fury.webp",
+          "art_source_url": "https://tekken.com/fighters/bryan-fury",
+          "art_alt": "Bryan Fury from TEKKEN 8"
+        },
+        {
+          "slug": "claudio-serafino",
+          "name": "Claudio Serafino",
+          "art_url": "/static/art/1778820/claudio-serafino.webp",
+          "art_source_url": "https://tekken.com/fighters/claudio-serafino",
+          "art_alt": "Claudio Serafino from TEKKEN 8"
+        },
+        {
+          "slug": "clive-rosfield",
+          "name": "Clive Rosfield",
+          "art_url": "/static/art/1778820/clive-rosfield.webp",
+          "art_source_url": "https://tekken.com/fighters/clive-rosfield",
+          "art_alt": "Clive Rosfield from TEKKEN 8"
+        },
+        {
+          "slug": "devil-jin",
+          "name": "Devil Jin",
+          "art_url": "/static/art/1778820/devil-jin.webp",
+          "art_source_url": "https://tekken.com/fighters/devil-jin",
+          "art_alt": "Devil Jin from TEKKEN 8"
+        },
+        {
+          "slug": "eddy-gordo",
+          "name": "Eddy Gordo",
+          "art_url": "/static/art/1778820/eddy-gordo.webp",
+          "art_source_url": "https://tekken.com/fighters/eddy-gordo",
+          "art_alt": "Eddy Gordo from TEKKEN 8"
+        },
+        {
+          "slug": "fahkumram",
+          "name": "Fahkumram",
+          "art_url": "/static/art/1778820/fahkumram.webp",
+          "art_source_url": "https://tekken.com/fighters/fahkumram",
+          "art_alt": "Fahkumram from TEKKEN 8"
+        },
+        {
+          "slug": "feng-wei",
+          "name": "Feng Wei",
+          "art_url": "/static/art/1778820/feng-wei.webp",
+          "art_source_url": "https://tekken.com/fighters/feng-wei",
+          "art_alt": "Feng Wei from TEKKEN 8"
+        },
+        {
+          "slug": "heihachi-mishima",
+          "name": "Heihachi Mishima",
+          "art_url": "/static/art/1778820/heihachi-mishima.webp",
+          "art_source_url": "https://tekken.com/fighters/heihachi-mishima",
+          "art_alt": "Heihachi Mishima from TEKKEN 8"
+        },
+        {
+          "slug": "hwoarang",
+          "name": "Hwoarang",
+          "art_url": "/static/art/1778820/hwoarang.webp",
+          "art_source_url": "https://tekken.com/fighters/hwoarang",
+          "art_alt": "Hwoarang from TEKKEN 8"
+        },
+        {
+          "slug": "jack-8",
+          "name": "Jack-8",
+          "art_url": "/static/art/1778820/jack-8.webp",
+          "art_source_url": "https://tekken.com/fighters/jack-8",
+          "art_alt": "Jack-8 from TEKKEN 8"
+        },
+        {
+          "slug": "jin-kazama",
+          "name": "Jin Kazama",
+          "art_url": "/static/art/1778820/jin-kazama.webp",
+          "art_source_url": "https://tekken.com/fighters/jin-kazama",
+          "art_alt": "Jin Kazama from TEKKEN 8"
+        },
+        {
+          "slug": "jun-kazama",
+          "name": "Jun Kazama",
+          "art_url": "/static/art/1778820/jun-kazama.webp",
+          "art_source_url": "https://tekken.com/fighters/jun-kazama",
+          "art_alt": "Jun Kazama from TEKKEN 8"
+        },
+        {
           "slug": "kazuya-mishima",
           "name": "Kazuya Mishima",
           "description": "A ruthless Mishima heir who turns demonic power and precise martial arts into overwhelming force.",
           "description_source_url": "https://tekken.com/fighters/kazuya-mishima",
-          "art_url": "https://us-east-1-bandai.graphassets.com/AXzioIclSWilEjFtsMJPwz/pV8nXDdUSoWz68S6bemw",
+          "art_url": "/static/art/1778820/kazuya-mishima.webp",
           "art_source_url": "https://tekken.com/fighters/kazuya-mishima",
           "art_alt": "Kazuya Mishima from TEKKEN 8"
         },
-        "Jin Kazama", "King", "Jun Kazama", "Paul Phoenix", "Marshall Law", "Jack-8",
-        "Lars Alexandersson", "Ling Xiaoyu", "Nina Williams", "Leroy Smith", "Asuka Kazama", "Lili Rochefort",
-        "Bryan Fury", "Hwoarang", "Claudio Serafino", "Azucena Milagros Ortiz Castillo", "Raven",
-        "Leo Kliesen", "Steve Fox", "Kuma", "Yoshimitsu", "Shaheen", "Sergei Dragunov", "Feng Wei",
-        "Panda", "Lee Chaolan", "Alisa Bosconovitch",
+        {
+          "slug": "king",
+          "name": "King",
+          "art_url": "/static/art/1778820/king.webp",
+          "art_source_url": "https://tekken.com/fighters/king",
+          "art_alt": "King from TEKKEN 8"
+        },
+        {
+          "slug": "kuma",
+          "name": "Kuma",
+          "art_url": "/static/art/1778820/kuma.webp",
+          "art_source_url": "https://tekken.com/fighters/kuma",
+          "art_alt": "Kuma from TEKKEN 8"
+        },
+        {
+          "slug": "kunimitsu",
+          "name": "Kunimitsu",
+          "art_url": "/static/art/1778820/kunimitsu.webp",
+          "art_source_url": "https://tekken.com/fighters/kunimitsu",
+          "art_alt": "Kunimitsu from TEKKEN 8"
+        },
+        {
+          "slug": "lars-alexandersson",
+          "name": "Lars Alexandersson",
+          "art_url": "/static/art/1778820/lars-alexandersson.webp",
+          "art_source_url": "https://tekken.com/fighters/lars-alexandersson",
+          "art_alt": "Lars Alexandersson from TEKKEN 8"
+        },
+        {
+          "slug": "lee-chaolan",
+          "name": "Lee Chaolan",
+          "art_url": "/static/art/1778820/lee-chaolan.webp",
+          "art_source_url": "https://tekken.com/fighters/lee-chaolan",
+          "art_alt": "Lee Chaolan from TEKKEN 8"
+        },
+        {
+          "slug": "leo-kliesen",
+          "name": "Leo Kliesen",
+          "art_url": "/static/art/1778820/leo-kliesen.webp",
+          "art_source_url": "https://tekken.com/fighters/leo",
+          "art_alt": "Leo Kliesen from TEKKEN 8"
+        },
+        {
+          "slug": "leroy-smith",
+          "name": "Leroy Smith",
+          "art_url": "/static/art/1778820/leroy-smith.webp",
+          "art_source_url": "https://tekken.com/fighters/leroy-smith",
+          "art_alt": "Leroy Smith from TEKKEN 8"
+        },
+        {
+          "slug": "lidia-sobieska",
+          "name": "Lidia Sobieska",
+          "art_url": "/static/art/1778820/lidia-sobieska.webp",
+          "art_source_url": "https://tekken.com/fighters/lidia",
+          "art_alt": "Lidia Sobieska from TEKKEN 8"
+        },
+        {
+          "slug": "lili-rochefort",
+          "name": "Lili Rochefort",
+          "art_url": "/static/art/1778820/lili-rochefort.webp",
+          "art_source_url": "https://tekken.com/fighters/lili",
+          "art_alt": "Lili Rochefort from TEKKEN 8"
+        },
+        {
+          "slug": "ling-xiaoyu",
+          "name": "Ling Xiaoyu",
+          "art_url": "/static/art/1778820/ling-xiaoyu.webp",
+          "art_source_url": "https://tekken.com/fighters/ling-xiaoyu",
+          "art_alt": "Ling Xiaoyu from TEKKEN 8"
+        },
+        {
+          "slug": "marshall-law",
+          "name": "Marshall Law",
+          "art_url": "/static/art/1778820/marshall-law.webp",
+          "art_source_url": "https://tekken.com/fighters/marshall-law",
+          "art_alt": "Marshall Law from TEKKEN 8"
+        },
+        {
+          "slug": "miary-zo",
+          "name": "Miary Zo",
+          "art_url": "/static/art/1778820/miary-zo.webp",
+          "art_source_url": "https://tekken.com/fighters/miary-zo",
+          "art_alt": "Miary Zo from TEKKEN 8"
+        },
+        {
+          "slug": "nina-williams",
+          "name": "Nina Williams",
+          "art_url": "/static/art/1778820/nina-williams.webp",
+          "art_source_url": "https://tekken.com/fighters/nina-williams",
+          "art_alt": "Nina Williams from TEKKEN 8"
+        },
+        {
+          "slug": "panda",
+          "name": "Panda",
+          "art_url": "/static/art/1778820/panda.webp",
+          "art_source_url": "https://tekken.com/fighters/panda",
+          "art_alt": "Panda from TEKKEN 8"
+        },
+        {
+          "slug": "paul-phoenix",
+          "name": "Paul Phoenix",
+          "art_url": "/static/art/1778820/paul-phoenix.webp",
+          "art_source_url": "https://tekken.com/fighters/paul-phoenix",
+          "art_alt": "Paul Phoenix from TEKKEN 8"
+        },
+        {
+          "slug": "raven",
+          "name": "Raven",
+          "art_url": "/static/art/1778820/raven.webp",
+          "art_source_url": "https://tekken.com/fighters/raven",
+          "art_alt": "Raven from TEKKEN 8"
+        },
+        {
+          "slug": "reina",
+          "name": "Reina",
+          "art_url": "/static/art/1778820/reina.webp",
+          "art_source_url": "https://tekken.com/fighters/reina",
+          "art_alt": "Reina from TEKKEN 8"
+        },
+        {
+          "slug": "sergei-dragunov",
+          "name": "Sergei Dragunov",
+          "art_url": "/static/art/1778820/sergei-dragunov.webp",
+          "art_source_url": "https://tekken.com/fighters/sergei-dragunov",
+          "art_alt": "Sergei Dragunov from TEKKEN 8"
+        },
+        {
+          "slug": "shaheen",
+          "name": "Shaheen",
+          "art_url": "/static/art/1778820/shaheen.webp",
+          "art_source_url": "https://tekken.com/fighters/shaheen",
+          "art_alt": "Shaheen from TEKKEN 8"
+        },
+        {
+          "slug": "steve-fox",
+          "name": "Steve Fox",
+          "art_url": "/static/art/1778820/steve-fox.webp",
+          "art_source_url": "https://tekken.com/fighters/steve-fox",
+          "art_alt": "Steve Fox from TEKKEN 8"
+        },
+        {
+          "slug": "victor-chevalier",
+          "name": "Victor Chevalier",
+          "art_url": "/static/art/1778820/victor-chevalier.webp",
+          "art_source_url": "https://tekken.com/fighters/victor-chevalier",
+          "art_alt": "Victor Chevalier from TEKKEN 8"
+        },
+        {
+          "slug": "yoshimitsu",
+          "name": "Yoshimitsu",
+          "art_url": "/static/art/1778820/yoshimitsu.webp",
+          "art_source_url": "https://tekken.com/fighters/yoshimitsu",
+          "art_alt": "Yoshimitsu from TEKKEN 8"
+        },
         {
           "slug": "zafina",
           "name": "Zafina",
           "description": "An astrologer and exorcist who seals a terrible power in her arm to delay an ancient threat.",
           "description_source_url": "https://tekken.com/fighters/zafina",
-          "art_url": "https://us-east-1-bandai.graphassets.com/AXzioIclSWilEjFtsMJPwz/OYb6gBOIQS1Siq7S3EXg",
+          "art_url": "/static/art/1778820/zafina.webp",
           "art_source_url": "https://tekken.com/fighters/zafina",
           "art_alt": "Zafina from TEKKEN 8"
-        },
-        "Devil Jin", "Victor Chevalier", "Reina",
-        "Eddy Gordo", "Lidia Sobieska", "Heihachi Mishima", "Clive Rosfield", "Anna Williams", "Fahkumram",
-        "Armor King", "Miary Zo", "Kunimitsu", "Bob"
+        }
       ]
     },
     {
@@ -305,9 +3496,181 @@
       "steam_appid": 2076010,
       "trial_source_url": "https://store.steampowered.com/app/2076010/",
       "characters": [
-        "Hyde", "Linne", "Waldstein", "Carmine", "Orie", "Gordeau", "Merkava", "Vatista", "Seth",
-        "Hilda", "Nanase", "Byakuya", "Yuzehira", "Mika", "Wagner", "Enkidu", "Phonon", "Londrekia",
-        "Akatsuki", "Blitztank", "Kuon", "Kaguya", "Tsurugi", "Uzuki", "Ogre", "Shizuka"
+        {
+          "slug": "akatsuki",
+          "name": "Akatsuki",
+          "art_url": "/static/art/2076010/akatsuki.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Akatsuki",
+          "art_alt": "Akatsuki from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "blitztank",
+          "name": "Blitztank",
+          "art_url": "/static/art/2076010/blitztank.webp",
+          "art_source_url": "https://www.dustloop.com/w/BBTag/Blitztank",
+          "art_alt": "Blitztank from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "byakuya",
+          "name": "Byakuya",
+          "art_url": "/static/art/2076010/byakuya.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Byakuya",
+          "art_alt": "Byakuya from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "carmine",
+          "name": "Carmine",
+          "art_url": "/static/art/2076010/carmine.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Carmine",
+          "art_alt": "Carmine from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "enkidu",
+          "name": "Enkidu",
+          "art_url": "/static/art/2076010/enkidu.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Enkidu",
+          "art_alt": "Enkidu from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "gordeau",
+          "name": "Gordeau",
+          "art_url": "/static/art/2076010/gordeau.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Gordeau",
+          "art_alt": "Gordeau from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "hilda",
+          "name": "Hilda",
+          "art_url": "/static/art/2076010/hilda.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Hilda",
+          "art_alt": "Hilda from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "hyde",
+          "name": "Hyde",
+          "art_url": "/static/art/2076010/hyde.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Hyde",
+          "art_alt": "Hyde from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "kaguya",
+          "name": "Kaguya",
+          "art_url": "/static/art/2076010/kaguya.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Kaguya",
+          "art_alt": "Kaguya from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "kuon",
+          "name": "Kuon",
+          "art_url": "/static/art/2076010/kuon.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Kuon",
+          "art_alt": "Kuon from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "linne",
+          "name": "Linne",
+          "art_url": "/static/art/2076010/linne.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Linne",
+          "art_alt": "Linne from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "londrekia",
+          "name": "Londrekia",
+          "art_url": "/static/art/2076010/londrekia.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Londrekia",
+          "art_alt": "Londrekia from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "merkava",
+          "name": "Merkava",
+          "art_url": "/static/art/2076010/merkava.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Merkava",
+          "art_alt": "Merkava from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "mika",
+          "name": "Mika",
+          "art_url": "/static/art/2076010/mika.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Mika",
+          "art_alt": "Mika from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "nanase",
+          "name": "Nanase",
+          "art_url": "/static/art/2076010/nanase.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Nanase",
+          "art_alt": "Nanase from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "ogre",
+          "name": "Ogre",
+          "art_url": "/static/art/2076010/ogre.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Ogre",
+          "art_alt": "Ogre from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "orie",
+          "name": "Orie",
+          "art_url": "/static/art/2076010/orie.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Orie",
+          "art_alt": "Orie from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "phonon",
+          "name": "Phonon",
+          "art_url": "/static/art/2076010/phonon.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Phonon",
+          "art_alt": "Phonon from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "seth",
+          "name": "Seth",
+          "art_url": "/static/art/2076010/seth.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Seth",
+          "art_alt": "Seth from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "tsurugi",
+          "name": "Tsurugi",
+          "art_url": "/static/art/2076010/tsurugi.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Tsurugi",
+          "art_alt": "Tsurugi from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "uzuki",
+          "name": "Uzuki",
+          "art_url": "/static/art/2076010/uzuki.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Uzuki",
+          "art_alt": "Uzuki from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "vatista",
+          "name": "Vatista",
+          "art_url": "/static/art/2076010/vatista.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Vatista",
+          "art_alt": "Vatista from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "wagner",
+          "name": "Wagner",
+          "art_url": "/static/art/2076010/wagner.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Wagner",
+          "art_alt": "Wagner from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "waldstein",
+          "name": "Waldstein",
+          "art_url": "/static/art/2076010/waldstein.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Waldstein",
+          "art_alt": "Waldstein from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        },
+        {
+          "slug": "yuzehira",
+          "name": "Yuzehira",
+          "art_url": "/static/art/2076010/yuzehira.webp",
+          "art_source_url": "https://wiki.gbl.gg/w/Under_Night_In-Birth/UNI2/Yuzuriha",
+          "art_alt": "Yuzehira from UNDER NIGHT IN-BIRTH II Sys:Celes"
+        }
       ]
     },
     {
@@ -316,9 +3679,146 @@
       "steam_appid": 3787240,
       "trial_source_url": "https://blog.playstation.com/2026/06/02/magneto-green-goblin-carnage-announced-for-marvel-tokon-fighting-souls/",
       "characters": [
-        "Ms. Marvel", "Peni Parker", "Spider-Man", "Star-Lord", "Black Panther", "Captain America", "Hulk",
-        "Iron Man", "Danger", "Magik", "Storm", "Wolverine", "Doctor Doom", "Magneto", "Green Goblin",
-        "Carnage", "Deadpool", "Blade", "Loki", "Ghost Rider"
+        {
+          "slug": "black-panther",
+          "name": "Black Panther",
+          "art_url": "/static/art/3787240/black-panther.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Black Panther from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "blade",
+          "name": "Blade",
+          "art_url": "/static/art/3787240/blade.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Blade from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "captain-america",
+          "name": "Captain America",
+          "art_url": "/static/art/3787240/captain-america.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Captain America from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "carnage",
+          "name": "Carnage",
+          "art_url": "/static/art/3787240/carnage.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Carnage from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "danger",
+          "name": "Danger",
+          "art_url": "/static/art/3787240/danger.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Danger from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "deadpool",
+          "name": "Deadpool",
+          "art_url": "/static/art/3787240/deadpool.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Deadpool from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "doctor-doom",
+          "name": "Doctor Doom",
+          "art_url": "/static/art/3787240/doctor-doom.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Doctor Doom from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "ghost-rider",
+          "name": "Ghost Rider",
+          "art_url": "/static/art/3787240/ghost-rider.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Ghost Rider from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "green-goblin",
+          "name": "Green Goblin",
+          "art_url": "/static/art/3787240/green-goblin.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Green Goblin from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "hulk",
+          "name": "Hulk",
+          "art_url": "/static/art/3787240/hulk.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Hulk from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "iron-man",
+          "name": "Iron Man",
+          "art_url": "/static/art/3787240/iron-man.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Iron Man from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "loki",
+          "name": "Loki",
+          "art_url": "/static/art/3787240/loki.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Loki from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "magik",
+          "name": "Magik",
+          "art_url": "/static/art/3787240/magik.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Magik from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "magneto",
+          "name": "Magneto",
+          "art_url": "/static/art/3787240/magneto.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Magneto from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "ms-marvel",
+          "name": "Ms. Marvel",
+          "art_url": "/static/art/3787240/ms-marvel.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Ms. Marvel from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "peni-parker",
+          "name": "Peni Parker",
+          "art_url": "/static/art/3787240/peni-parker.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Peni Parker from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "spider-man",
+          "name": "Spider-Man",
+          "art_url": "/static/art/3787240/spider-man.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Spider-Man from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "star-lord",
+          "name": "Star-Lord",
+          "art_url": "/static/art/3787240/star-lord.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Star-Lord from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "storm",
+          "name": "Storm",
+          "art_url": "/static/art/3787240/storm.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Storm from Marvel Tokon: Fighting Souls"
+        },
+        {
+          "slug": "wolverine",
+          "name": "Wolverine",
+          "art_url": "/static/art/3787240/wolverine.webp",
+          "art_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
+          "art_alt": "Wolverine from Marvel Tokon: Fighting Souls"
+        }
       ]
     }
   ]
