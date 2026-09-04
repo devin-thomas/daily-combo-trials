@@ -8,7 +8,7 @@ import secrets
 from typing import Callable
 from zoneinfo import ZoneInfo
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, Form, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -16,6 +16,7 @@ from fastapi.templating import Jinja2Templates
 
 from .catalog import Catalog, Character, Game, load_catalog
 from .database import Database, assignment_ref
+from .secret_store import SecretStore, SecretStoreError
 from .selection import ChallengeRef, choose_challenge
 
 
@@ -23,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CATALOG_PATH = ROOT / "data" / "catalog.json"
 CENTRAL = ZoneInfo("America/Chicago")
 REROLL_COOKIE = "combo_trial_reroll"
+SETUP_CSRF_COOKIE = "daily_combo_setup_csrf"
 
 
 def _default_catalog() -> Catalog:
@@ -63,6 +65,36 @@ def _parse_reroll(value: str | None, day: date) -> int | None:
         return None
 
 
+def _setup_enabled() -> bool:
+    if os.getenv("VERCEL"):
+        return False
+    return os.getenv("SETUP_WIZARD_ENABLED", "1").lower() in {"1", "true", "yes", "on"}
+
+
+def _is_loopback(request: Request) -> bool:
+    client = request.client
+    return client is not None and client.host in {"127.0.0.1", "::1"}
+
+
+def _setup_access_allowed(request: Request) -> bool:
+    if _is_loopback(request):
+        return True
+    return bool(request.headers.get("Tailscale-User-Login"))
+
+
+def _setup_cookie_secure(request: Request) -> bool:
+    return bool(
+        request.headers.get("Tailscale-User-Login")
+        or request.url.scheme == "https"
+        or request.headers.get("X-Forwarded-Proto") == "https"
+    )
+
+
+def _csrf_matches(request: Request, token: str) -> bool:
+    cookie = request.cookies.get(SETUP_CSRF_COOKIE)
+    return bool(cookie and token and secrets.compare_digest(cookie, token))
+
+
 def _resolve(catalog: Catalog, reference: ChallengeRef) -> tuple[Game, Character]:
     resolved = catalog.get_character(reference.game_slug, reference.character_slug)
     if resolved is None:
@@ -81,14 +113,18 @@ def create_app(
     catalog: Catalog | None = None,
     database: Database | None = None,
     now_provider: Callable[[], datetime] | None = None,
+    secret_store: SecretStore | None = None,
 ) -> FastAPI:
     site_catalog = catalog or _default_catalog()
     site_database = database or Database()
+    site_secret_store = secret_store or SecretStore()
     templates = Jinja2Templates(directory=str(ROOT / "templates"))
 
     app = FastAPI(title="Daily Combo Trials")
     app.state.catalog = site_catalog
     app.state.database = site_database
+    app.state.secret_store = site_secret_store
+    app.state.setup_enabled = _setup_enabled()
     app.state.now_provider = now_provider
     app.mount("/static", StaticFiles(directory=str(ROOT / "static")), name="static")
 
@@ -144,6 +180,89 @@ def create_app(
     def daily() -> RedirectResponse:
         response = RedirectResponse(url="/", status_code=303)
         response.delete_cookie(key=REROLL_COOKIE, path="/")
+        return response
+
+    def render_setup(
+        request: Request,
+        *,
+        csrf_token: str | None = None,
+        saved: bool = False,
+        cleared: bool = False,
+        error: str | None = None,
+        status_code: int = 200,
+    ) -> HTMLResponse:
+        token = csrf_token or secrets.token_urlsafe(32)
+        response = templates.TemplateResponse(
+            request=request,
+            name="setup.html",
+            context={
+                "request": request,
+                "status": site_secret_store.status(),
+                "saved": saved,
+                "cleared": cleared,
+                "error": error,
+                "csrf_token": token,
+                "tailnet_identity": request.headers.get("Tailscale-User-Login"),
+            },
+            status_code=status_code,
+        )
+        response.set_cookie(
+            key=SETUP_CSRF_COOKIE,
+            value=token,
+            max_age=600,
+            httponly=True,
+            samesite="strict",
+            secure=_setup_cookie_secure(request),
+            path="/setup",
+        )
+        return response
+
+    def require_setup_access(request: Request) -> None:
+        if not app.state.setup_enabled:
+            raise HTTPException(status_code=404)
+        if not _setup_access_allowed(request):
+            raise HTTPException(
+                status_code=403,
+                detail="The setup wizard is available only from this computer or through Tailscale Serve.",
+            )
+
+    @app.get("/setup", response_class=HTMLResponse, name="setup")
+    def setup(request: Request) -> HTMLResponse:
+        require_setup_access(request)
+        return render_setup(
+            request,
+            saved=request.query_params.get("saved") == "1",
+            cleared=request.query_params.get("cleared") == "1",
+        )
+
+    @app.post("/setup", response_class=HTMLResponse, name="setup_save")
+    def setup_save(request: Request, database_url: str = Form(...), csrf_token: str = Form(...)) -> HTMLResponse:
+        require_setup_access(request)
+        if not _csrf_matches(request, csrf_token):
+            raise HTTPException(status_code=403, detail="This setup form expired. Reload it and try again.")
+        try:
+            site_secret_store.save_database_url(database_url)
+        except ValueError as exc:
+            return render_setup(request, csrf_token=csrf_token, error=str(exc), status_code=400)
+        except SecretStoreError:
+            return render_setup(
+                request,
+                csrf_token=csrf_token,
+                error="The encrypted local store could not save this value.",
+                status_code=500,
+            )
+        response = RedirectResponse(url="/setup?saved=1", status_code=303)
+        response.delete_cookie(key=SETUP_CSRF_COOKIE, path="/setup")
+        return response
+
+    @app.post("/setup/clear", name="setup_clear")
+    def setup_clear(request: Request, csrf_token: str = Form(...)) -> RedirectResponse:
+        require_setup_access(request)
+        if not _csrf_matches(request, csrf_token):
+            raise HTTPException(status_code=403, detail="This setup form expired. Reload it and try again.")
+        site_secret_store.clear()
+        response = RedirectResponse(url="/setup?cleared=1", status_code=303)
+        response.delete_cookie(key=SETUP_CSRF_COOKIE, path="/setup")
         return response
 
     @app.get("/history", response_class=HTMLResponse, name="history")

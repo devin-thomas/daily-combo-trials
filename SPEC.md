@@ -43,6 +43,7 @@ The site should feel like a useful FGC practice ritual: visually immediate, char
 - Supabase Postgres through the server-only `DATABASE_URL` for a durable Vercel deployment. The app must not assume that Vercel's function filesystem is a persistent database.
 - SQLAlchemy for a small persistence boundary that works with local SQLite and Supabase Postgres.
 - Catalog data is versioned in the repository and loaded at application startup.
+- A local-only setup route may capture the missing Supabase value over Tailscale Serve and store it with Windows user-bound encryption; the route is disabled on Vercel.
 
 ## Data model
 
@@ -105,6 +106,9 @@ The exact day boundary is midnight Central time. In the absence of a scheduled p
 | GET | `/games` | List every included game. |
 | GET | `/games/{game_slug}` | Show one game and links to every eligible character page. |
 | GET | `/games/{game_slug}/characters/{character_slug}` | Show one character, trial instruction, metadata, art, and sources. |
+| GET | `/setup` | Show the local, tailnet-only provider setup wizard. |
+| POST | `/setup` | Validate and encrypt the Supabase connection URI locally, then redirect. |
+| POST | `/setup/clear` | Remove the locally encrypted setup value after a CSRF check. |
 | GET | `/static/style.css` | Serve the site stylesheet. |
 
 No route accepts a historical date as a required detail identifier. Unknown game or character slugs return a normal 404 page with a useful navigation link.
@@ -164,7 +168,10 @@ Apply the installed No Useless Copy skill to all rendered strings:
 ## Security and privacy
 
 - Do not expose the raw Steam export, Steam playtime, or unused source fields through a route.
-- Keep database credentials in environment variables only.
+- Keep database credentials in server-only environment variables for hosted deployments; the local phone handoff may use the encrypted DPAPI store described below.
+- The local setup wizard is disabled when `VERCEL` is present, requires loopback or a Tailscale identity header, uses a short-lived CSRF cookie, accepts the URI only in a password-style POST field, and never echoes it.
+- On Windows, the setup value is encrypted with DPAPI and stored in ignored `data/remote-secrets.dpapi`; pages show only provider, host, and port metadata.
+- Bind the local server to `127.0.0.1` and use Tailscale Serve rather than Funnel or public port forwarding for the wizard.
 - Use `HttpOnly`, `SameSite=Lax`, and production `Secure` settings for the reroll cookie.
 - Treat catalog source URLs as untrusted external links and render them with safe URL validation.
 - Version 1 has no authentication and is intended as a personal utility, even if its Vercel URL is technically shareable.

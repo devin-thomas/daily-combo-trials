@@ -28,6 +28,19 @@ Run the checks with:
 .venv\Scripts\python -m pytest
 ~~~
 
+## Private phone setup over Tailscale
+
+When the computer needs a provider value and you are away from it, run the local app on loopback and publish it through Tailscale Serve:
+
+~~~powershell
+.venv\Scripts\python -m uvicorn app:app --host 127.0.0.1 --port 8788
+tailscale serve --bg --yes --https=8443 http://127.0.0.1:8788
+~~~
+
+Open `https://<this-machine>.<your-tailnet>.ts.net:8443/setup` from a phone that is connected to the same tailnet. The setup page is disabled on Vercel, accepts only the Supabase connection URI, and keeps the field blank after reload. On Windows, the value is encrypted with the current user's DPAPI profile and stored in the ignored `data/remote-secrets.dpapi` file. The page shows only redacted host, port, and database metadata.
+
+Inspect `tailscale serve status` first when this machine already serves other applications. The example uses HTTPS port 8443 so the existing HTTPS routes on port 443 remain in place. Use Tailscale Serve, never Funnel, for a credential handoff.
+
 ## Project shape
 
 - app.py exposes the FastAPI instance that Vercel discovers.

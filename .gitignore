@@ -7,6 +7,7 @@ __pycache__/
 .vercel/
 .playwright-cli/
 data/history.sqlite3
+data/remote-secrets.dpapi
 output/
 download.json
 fg.js

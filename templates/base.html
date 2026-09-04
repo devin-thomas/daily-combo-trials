@@ -29,6 +29,7 @@
 
       <footer class="site-footer">
         <span>Central time</span>
+        {% if request.app.state.setup_enabled %}<a href="{{ url_for('setup') }}">Private setup</a>{% endif %}
       </footer>
     </div>
   </body>

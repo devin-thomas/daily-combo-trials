@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Private setup | Daily Combo Trials{% endblock %}
+{% block content %}
+<section class="page-heading setup-heading">
+  <p class="kicker">Tailnet-only setup</p>
+  <h1>Finish the handoff</h1>
+  <p>This page lets you provide the one value the deployment still needs from your phone. It is saved on Titan, not in chat or the repository.</p>
+</section>
+
+<section class="setup-grid" aria-label="Deployment setup">
+  <article class="setup-panel">
+    <p class="setup-eyebrow">Three steps</p>
+    <ol class="setup-steps">
+      <li>
+        <strong>Vercel</strong>
+        <span>The GitHub repository is already connected to <code>devint/daily-combo-trials</code>; no Vercel token is needed here.</span>
+        <a href="https://vercel.com/devint/daily-combo-trials" target="_blank" rel="noreferrer">Open the Vercel project</a>
+      </li>
+      <li>
+        <strong>Supabase</strong>
+        <span>Open Connect, choose Direct, then Transaction pooler. Copy the full PostgreSQL URI. This is the server-only value Vercel needs.</span>
+        <a href="https://supabase.com/dashboard/project/elrngwxjmmjfpdedesha" target="_blank" rel="noreferrer">Open the Supabase project</a>
+      </li>
+      <li>
+        <strong>Save locally</strong>
+        <span>Paste the URI below. The browser sends it over the private Tailscale HTTPS link, and the server encrypts it with Windows user-bound protection.</span>
+      </li>
+    </ol>
+
+    {% if saved %}
+      <div class="setup-message setup-message-success" role="status">Saved locally. The connection string is encrypted and is not shown again.</div>
+    {% elif cleared %}
+      <div class="setup-message" role="status">The locally stored connection string was removed.</div>
+    {% endif %}
+    {% if error %}
+      <div class="setup-message setup-message-error" role="alert">{{ error }}</div>
+    {% endif %}
+
+    <form class="setup-form" method="post" action="{{ url_for('setup_save') }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <input class="visually-hidden" type="text" name="username" autocomplete="username" tabindex="-1" aria-hidden="true">
+      <label for="database-url">Supabase transaction pooler URI</label>
+      <input id="database-url" name="database_url" type="password" autocomplete="new-password" spellcheck="false" placeholder="postgresql://postgres...:password@...:6543/postgres" required>
+      <p class="form-help">Use port 6543. If the password has special characters, use the percent-encoded URI Supabase provides. This field is intentionally blank on every reload.</p>
+      <button class="button button-primary" type="submit">Encrypt and save locally</button>
+    </form>
+  </article>
+
+  <aside class="setup-panel setup-status" aria-labelledby="setup-status-title">
+    <p class="setup-eyebrow">Local status</p>
+    {% if status %}
+      <h2 id="setup-status-title">Ready to hand off</h2>
+      <dl class="status-list">
+        <div><dt>Provider</dt><dd>Supabase</dd></div>
+        <div><dt>Host</dt><dd>{{ status.host }}</dd></div>
+        <div><dt>Port</dt><dd>{{ status.port or "default" }}</dd></div>
+        <div><dt>Database</dt><dd>{{ status.database }}</dd></div>
+      </dl>
+      <p class="setup-footnote">Only this redacted metadata is displayed. The encrypted value can be handed to the local deployment command without printing it.</p>
+      <form method="post" action="{{ url_for('setup_clear') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <button class="button button-secondary" type="submit">Remove saved value</button>
+      </form>
+    {% else %}
+      <h2 id="setup-status-title">Waiting for the URI</h2>
+      <p class="setup-footnote">Nothing is stored yet. After you save it, this panel will show only safe connection metadata.</p>
+    {% endif %}
+    {% if tailnet_identity %}<p class="setup-identity">Tailnet identity: {{ tailnet_identity }}</p>{% endif %}
+  </aside>
+</section>
+{% endblock %}

@@ -2,7 +2,7 @@
 
 ## Status
 
-Discovery closed after 3 rounds. The implementation pack is authoritative; the local app is built and the GitHub, Vercel, and Supabase release path is in progress.
+Discovery closed after 3 rounds. The implementation pack is authoritative; the local app is built, GitHub and Vercel are linked, and a private Tailscale setup path is available for the remaining Supabase handoff.
 
 ## Product
 
@@ -33,6 +33,7 @@ The site is primarily a personal FGC practice prompt. The user wants to learn ho
 - The target deployment platform is Vercel.
 - The deployed history database is the Supabase project `elrngwxjmmjfpdedesha`, associated with the `daily-combo-trials` project name.
 - The application should remain a low-complexity, pure-Python site: FastAPI routes and server-rendered templates, with basic HTML/CSS rather than a frontend framework.
+- When the user is away from the computer, the local app can expose a tailnet-only setup page that captures the needed Supabase URI without chat or plaintext repository storage.
 
 ## Current data inputs
 
@@ -71,7 +72,8 @@ Mermaid is the current visual fallback because an editable Figma artifact is not
 
 ## Implementation gates
 
-- Add the Supabase pooled Postgres connection string to Vercel as the server-only `DATABASE_URL`; never commit it.
+- Use the tailnet-only `/setup` page to capture the Supabase transaction pooler URI, then add it to Vercel as the server-only `DATABASE_URL`; never commit or paste it into chat.
+- Keep the local Uvicorn listener on loopback and preserve the existing Tailscale Serve mappings while the setup page is active.
 - Complete the catalog curation and source audit for every included game and character.
 - Finalize the exact artwork fallback styling after the first rendered pass.
 - Validate the temporary reroll cookie behavior across refresh and the Central-time date boundary.

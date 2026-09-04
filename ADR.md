@@ -129,3 +129,13 @@
 **Rationale:** The user selected Supabase for durable storage and supplied a project owned by a separate Supabase account from the CLI session. Keeping the database connection in Vercel environment settings preserves that account boundary and avoids publishing credentials.
 
 **Consequences:** The repository can be tested locally with SQLite. The production deployment cannot be considered durable until the other Supabase account supplies the connection string and the deployed app successfully writes a daily assignment.
+
+## ADR-014 - Capture the deployment credential through a private local wizard
+
+**Status:** Accepted
+
+**Decision:** When the user is away from the computer, the local FastAPI app may expose `/setup` through Tailscale Serve on a separate HTTPS port. The page accepts only the Supabase connection URI, encrypts it with the current Windows user's DPAPI profile, writes it to ignored local data, and displays only redacted connection metadata. The setup route is disabled on Vercel and is not part of the public product navigation.
+
+**Rationale:** The missing production value is account-owned and cannot be safely requested through chat. Tailscale Serve provides a private HTTPS path from the user's phone while keeping the local listener on loopback; DPAPI avoids a plaintext credential file.
+
+**Consequences:** The user still completes provider dashboard authentication and password entry. The agent can later read the encrypted value locally for a Vercel environment handoff without printing it. A process running as the same Windows user remains within the DPAPI trust boundary, so the setup page should be disabled after one-time use when practical.

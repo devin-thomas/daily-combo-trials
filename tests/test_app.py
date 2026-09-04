@@ -8,6 +8,7 @@ import pytest
 from combo_site.catalog import Catalog, Character, Game, load_catalog
 from combo_site.database import DailyAssignment, Database
 from combo_site.main import _central_day, create_app
+from combo_site.secret_store import SecretStore
 from combo_site.selection import ChallengeRef, choose_challenge
 
 
@@ -23,14 +24,20 @@ def local_test_dir() -> Path:
         yield Path(directory)
 
 
-def make_client(test_dir: Path, now: datetime | None = None) -> tuple[TestClient, Database]:
+def make_client(
+    test_dir: Path,
+    now: datetime | None = None,
+    secret_store: SecretStore | None = None,
+    base_url: str = "http://testserver",
+) -> tuple[TestClient, Database]:
     database = Database(f"sqlite:///{(test_dir / 'history.sqlite3').as_posix()}")
     app = create_app(
         catalog=load_catalog(CATALOG_PATH),
         database=database,
         now_provider=lambda: now or datetime(2026, 9, 4, 17, 0, tzinfo=timezone.utc),
+        secret_store=secret_store or SecretStore(test_dir / "remote-secrets.dpapi"),
     )
-    return TestClient(app), database
+    return TestClient(app, base_url=base_url), database
 
 
 def test_catalog_contains_all_initial_games_and_playable_rosters() -> None:
@@ -185,6 +192,65 @@ def test_missing_metadata_has_explicit_fallbacks(local_test_dir: Path) -> None:
     assert "Artwork unavailable" in response.text
     assert "Description not available." in response.text
     database.close()
+
+
+def test_remote_setup_wizard_encrypts_and_redacts_database_url(local_test_dir: Path) -> None:
+    secret_store = SecretStore(local_test_dir / "remote-secrets.dpapi")
+    client, database = make_client(
+        local_test_dir,
+        secret_store=secret_store,
+        base_url="https://testserver",
+    )
+    database_url = "postgresql://postgres.elrngwxjmmjfpdedesha:phone%40safe@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
+    headers = {
+        "Tailscale-User-Login": "devin-thomas@github",
+        "X-Forwarded-Proto": "https",
+    }
+    try:
+        assert client.get("/setup").status_code == 403
+
+        page = client.get("/setup", headers=headers)
+        assert page.status_code == 200
+        assert "Open the Supabase project" in page.text
+        csrf_token = client.cookies.get("daily_combo_setup_csrf")
+        assert csrf_token
+
+        invalid = client.post(
+            "/setup",
+            data={"database_url": "postgresql://postgres:YOUR-PASSWORD@example.test/postgres", "csrf_token": csrf_token},
+            headers=headers,
+        )
+        assert invalid.status_code == 400
+        assert database_url not in invalid.text
+
+        saved = client.post(
+            "/setup",
+            data={"database_url": database_url, "csrf_token": csrf_token},
+            headers=headers,
+            follow_redirects=False,
+        )
+        assert saved.status_code == 303
+        status = client.get("/setup", headers=headers)
+        assert status.status_code == 200
+        assert "Ready to hand off" in status.text
+        assert "aws-0-us-east-1.pooler.supabase.com" in status.text
+        assert database_url not in status.text
+        assert secret_store.load_database_url() == database_url
+        assert database_url.encode("utf-8") not in secret_store.path.read_bytes()
+
+        csrf_token = client.cookies.get("daily_combo_setup_csrf")
+        assert csrf_token
+        cleared = client.post(
+            "/setup/clear",
+            data={"csrf_token": csrf_token},
+            headers=headers,
+            follow_redirects=False,
+        )
+        assert cleared.status_code == 303
+        assert secret_store.load_database_url() is None
+    finally:
+        client.close()
+        database.close()
 
 
 def test_unknown_routes_return_navigation_page(local_test_dir: Path) -> None:
