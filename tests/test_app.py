@@ -88,7 +88,7 @@ def test_catalog_contains_all_initial_games_and_playable_rosters() -> None:
     assert len(catalog.candidates) > len(catalog.games)
 
 
-def test_catalog_rosters_are_alphabetized_and_every_character_has_local_art() -> None:
+def test_catalog_rosters_are_alphabetized_and_every_character_has_art_and_description() -> None:
     catalog = load_catalog(CATALOG_PATH)
 
     for game in catalog.games:
@@ -114,6 +114,8 @@ def test_catalog_rosters_are_alphabetized_and_every_character_has_local_art() ->
             assert art_path.is_file()
             # The supplied gallery previews are capped at 320px; roster art must not regress to them.
             assert max(_webp_dimensions(art_path)) > 320
+            assert character.description
+            assert character.description_source_url
 
 
 def test_selection_is_game_first_and_respects_exclusion() -> None:
