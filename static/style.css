@@ -75,7 +75,7 @@ a { color: inherit; }
 
 .home-intro, .page-heading { padding: 5.5rem 0 2rem; }
 .home-intro { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
-.kicker, .challenge-label, .art-status, .error-code { margin: 0; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; }
+.kicker, .art-status, .error-code { margin: 0; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; }
 .kicker { color: var(--acid); }
 h1, h2, p { margin-top: 0; }
 h1, h2 { margin-bottom: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.04em; }
@@ -121,8 +121,6 @@ h1 { max-width: 8ch; font-size: clamp(3.7rem, 10vw, 7.7rem); line-height: 0.83; 
 .art-status { left: 1.5rem; bottom: 1.25rem; color: var(--aqua); }
 
 .challenge-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem, 7vw, 5.5rem); }
-.challenge-label { display: inline-flex; align-self: flex-start; margin-bottom: 2.25rem; padding: 0.65rem 0.8rem; color: var(--ink); background: var(--acid); }
-.is-alternate .challenge-label { background: var(--coral); }
 .game-name { margin-bottom: 0.45rem; font-family: var(--mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.07em; }
 .challenge-copy h2 { max-width: 10ch; margin-bottom: 1.4rem; font-size: clamp(3.2rem, 7vw, 6.2rem); line-height: 0.82; }
 .mission { max-width: 25rem; margin-bottom: 1.2rem; color: #4c4a45; font-family: var(--mono); font-size: 0.86rem; line-height: 1.5; }
@@ -144,11 +142,9 @@ h1 { max-width: 8ch; font-size: clamp(3.7rem, 10vw, 7.7rem); line-height: 0.83; 
 .link-card:nth-child(2) { background: var(--violet); color: var(--paper); }
 .link-card:hover, .link-card:focus-visible { transform: translateY(-4px); }
 .link-card-title { font-family: var(--display); font-size: 1.7rem; text-transform: uppercase; }
-.link-card-detail { font-family: var(--mono); font-size: 0.7rem; line-height: 1.45; }
 
 .page-heading { padding-bottom: 3.5rem; }
 .page-heading h1 { margin: 0.7rem 0 1rem; }
-.page-heading > p:last-child { max-width: 30rem; color: var(--muted); font-family: var(--mono); font-size: 0.8rem; line-height: 1.5; }
 .game-heading h1 { max-width: none; font-size: clamp(3.4rem, 9vw, 7rem); }
 .breadcrumbs { display: flex; flex-wrap: wrap; gap: 0.65rem; padding-top: 3rem; color: var(--muted); font-family: var(--mono); font-size: 0.68rem; }
 .breadcrumbs a { color: var(--acid); text-underline-offset: 0.25em; }
@@ -178,7 +174,7 @@ h1 { max-width: 8ch; font-size: clamp(3.7rem, 10vw, 7.7rem); line-height: 0.83; 
 
 .character-page { display: grid; grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr); min-height: 540px; margin-bottom: 3rem; background: var(--paper); color: var(--ink); }
 .character-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem, 7vw, 5.5rem); }
-.character-copy h1 { max-width: 10ch; margin: 0.65rem 0 1.5rem; font-size: clamp(3.6rem, 8vw, 7rem); }
+.character-copy h1 { max-width: 10ch; margin: 0 0 1.5rem; font-size: clamp(3.6rem, 8vw, 7rem); }
 .character-copy .mission { color: #4c4a45; }
 .character-portrait { min-height: 540px; }
 .portrait-fallback { background: linear-gradient(140deg, var(--violet), var(--coral)); }
@@ -206,7 +202,6 @@ h1 { max-width: 8ch; font-size: clamp(3.7rem, 10vw, 7.7rem); line-height: 0.83; 
 .setup-form input:focus { border-color: var(--acid); outline: 3px solid rgba(215, 239, 99, 0.22); outline-offset: 2px; }
 .form-help, .setup-footnote { margin: 0 0 1rem; color: var(--muted); font-family: var(--mono); font-size: 0.7rem; line-height: 1.55; }
 .setup-message { margin: 1.5rem 0 0; padding: 0.9rem 1rem; color: var(--paper); background: rgba(185, 239, 224, 0.12); border-left: 3px solid var(--aqua); font-family: var(--mono); font-size: 0.75rem; line-height: 1.5; }
-.setup-message-success { border-left-color: var(--acid); }
 .setup-message-error { color: #ffd0c5; background: rgba(255, 107, 74, 0.14); border-left-color: var(--coral); }
 .setup-status h2 { max-width: 11ch; margin: 0 0 2rem; color: var(--acid); font-size: clamp(2.8rem, 6vw, 5rem); line-height: 0.86; }
 .status-list { display: grid; gap: 0.8rem; margin: 0 0 2rem; }

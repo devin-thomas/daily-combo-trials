@@ -186,8 +186,6 @@ def create_app(
         request: Request,
         *,
         csrf_token: str | None = None,
-        saved: bool = False,
-        cleared: bool = False,
         error: str | None = None,
         status_code: int = 200,
     ) -> HTMLResponse:
@@ -198,8 +196,6 @@ def create_app(
             context={
                 "request": request,
                 "status": site_secret_store.status(),
-                "saved": saved,
-                "cleared": cleared,
                 "error": error,
                 "csrf_token": token,
             },
@@ -228,11 +224,7 @@ def create_app(
     @app.get("/setup", response_class=HTMLResponse, name="setup")
     def setup(request: Request) -> HTMLResponse:
         require_setup_access(request)
-        return render_setup(
-            request,
-            saved=request.query_params.get("saved") == "1",
-            cleared=request.query_params.get("cleared") == "1",
-        )
+        return render_setup(request)
 
     @app.post("/setup", response_class=HTMLResponse, name="setup_save")
     def setup_save(
@@ -255,7 +247,7 @@ def create_app(
                 error="The encrypted local store could not save this value.",
                 status_code=500,
             )
-        response = RedirectResponse(url="/setup?saved=1", status_code=303)
+        response = RedirectResponse(url="/setup", status_code=303)
         response.delete_cookie(key=SETUP_CSRF_COOKIE, path="/setup")
         return response
 
@@ -265,7 +257,7 @@ def create_app(
         if not _csrf_matches(request, csrf_token):
             raise HTTPException(status_code=403, detail="This setup form expired. Reload it and try again.")
         site_secret_store.clear()
-        response = RedirectResponse(url="/setup?cleared=1", status_code=303)
+        response = RedirectResponse(url="/setup", status_code=303)
         response.delete_cookie(key=SETUP_CSRF_COOKIE, path="/setup")
         return response
 

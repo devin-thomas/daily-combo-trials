@@ -19,7 +19,6 @@
   </div>
 
   <div class="challenge-copy">
-    <div class="challenge-label">{% if is_alternate %}Temporary alternate{% else %}Daily recommendation{% endif %}</div>
     <p class="game-name">{{ challenge.game.title }}</p>
     <h2 id="challenge-title">{{ challenge.character.name }}</h2>
     <p class="mission">Complete every combo trial for this character.</p>
@@ -51,11 +50,9 @@
 <section class="home-links" aria-label="Explore">
   <a class="link-card" href="{{ url_for('history') }}">
     <span class="link-card-title">Recommendation history</span>
-    <span class="link-card-detail">See what was recommended on earlier days.</span>
   </a>
   <a class="link-card" href="{{ url_for('games') }}">
     <span class="link-card-title">Browse {{ game_count }} games</span>
-    <span class="link-card-detail">Open a game, then choose a character.</span>
   </a>
 </section>
 {% endblock %}

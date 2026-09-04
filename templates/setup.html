@@ -4,19 +4,13 @@
 <section class="page-heading setup-heading">
   <p class="kicker">Supabase connection</p>
   <h1>Add the database</h1>
-  <p>Paste Supabase's connection string and enter its password separately. The saved value stays encrypted on Titan.</p>
 </section>
 
 <section class="setup-grid" aria-label="Supabase connection">
   <article class="setup-panel">
-    <p class="setup-instructions">In Connect, choose Direct, then Transaction pooler. Paste the copied string with <code>[YOUR-PASSWORD]</code> below, then enter the password in the next field.</p>
+    <p class="setup-instructions">In Connect, choose Direct, then Transaction pooler. Paste the copied string with <code>[YOUR-PASSWORD]</code> below and enter the password separately. The saved value stays encrypted locally.</p>
     <a class="setup-source-link" href="https://supabase.com/dashboard/project/elrngwxjmmjfpdedesha" target="_blank" rel="noreferrer">Open Supabase</a>
 
-    {% if saved %}
-      <div class="setup-message setup-message-success" role="status">Saved. The password will not be shown again.</div>
-    {% elif cleared %}
-      <div class="setup-message" role="status">The locally stored connection string was removed.</div>
-    {% endif %}
     {% if error %}
       <div class="setup-message setup-message-error" role="alert">{{ error }}</div>
     {% endif %}
@@ -27,7 +21,7 @@
       <label for="database-url">Connection string</label>
       <input id="database-url" name="database_url" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="postgresql://...:[YOUR-PASSWORD]@...:6543/postgres" required>
       <label for="database-password">Database password</label>
-      <input id="database-password" name="database_password" type="password" autocomplete="new-password" spellcheck="false" placeholder="Supabase database password">
+      <input id="database-password" name="database_password" type="password" autocomplete="new-password" spellcheck="false">
       <p class="form-help">The password is encoded for the URI automatically. Leave it blank only when the pasted string already contains the password.</p>
       <button class="button button-primary" type="submit">Save connection</button>
     </form>
@@ -41,14 +35,13 @@
         <div><dt>Port</dt><dd>{{ status.port or "default" }}</dd></div>
         <div><dt>Database</dt><dd>{{ status.database }}</dd></div>
       </dl>
-      <p class="setup-footnote">Only safe connection details are shown. The password is not displayed again.</p>
+      <p class="setup-footnote">Only safe connection details are shown; the password is never displayed.</p>
       <form method="post" action="{{ url_for('setup_clear') }}">
         <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
         <button class="button button-secondary" type="submit">Remove saved value</button>
       </form>
     {% else %}
       <h2 id="setup-status-title">Not saved</h2>
-      <p class="setup-footnote">Nothing has been saved yet.</p>
     {% endif %}
   </aside>
 </section>

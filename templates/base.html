@@ -29,10 +29,9 @@
         {% block content %}{% endblock %}
       </main>
 
-      {% if request.url.path != '/setup' %}
+      {% if request.url.path != '/setup' and request.app.state.setup_enabled %}
         <footer class="site-footer">
-          <span>Central time</span>
-          {% if request.app.state.setup_enabled %}<a href="{{ url_for('setup') }}">Private setup</a>{% endif %}
+          <a href="{{ url_for('setup') }}">Private setup</a>
         </footer>
       {% endif %}
     </div>

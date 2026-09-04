@@ -134,6 +134,30 @@ def test_home_history_and_stable_character_routes(local_test_dir: Path) -> None:
         database.close()
 
 
+def test_public_copy_has_no_redundant_labels(local_test_dir: Path) -> None:
+    client, database = make_client(local_test_dir)
+    try:
+        pages = {
+            "home": client.get("/"),
+            "history": client.get("/history"),
+            "games": client.get("/games"),
+            "game": client.get("/games/street-fighter-6"),
+            "character": client.get("/games/street-fighter-6/characters/ryu"),
+            "missing": client.get("/not-in-the-catalog"),
+        }
+
+        assert all("Central time" not in response.text for response in pages.values())
+        assert "Daily recommendation" not in pages["home"].text
+        assert "See what was recommended on earlier days." not in pages["home"].text
+        assert "Open a game, then choose a character." not in pages["home"].text
+        assert "Choose a game to browse its trial characters." not in pages["games"].text
+        assert "Each date opens the same game and character page you can revisit anytime." not in pages["history"].text
+        assert '<p class="kicker">Street Fighter 6</p>' not in pages["character"].text
+    finally:
+        client.close()
+        database.close()
+
+
 def test_every_catalog_game_and_character_has_a_route(local_test_dir: Path) -> None:
     client, database = make_client(local_test_dir)
     catalog = load_catalog(CATALOG_PATH)
@@ -165,7 +189,8 @@ def test_reroll_is_temporary_and_does_not_change_daily_record(local_test_dir: Pa
         assert reroll.status_code == 303
         alternate = client.get("/")
         assert alternate.status_code == 200
-        assert "Temporary alternate" in alternate.text
+        assert "Alternate challenge" in alternate.text
+        assert "Temporary alternate" not in alternate.text
 
         with database.session() as session:
             after = session.get(DailyAssignment, "2026-09-04")
@@ -174,7 +199,7 @@ def test_reroll_is_temporary_and_does_not_change_daily_record(local_test_dir: Pa
 
         back_to_daily = client.post("/daily", follow_redirects=True)
         assert back_to_daily.status_code == 200
-        assert "Daily recommendation" in back_to_daily.text
+        assert "Today's challenge" in back_to_daily.text
     finally:
         client.close()
         database.close()
@@ -233,6 +258,8 @@ def test_remote_setup_wizard_encrypts_and_redacts_database_url(local_test_dir: P
         assert "Primary navigation" not in page.text
         assert "Central time" not in page.text
         assert "Private setup" not in page.text
+        assert 'placeholder="Supabase database password"' not in page.text
+        assert "The saved value stays encrypted on Titan." not in page.text
         assert "[YOUR-PASSWORD]" in page.text
         csrf_token = client.cookies.get("daily_combo_setup_csrf")
         assert csrf_token
@@ -256,6 +283,7 @@ def test_remote_setup_wizard_encrypts_and_redacts_database_url(local_test_dir: P
             follow_redirects=False,
         )
         assert saved.status_code == 303
+        assert saved.headers["location"] == "/setup"
         status = client.get("/setup", headers=headers)
         assert status.status_code == 200
         assert "Saved" in status.text
@@ -274,6 +302,7 @@ def test_remote_setup_wizard_encrypts_and_redacts_database_url(local_test_dir: P
             follow_redirects=False,
         )
         assert cleared.status_code == 303
+        assert cleared.headers["location"] == "/setup"
         assert secret_store.load_database_url() is None
     finally:
         client.close()
