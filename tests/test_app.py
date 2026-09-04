@@ -18,6 +18,30 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / "data" / "catalog.json"
 
 
+def _webp_dimensions(path: Path) -> tuple[int, int]:
+    data = path.read_bytes()
+    if data[:4] != b"RIFF" or data[8:12] != b"WEBP":
+        raise AssertionError(f"Not a WebP file: {path}")
+
+    chunk_type = data[12:16]
+    if chunk_type == b"VP8X":
+        return (
+            1 + int.from_bytes(data[24:27], "little"),
+            1 + int.from_bytes(data[27:30], "little"),
+        )
+    if chunk_type == b"VP8 ":
+        marker = data[20:].find(b"\x9d\x01\x2a")
+        if marker < 0:
+            raise AssertionError(f"WebP frame header missing: {path}")
+        frame = 20 + marker + 3
+        return (
+            int.from_bytes(data[frame : frame + 2], "little") & 0x3FFF,
+            int.from_bytes(data[frame + 2 : frame + 4], "little") & 0x3FFF,
+        )
+
+    raise AssertionError(f"Unsupported WebP chunk {chunk_type!r}: {path}")
+
+
 @pytest.fixture
 def local_test_dir() -> Path:
     test_root = ROOT / "output" / "pytest"
@@ -86,7 +110,10 @@ def test_catalog_rosters_are_alphabetized_and_every_character_has_local_art() ->
         for character in game.eligible_characters:
             expected_url = f"/static/art/{game.steam_appid}/{character.slug}.webp"
             assert character.art_url == expected_url
-            assert (ROOT / "static" / expected_url.removeprefix("/static/")).is_file()
+            art_path = ROOT / "static" / expected_url.removeprefix("/static/")
+            assert art_path.is_file()
+            # The supplied gallery previews are capped at 320px; roster art must not regress to them.
+            assert max(_webp_dimensions(art_path)) > 320
 
 
 def test_selection_is_game_first_and_respects_exclusion() -> None:

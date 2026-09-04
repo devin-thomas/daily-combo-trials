@@ -47,6 +47,7 @@ Inspect `tailscale serve status` first when this machine already serves other ap
 - combo_site/ contains catalog loading, selection, persistence, and routes.
 - data/catalog.json is the versioned build-time catalog.
 - templates/ and static/ contain the server-rendered UI.
+- static/art/ contains source-derived roster artwork. The supplied 320px `previews/` thumbnails are not used; the checked-in WebP deliveries are sized to preserve detail while staying within Vercel Hobby's 100 MB upload limit.
 - download.json and fg.js are local source inputs and remain ignored.
 
 ## Supabase production database

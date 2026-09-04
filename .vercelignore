@@ -1,0 +1,16 @@
+.git
+.git/**
+.venv
+.venv/**
+output
+output/**
+.vercel
+.vercel/**
+.playwright-cli
+.playwright-cli/**
+.env
+.env.*
+data/history.sqlite3
+data/remote-secrets.dpapi
+download.json
+fg.js
