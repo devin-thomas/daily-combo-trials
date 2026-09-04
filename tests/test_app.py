@@ -8,7 +8,7 @@ import pytest
 from combo_site.catalog import Catalog, Character, Game, load_catalog
 from combo_site.database import DailyAssignment, Database
 from combo_site.main import _central_day, create_app
-from combo_site.secret_store import SecretStore
+from combo_site.secret_store import SecretStore, compose_database_url
 from combo_site.selection import ChallengeRef, choose_challenge
 
 
@@ -38,6 +38,20 @@ def make_client(
         secret_store=secret_store or SecretStore(test_dir / "remote-secrets.dpapi"),
     )
     return TestClient(app, base_url=base_url), database
+
+
+def test_compose_database_url_encodes_separate_password() -> None:
+    template = "postgresql://postgres.example:[YOUR-PASSWORD]@db.example.test:6543/postgres"
+
+    assert compose_database_url(template, "phone@safe/#?") == (
+        "postgresql://postgres.example:phone%40safe%2F%23%3F@db.example.test:6543/postgres"
+    )
+    assert compose_database_url(
+        "postgresql://postgres.example:already%40encoded@db.example.test/postgres"
+    ) == "postgresql://postgres.example:already%40encoded@db.example.test/postgres"
+
+    with pytest.raises(ValueError, match="separate password"):
+        compose_database_url(template)
 
 
 def test_catalog_contains_all_initial_games_and_playable_rosters() -> None:
@@ -201,7 +215,9 @@ def test_remote_setup_wizard_encrypts_and_redacts_database_url(local_test_dir: P
         secret_store=secret_store,
         base_url="https://testserver",
     )
-    database_url = "postgresql://postgres.elrngwxjmmjfpdedesha:phone%40safe@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
+    connection_string = "postgresql://postgres.elrngwxjmmjfpdedesha:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
+    database_password = "phone@safe/#?"
+    database_url = "postgresql://postgres.elrngwxjmmjfpdedesha:phone%40safe%2F%23%3F@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
     headers = {
         "Tailscale-User-Login": "devin-thomas@github",
         "X-Forwarded-Proto": "https",
@@ -211,13 +227,19 @@ def test_remote_setup_wizard_encrypts_and_redacts_database_url(local_test_dir: P
 
         page = client.get("/setup", headers=headers)
         assert page.status_code == 200
-        assert "Open the Supabase project" in page.text
+        assert "Supabase connection | Daily Combo Trials" in page.text
+        assert "Open Supabase" in page.text
+        assert "Open the Vercel project" not in page.text
+        assert "Primary navigation" not in page.text
+        assert "Central time" not in page.text
+        assert "Private setup" not in page.text
+        assert "[YOUR-PASSWORD]" in page.text
         csrf_token = client.cookies.get("daily_combo_setup_csrf")
         assert csrf_token
 
         invalid = client.post(
             "/setup",
-            data={"database_url": "postgresql://postgres:YOUR-PASSWORD@example.test/postgres", "csrf_token": csrf_token},
+            data={"database_url": connection_string, "database_password": "", "csrf_token": csrf_token},
             headers=headers,
         )
         assert invalid.status_code == 400
@@ -225,16 +247,21 @@ def test_remote_setup_wizard_encrypts_and_redacts_database_url(local_test_dir: P
 
         saved = client.post(
             "/setup",
-            data={"database_url": database_url, "csrf_token": csrf_token},
+            data={
+                "database_url": connection_string,
+                "database_password": database_password,
+                "csrf_token": csrf_token,
+            },
             headers=headers,
             follow_redirects=False,
         )
         assert saved.status_code == 303
         status = client.get("/setup", headers=headers)
         assert status.status_code == 200
-        assert "Ready to hand off" in status.text
+        assert "Saved" in status.text
         assert "aws-0-us-east-1.pooler.supabase.com" in status.text
         assert database_url not in status.text
+        assert database_password not in status.text
         assert secret_store.load_database_url() == database_url
         assert database_url.encode("utf-8") not in secret_store.path.read_bytes()
 

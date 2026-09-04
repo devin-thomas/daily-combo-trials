@@ -33,7 +33,7 @@ The site is primarily a personal FGC practice prompt. The user wants to learn ho
 - The target deployment platform is Vercel.
 - The deployed history database is the Supabase project `elrngwxjmmjfpdedesha`, associated with the `daily-combo-trials` project name.
 - The application should remain a low-complexity, pure-Python site: FastAPI routes and server-rendered templates, with basic HTML/CSS rather than a frontend framework.
-- When the user is away from the computer, the local app can expose a tailnet-only setup page that captures the needed Supabase URI without chat or plaintext repository storage.
+- When the user is away from the computer, the local app can expose a tailnet-only setup page that captures Supabase's placeholder URI and password separately without chat or plaintext repository storage.
 
 ## Current data inputs
 
@@ -72,7 +72,7 @@ Mermaid is the current visual fallback because an editable Figma artifact is not
 
 ## Implementation gates
 
-- Use the tailnet-only `/setup` page to capture the Supabase transaction pooler URI, then add it to Vercel as the server-only `DATABASE_URL`; never commit or paste it into chat.
+- Use the tailnet-only `/setup` page to capture Supabase's placeholder connection string and password separately, then add the completed value to Vercel as the server-only `DATABASE_URL`; never commit or paste it into chat.
 - Keep the local Uvicorn listener on loopback and preserve the existing Tailscale Serve mappings while the setup page is active.
 - Complete the catalog curation and source audit for every included game and character.
 - Finalize the exact artwork fallback styling after the first rendered pass.

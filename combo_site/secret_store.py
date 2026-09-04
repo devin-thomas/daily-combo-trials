@@ -7,9 +7,10 @@ from ctypes import wintypes
 import json
 import os
 from pathlib import Path
+import re
 import secrets
 import sys
-from urllib.parse import urlsplit
+from urllib.parse import quote, unquote, urlsplit, urlunsplit
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,6 +20,9 @@ _ENTROPY = b"Daily Combo Trials remote secret store v1"
 
 class SecretStoreError(RuntimeError):
     """Raised when encrypted local secret storage cannot be used safely."""
+
+
+_PASSWORD_PLACEHOLDER_RE = re.compile(r"(?:\[your-password\]|<password>|your-password)", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -122,6 +126,53 @@ def _unprotect(ciphertext: bytes) -> bytes:
         local_free(plaintext_blob.pbData)
         if description.value:
             local_free(description)
+
+
+def _has_password_placeholder(value: str) -> bool:
+    return bool(_PASSWORD_PLACEHOLDER_RE.search(value))
+
+
+def _with_database_password(connection_string: str, password: str) -> str:
+    try:
+        parseable_string = _PASSWORD_PLACEHOLDER_RE.sub("%5BYOUR-PASSWORD%5D", connection_string)
+        parsed = urlsplit(parseable_string)
+        username = parsed.username
+        hostname = parsed.hostname
+        port = parsed.port
+    except ValueError as exc:
+        raise ValueError("Enter a valid PostgreSQL connection string.") from exc
+
+    if parsed.scheme not in {"postgres", "postgresql"} or not username or not hostname:
+        raise ValueError("Enter the Supabase PostgreSQL connection string before entering its password.")
+
+    encoded_username = quote(unquote(username), safe="!$&'()*+,;=")
+    encoded_password = quote(password, safe="")
+    host = f"[{hostname}]" if ":" in hostname and not hostname.startswith("[") else hostname
+    if port is not None:
+        host = f"{host}:{port}"
+    netloc = f"{encoded_username}:{encoded_password}@{host}"
+    return urlunsplit((parsed.scheme, netloc, parsed.path, parsed.query, parsed.fragment))
+
+
+def compose_database_url(connection_string: str, password: str | None = None) -> str:
+    """Combine Supabase's password placeholder URI with a separately entered password."""
+    candidate = connection_string.strip()
+    supplied_password = (password or "").strip()
+
+    if not candidate:
+        raise ValueError("Paste the Supabase connection string.")
+    if any("\r" in value or "\n" in value for value in (candidate, supplied_password)):
+        raise ValueError("The connection string and password cannot contain line breaks.")
+    if len(candidate) > 2048 or len(supplied_password) > 1024:
+        raise ValueError("The connection string or password is too long.")
+    if supplied_password and _has_password_placeholder(supplied_password):
+        raise ValueError("Enter the database password itself, not the placeholder text.")
+
+    if supplied_password:
+        return _with_database_password(candidate, supplied_password)
+    if _has_password_placeholder(candidate):
+        raise ValueError("Enter the database password in the separate password field.")
+    return candidate
 
 
 def _validate_database_url(value: str) -> str:

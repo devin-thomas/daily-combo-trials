@@ -16,7 +16,7 @@ from fastapi.templating import Jinja2Templates
 
 from .catalog import Catalog, Character, Game, load_catalog
 from .database import Database, assignment_ref
-from .secret_store import SecretStore, SecretStoreError
+from .secret_store import SecretStore, SecretStoreError, compose_database_url
 from .selection import ChallengeRef, choose_challenge
 
 
@@ -202,7 +202,6 @@ def create_app(
                 "cleared": cleared,
                 "error": error,
                 "csrf_token": token,
-                "tailnet_identity": request.headers.get("Tailscale-User-Login"),
             },
             status_code=status_code,
         )
@@ -236,12 +235,17 @@ def create_app(
         )
 
     @app.post("/setup", response_class=HTMLResponse, name="setup_save")
-    def setup_save(request: Request, database_url: str = Form(...), csrf_token: str = Form(...)) -> HTMLResponse:
+    def setup_save(
+        request: Request,
+        database_url: str = Form(...),
+        database_password: str = Form(""),
+        csrf_token: str = Form(...),
+    ) -> HTMLResponse:
         require_setup_access(request)
         if not _csrf_matches(request, csrf_token):
             raise HTTPException(status_code=403, detail="This setup form expired. Reload it and try again.")
         try:
-            site_secret_store.save_database_url(database_url)
+            site_secret_store.save_database_url(compose_database_url(database_url, database_password))
         except ValueError as exc:
             return render_setup(request, csrf_token=csrf_token, error=str(exc), status_code=400)
         except SecretStoreError:

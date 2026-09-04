@@ -107,7 +107,7 @@ The exact day boundary is midnight Central time. In the absence of a scheduled p
 | GET | `/games/{game_slug}` | Show one game and links to every eligible character page. |
 | GET | `/games/{game_slug}/characters/{character_slug}` | Show one character, trial instruction, metadata, art, and sources. |
 | GET | `/setup` | Show the local, tailnet-only provider setup wizard. |
-| POST | `/setup` | Validate and encrypt the Supabase connection URI locally, then redirect. |
+| POST | `/setup` | Combine the Supabase placeholder URI and password, validate the result, encrypt it locally, then redirect. |
 | POST | `/setup/clear` | Remove the locally encrypted setup value after a CSRF check. |
 | GET | `/static/style.css` | Serve the site stylesheet. |
 
@@ -169,7 +169,7 @@ Apply the installed No Useless Copy skill to all rendered strings:
 
 - Do not expose the raw Steam export, Steam playtime, or unused source fields through a route.
 - Keep database credentials in server-only environment variables for hosted deployments; the local phone handoff may use the encrypted DPAPI store described below.
-- The local setup wizard is disabled when `VERCEL` is present, requires loopback or a Tailscale identity header, uses a short-lived CSRF cookie, accepts the URI only in a password-style POST field, and never echoes it.
+- The local setup wizard is disabled when `VERCEL` is present, requires loopback or a Tailscale identity header, uses a short-lived CSRF cookie, accepts Supabase's placeholder URI and a separate password field, URL-encodes the password server-side, and never echoes the completed value.
 - On Windows, the setup value is encrypted with DPAPI and stored in ignored `data/remote-secrets.dpapi`; pages show only provider, host, and port metadata.
 - Bind the local server to `127.0.0.1` and use Tailscale Serve rather than Funnel or public port forwarding for the wizard.
 - Use `HttpOnly`, `SameSite=Lax`, and production `Secure` settings for the reroll cookie.

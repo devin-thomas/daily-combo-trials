@@ -16,21 +16,25 @@
           <span class="brand-top">DAILY</span>
           <span class="brand-bottom">COMBO TRIALS</span>
         </a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="{{ url_for('home') }}">Today</a>
-          <a href="{{ url_for('history') }}">History</a>
-          <a href="{{ url_for('games') }}">Games</a>
-        </nav>
+        {% if request.url.path != '/setup' %}
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="{{ url_for('home') }}">Today</a>
+            <a href="{{ url_for('history') }}">History</a>
+            <a href="{{ url_for('games') }}">Games</a>
+          </nav>
+        {% endif %}
       </header>
 
       <main id="main-content">
         {% block content %}{% endblock %}
       </main>
 
-      <footer class="site-footer">
-        <span>Central time</span>
-        {% if request.app.state.setup_enabled %}<a href="{{ url_for('setup') }}">Private setup</a>{% endif %}
-      </footer>
+      {% if request.url.path != '/setup' %}
+        <footer class="site-footer">
+          <span>Central time</span>
+          {% if request.app.state.setup_enabled %}<a href="{{ url_for('setup') }}">Private setup</a>{% endif %}
+        </footer>
+      {% endif %}
     </div>
   </body>
 </html>

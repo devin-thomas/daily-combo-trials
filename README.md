@@ -37,7 +37,7 @@ When the computer needs a provider value and you are away from it, run the local
 tailscale serve --bg --yes --https=8443 http://127.0.0.1:8788
 ~~~
 
-Open `https://<this-machine>.<your-tailnet>.ts.net:8443/setup` from a phone that is connected to the same tailnet. The setup page is disabled on Vercel, accepts only the Supabase connection URI, and keeps the field blank after reload. On Windows, the value is encrypted with the current user's DPAPI profile and stored in the ignored `data/remote-secrets.dpapi` file. The page shows only redacted host, port, and database metadata.
+Open `https://<this-machine>.<your-tailnet>.ts.net:8443/setup` from a phone that is connected to the same tailnet. Paste Supabase's connection URI with `[YOUR-PASSWORD]`, then enter the database password separately; the server combines and URL-encodes them before saving. The setup page is disabled on Vercel and keeps both fields blank after reload. On Windows, the completed value is encrypted with the current user's DPAPI profile and stored in the ignored `data/remote-secrets.dpapi` file. The page shows only redacted host, port, and database metadata.
 
 Inspect `tailscale serve status` first when this machine already serves other applications. The example uses HTTPS port 8443 so the existing HTTPS routes on port 443 remain in place. Use Tailscale Serve, never Funnel, for a credential handoff.
 
