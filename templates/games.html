@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Games | Daily Combo Trials{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <h1>Games</h1>
+  <p>Choose a game to browse its trial characters.</p>
+</section>
+
+<section class="game-grid" aria-label="Included games">
+  {% for game in games %}
+    <a class="game-tile" href="{{ url_for('game_detail', game_slug=game.slug) }}">
+      <span class="game-tile-title">{{ game.title }}</span>
+      <span class="game-tile-count">{{ game.eligible_characters|length }} playable characters</span>
+    </a>
+  {% endfor %}
+</section>
+{% endblock %}

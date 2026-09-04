@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Recommendation history | Daily Combo Trials{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <p class="kicker">Central time</p>
+  <h1>Recommendation history</h1>
+  <p>Each date opens the same game and character page you can revisit anytime.</p>
+</section>
+
+<section class="history-list" aria-label="Daily recommendations">
+  {% for entry in entries %}
+    {% if entry.resolved %}
+      <a class="history-row" href="{{ url_for('character_detail', game_slug=entry.resolved[0].slug, character_slug=entry.resolved[1].slug) }}">
+        <time datetime="{{ entry.record.day }}">{{ entry.record.day }}</time>
+        <span class="history-game">{{ entry.resolved[0].title }}</span>
+        <span class="history-character">{{ entry.resolved[1].name }}</span>
+        <span class="arrow" aria-hidden="true">&#8599;</span>
+      </a>
+    {% else %}
+      <div class="history-row is-missing">
+        <time datetime="{{ entry.record.day }}">{{ entry.record.day }}</time>
+        <span>Catalog entry unavailable</span>
+      </div>
+    {% endif %}
+  {% endfor %}
+</section>
+{% endblock %}

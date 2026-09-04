@@ -1,0 +1,325 @@
+{
+  "games": [
+    {
+      "slug": "ultra-street-fighter-iv",
+      "title": "Ultra Street Fighter IV",
+      "steam_appid": 45760,
+      "trial_source_url": "https://store.steampowered.com/app/45760/",
+      "characters": [
+        "Abel", "Adon", "Akuma", "Balrog", "Blanka", "Cammy", "C. Viper", "Chun-Li", "Cody",
+        "Dan", "Decapre", "Dee Jay", "Dhalsim", "Dudley", "E. Honda", "El Fuerte", "Elena",
+        "Fei Long", "Gen", "Gouken", "Guile", "Guy", "Hakan", "Hugo", "Ibuki", "Juri",
+        "Ken", "M. Bison", "Makoto", "Oni", "Poison", "R. Mika", "Rufus", "Ryu", "Sagat",
+        "Sakura", "Seth", "T. Hawk", "Vega", "Yang", "Yun", "Zangief", "Evil Ryu"
+      ]
+    },
+    {
+      "slug": "skullgirls-2nd-encore",
+      "title": "Skullgirls 2nd Encore",
+      "steam_appid": 245170,
+      "trial_source_url": "https://store.steampowered.com/app/245170/",
+      "characters": [
+        "Annie", "Beowulf", "Big Band", "Black Dahlia", "Cerebella", "Double", "Eliza", "Filia",
+        "Fukua", "Marie", "Ms. Fortune", "Painwheel", "Parasoul", "Peacock", "Robo-Fortune",
+        "Squigly", "Umbrella", "Valentine"
+      ]
+    },
+    {
+      "slug": "blazblue-continuum-shift-extend",
+      "title": "BlazBlue: Continuum Shift Extend",
+      "steam_appid": 294810,
+      "trial_source_url": "https://store.steampowered.com/app/294810/",
+      "characters": [
+        "Ragna the Bloodedge", "Jin Kisaragi", "Noel Vermillion", "Rachel Alucard", "Taokaka",
+        "Iron Tager", "Bang Shishigami", "Carl Clover", "Hakumen", "Lambda-11", "Tsubaki Yayoi",
+        "Hazama", "Mu-12", "Makoto Nanaya", "Valkenhayn R. Hellsing", "Platinum the Trinity",
+        "Relius Clover", "Es", "Mai Natsume", "Izayoi"
+      ]
+    },
+    {
+      "slug": "street-fighter-v",
+      "title": "Street Fighter V",
+      "steam_appid": 310950,
+      "trial_source_url": "https://store.steampowered.com/app/310950/",
+      "characters": [
+        "Ryu", "Ken", "Chun-Li", "Cammy", "Nash", "M. Bison", "Birdie", "Rashid", "Karin",
+        "R. Mika", "Vega", "Dhalsim", "F.A.N.G", "Laura", "Zangief", "Guile", "Alex", "Balrog",
+        "Ibuki", "Juri", "Urien", "Akuma", "Kolin", "Ed", "Abigail", "Menat", "Zeku", "Sakura",
+        "Blanka", "Falke", "G", "Sagat", "Kage", "E. Honda", "Lucia", "Poison", "Gill", "Seth",
+        "Dan", "Rose", "Oro", "Luke", "Eleven"
+      ]
+    },
+    {
+      "slug": "ultimate-marvel-vs-capcom-3",
+      "title": "Ultimate Marvel vs. Capcom 3",
+      "steam_appid": 357190,
+      "trial_source_url": "https://store.steampowered.com/app/357190/",
+      "characters": [
+        "Akuma", "Amaterasu", "Arthur", "Chris Redfield", "Chun-Li", "C. Viper", "Dante", "Deadpool",
+        "Doctor Doom", "Dormammu", "Felicia", "Firebrand", "Frank West", "Ghost Rider", "Hawkeye",
+        "Hulk", "Iron Fist", "Iron Man", "Jill Valentine", "Magneto", "Mike Haggar", "Morrigan",
+        "Nemesis", "Nova", "Phoenix", "Phoenix Wright", "Rocket Raccoon", "She-Hulk", "Shuma-Gorath",
+        "Spider-Man", "Spencer", "Storm", "Strider Hiryu", "Super-Skrull", "Taskmaster", "Thor",
+        "Trish", "Tron Bonne", "Vergil", "Viewtiful Joe", "Wesker", "Wolverine", "X-23", "Zero"
+      ]
+    },
+    {
+      "slug": "guilty-gear-xrd-sign",
+      "title": "GUILTY GEAR Xrd -SIGN-",
+      "steam_appid": 376300,
+      "trial_source_url": "https://store.steampowered.com/app/376300/",
+      "characters": [
+        "Sol Badguy", "Ky Kiske", "May", "Millia Rage", "Zato-1", "Potemkin", "Chipp Zanuff",
+        "Faust", "Slayer", "I-No", "Venom", "Ramlethal Valentine", "Sin Kiske", "Elphelt Valentine",
+        "Bedman", "Leo Whitefang", "Johnny", "Jack-O'", "Raven"
+      ]
+    },
+    {
+      "slug": "blazblue-chronophantasma-extend",
+      "title": "BlazBlue: Chronophantasma Extend",
+      "steam_appid": 388750,
+      "trial_source_url": "https://store.steampowered.com/app/388750/",
+      "characters": [
+        "Ragna the Bloodedge", "Jin Kisaragi", "Noel Vermillion", "Rachel Alucard", "Iron Tager",
+        "Taokaka", "Bang Shishigami", "Carl Clover", "Hakumen", "Lambda-11", "Tsubaki Yayoi",
+        "Hazama", "Mu-12", "Makoto Nanaya", "Valkenhayn R. Hellsing", "Platinum the Trinity",
+        "Relius Clover", "Amane Nishiki", "Bullet", "Azrael", "Izayoi", "Kagura Mutsuki",
+        "Terumi", "Kokonoe", "Celica A. Mercury", "Nine the Phantom", "Es", "Mai Natsume", "Hibiki Kohaku"
+      ]
+    },
+    {
+      "slug": "guilty-gear-xrd-rev-2",
+      "title": "GUILTY GEAR Xrd REV 2",
+      "steam_appid": 520440,
+      "trial_source_url": "https://store.steampowered.com/app/520440/",
+      "characters": [
+        "Sol Badguy", "Ky Kiske", "May", "Millia Rage", "Zato-1", "Potemkin", "Chipp Zanuff",
+        "Faust", "Slayer", "Venom", "I-No", "Ramlethal Valentine", "Sin Kiske", "Elphelt Valentine",
+        "Leo Whitefang", "Johnny", "Jack-O'", "Jam Kuradoberi", "Raven", "Kum Haehyun", "Dizzy",
+        "Answer", "Baiken", "Bedman", "Axl Low"
+      ]
+    },
+    {
+      "slug": "blazblue-centralfiction",
+      "title": "BlazBlue Centralfiction",
+      "steam_appid": 586140,
+      "trial_source_url": "https://store.steampowered.com/app/586140/",
+      "characters": [
+        "Ragna the Bloodedge", "Jin Kisaragi", "Noel Vermillion", "Rachel Alucard", "Iron Tager",
+        "Taokaka", "Bang Shishigami", "Carl Clover", "Hakumen", "Lambda-11", "Tsubaki Yayoi",
+        "Hazama", "Mu-12", "Makoto Nanaya", "Valkenhayn R. Hellsing", "Platinum the Trinity",
+        "Relius Clover", "Amane Nishiki", "Bullet", "Azrael", "Izayoi", "Kagura Mutsuki", "Terumi",
+        "Kokonoe", "Celica A. Mercury", "Es", "Mai Natsume", "Susanoo", "Naoto Kurogane",
+        "Hibiki Kohaku", "Nine the Phantom", "Izanami", "Jubei", "Trinity Glassfille"
+      ]
+    },
+    {
+      "slug": "dragon-ball-fighterz",
+      "title": "DRAGON BALL FighterZ",
+      "steam_appid": 678950,
+      "trial_source_url": "https://store.steampowered.com/app/678950/",
+      "characters": [
+        "Android 16", "Android 17", "Android 18", "Android 21", "Android 21 (Lab Coat)", "Bardock",
+        "Beerus", "Broly", "Broly (DBS)", "Captain Ginyu", "Cell", "Cooler", "Frieza", "Gohan (Adult)",
+        "Gohan (Teen)", "Goku", "Goku (GT)", "Goku (Super Saiyan 4)", "Goku (Ultra Instinct)",
+        "Goku Black", "Gogeta", "Gogeta (SS4)", "Gotenks", "Janemba", "Jiren", "Kefla", "Kid Buu",
+        "Krillin", "Master Roshi", "Nappa", "Piccolo", "Super Baby 2", "Tien", "Trunks", "Vegeta",
+        "Vegeta (Base)", "Vegeta (Super Saiyan Blue)", "Vegito", "Videl", "Yamcha", "Zamasu (Fused)"
+      ]
+    },
+    {
+      "slug": "blazblue-cross-tag-battle",
+      "title": "BlazBlue Cross Tag Battle",
+      "steam_appid": 702890,
+      "trial_source_url": "https://store.steampowered.com/app/702890/",
+      "characters": [
+        "Ruby Rose", "Weiss Schnee", "Blake Belladonna", "Yang Xiao Long", "Yu Narukami", "Yosuke Hanamura",
+        "Chie Satonaka", "Yukiko Amagi", "Kanji Tatsumi", "Naoto Shirogane", "Aigis", "Mitsuru Kirijo",
+        "Akihiko Sanada", "Labrys", "Hyde", "Linne", "Waldstein", "Carmine", "Gordeau", "Merkava",
+        "Orie", "Vatista", "Hilda", "Es", "Hazama", "Noel Vermillion", "Rachel Alucard", "Iron Tager",
+        "Jin Kisaragi", "Tsubaki Yayoi", "Hakumen", "Makoto Nanaya", "Mai Natsume", "Azrael", "Nine",
+        "Akatsuki", "Blitztank", "Mika", "Yumi", "Neo Politan", "Adachi", "Elizabeth", "Seth",
+        "Teddie", "Heart Aino", "Naoto Kurogane"
+      ]
+    },
+    {
+      "slug": "under-night-in-birth-exelate-cl-r",
+      "title": "UNDER NIGHT IN-BIRTH Exe:Late[cl-r]",
+      "steam_appid": 801630,
+      "trial_source_url": "https://store.steampowered.com/app/801630/",
+      "characters": [
+        "Hyde", "Linne", "Waldstein", "Carmine", "Orie", "Gordeau", "Merkava", "Vatista", "Seth",
+        "Hilda", "Nanase", "Byakuya", "Yuzehira", "Mika", "Wagner", "Enkidu", "Phonon", "Londrekia",
+        "Akatsuki", "Blitztank", "Chaos", "Kuon", "Kaguya", "Eltnum"
+      ]
+    },
+    {
+      "slug": "granblue-fantasy-versus",
+      "title": "Granblue Fantasy: Versus",
+      "steam_appid": 1090630,
+      "trial_source_url": "https://store.steampowered.com/app/1090630/",
+      "characters": [
+        "Gran", "Katalina", "Charlotta", "Lowain", "Ferry", "Lancelot", "Percival", "Metera", "Zeta",
+        "Vaseraga", "Narmaya", "Soriz", "Djeeta", "Zooey", "Belial", "Avatar Belial", "Cagliostro",
+        "Yuel", "Anre", "Eustace", "Seox", "Vira", "Beelzebub", "Nier"
+      ]
+    },
+    {
+      "slug": "street-fighter-6",
+      "title": "Street Fighter 6",
+      "steam_appid": 1364780,
+      "trial_source_url": "https://store.steampowered.com/app/1364780/",
+      "characters": [
+        {
+          "slug": "ryu",
+          "name": "Ryu",
+          "description": "A disciplined wanderer who keeps refining his martial art wherever the road takes him.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/ryu",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/ryu/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/ryu",
+          "art_alt": "Ryu from Street Fighter 6"
+        },
+        {
+          "slug": "luke",
+          "name": "Luke",
+          "description": "A confident contractor who blends modern combat training with a direct, forward-driving style.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/luke",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/luke/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/luke",
+          "art_alt": "Luke from Street Fighter 6"
+        },
+        {
+          "slug": "chun-li",
+          "name": "Chun-Li",
+          "description": "A former ICPO officer who protects others with disciplined kung fu while building a quieter life.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/chunli",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/chunli/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/chunli",
+          "art_alt": "Chun-Li from Street Fighter 6"
+        },
+        {
+          "slug": "guile",
+          "name": "Guile",
+          "description": "A U.S. Air Force officer and family man who turns precise Sonic Boom fundamentals into a battlefield discipline.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/guile",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/guile/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/guile",
+          "art_alt": "Guile from Street Fighter 6"
+        },
+        "Kimberly", "Jamie",
+        {
+          "slug": "juri",
+          "name": "Juri",
+          "description": "A taekwondo specialist who uses her Feng Shui Engine to turn chaos and cruelty into a game.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/juri",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/juri/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/juri",
+          "art_alt": "Juri from Street Fighter 6"
+        },
+        {
+          "slug": "ken",
+          "name": "Ken",
+          "description": "A former national champion who fights with explosive force while rebuilding his life away from the spotlight.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/ken",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/ken/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/ken",
+          "art_alt": "Ken from Street Fighter 6"
+        },
+        "Blanka", "Dhalsim", "E. Honda", "Dee Jay",
+        {
+          "slug": "cammy",
+          "name": "Cammy",
+          "description": "A Delta Red operative with a relentless fighting style and a past entangled with Shadaloo.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/cammy",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/cammy/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/cammy",
+          "art_alt": "Cammy from Street Fighter 6"
+        },
+        "Manon", "Marisa", "Lily", "Zangief", "JP", "Rashid", "A.K.I.", "Ed", "Akuma", "M. Bison",
+        {
+          "slug": "terry",
+          "name": "Terry",
+          "description": "A legendary South Town fighter who brings relentless power and easygoing confidence to the World Warrior stage.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/terry",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/terry/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/terry",
+          "art_alt": "Terry from Street Fighter 6"
+        },
+        {
+          "slug": "mai",
+          "name": "Mai",
+          "description": "A charming Shiranui-style kunoichi who balances traditional arts, romance, and fierce training.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/mai",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/mai/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/mai",
+          "art_alt": "Mai from Street Fighter 6"
+        },
+        {
+          "slug": "elena",
+          "name": "Elena",
+          "description": "A cheerful savannah-raised warrior with a gift for healing and a dream of becoming a veterinarian.",
+          "description_source_url": "https://www.streetfighter.com/6/en-us/character/elena",
+          "art_url": "https://www.streetfighter.com/6/assets/images/character/elena/sns.jpg",
+          "art_source_url": "https://www.streetfighter.com/6/en-us/character/elena",
+          "art_alt": "Elena from Street Fighter 6"
+        }
+      ]
+    },
+    {
+      "slug": "tekken-8",
+      "title": "TEKKEN 8",
+      "steam_appid": 1778820,
+      "trial_source_url": "https://tekken.com/fighters",
+      "characters": [
+        {
+          "slug": "kazuya-mishima",
+          "name": "Kazuya Mishima",
+          "description": "A ruthless Mishima heir who turns demonic power and precise martial arts into overwhelming force.",
+          "description_source_url": "https://tekken.com/fighters/kazuya-mishima",
+          "art_url": "https://us-east-1-bandai.graphassets.com/AXzioIclSWilEjFtsMJPwz/pV8nXDdUSoWz68S6bemw",
+          "art_source_url": "https://tekken.com/fighters/kazuya-mishima",
+          "art_alt": "Kazuya Mishima from TEKKEN 8"
+        },
+        "Jin Kazama", "King", "Jun Kazama", "Paul Phoenix", "Marshall Law", "Jack-8",
+        "Lars Alexandersson", "Ling Xiaoyu", "Nina Williams", "Leroy Smith", "Asuka Kazama", "Lili Rochefort",
+        "Bryan Fury", "Hwoarang", "Claudio Serafino", "Azucena Milagros Ortiz Castillo", "Raven",
+        "Leo Kliesen", "Steve Fox", "Kuma", "Yoshimitsu", "Shaheen", "Sergei Dragunov", "Feng Wei",
+        "Panda", "Lee Chaolan", "Alisa Bosconovitch",
+        {
+          "slug": "zafina",
+          "name": "Zafina",
+          "description": "An astrologer and exorcist who seals a terrible power in her arm to delay an ancient threat.",
+          "description_source_url": "https://tekken.com/fighters/zafina",
+          "art_url": "https://us-east-1-bandai.graphassets.com/AXzioIclSWilEjFtsMJPwz/OYb6gBOIQS1Siq7S3EXg",
+          "art_source_url": "https://tekken.com/fighters/zafina",
+          "art_alt": "Zafina from TEKKEN 8"
+        },
+        "Devil Jin", "Victor Chevalier", "Reina",
+        "Eddy Gordo", "Lidia Sobieska", "Heihachi Mishima", "Clive Rosfield", "Anna Williams", "Fahkumram",
+        "Armor King", "Miary Zo", "Kunimitsu", "Bob"
+      ]
+    },
+    {
+      "slug": "under-night-in-birth-ii-sys-celes",
+      "title": "UNDER NIGHT IN-BIRTH II Sys:Celes",
+      "steam_appid": 2076010,
+      "trial_source_url": "https://store.steampowered.com/app/2076010/",
+      "characters": [
+        "Hyde", "Linne", "Waldstein", "Carmine", "Orie", "Gordeau", "Merkava", "Vatista", "Seth",
+        "Hilda", "Nanase", "Byakuya", "Yuzehira", "Mika", "Wagner", "Enkidu", "Phonon", "Londrekia",
+        "Akatsuki", "Blitztank", "Kuon", "Kaguya", "Tsurugi", "Uzuki", "Ogre", "Shizuka"
+      ]
+    },
+    {
+      "slug": "marvel-tokon-fighting-souls",
+      "title": "Marvel Tokon: Fighting Souls",
+      "steam_appid": 3787240,
+      "trial_source_url": "https://blog.playstation.com/2026/06/02/magneto-green-goblin-carnage-announced-for-marvel-tokon-fighting-souls/",
+      "characters": [
+        "Ms. Marvel", "Peni Parker", "Spider-Man", "Star-Lord", "Black Panther", "Captain America", "Hulk",
+        "Iron Man", "Danger", "Magik", "Storm", "Wolverine", "Doctor Doom", "Magneto", "Green Goblin",
+        "Carnage", "Deadpool", "Blade", "Loki", "Ghost Rider"
+      ]
+    }
+  ]
+}

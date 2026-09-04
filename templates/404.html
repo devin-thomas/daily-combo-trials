@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Page not found | Daily Combo Trials{% endblock %}
+{% block content %}
+<section class="error-page">
+  <span class="error-code">404</span>
+  <h1>Page not found</h1>
+  <p>That page is not part of the challenge catalog.</p>
+  <div class="challenge-actions">
+    <a class="button button-primary" href="{{ url_for('home') }}">Back to today's challenge</a>
+    <a class="button button-secondary" href="{{ url_for('games') }}">Browse games</a>
+  </div>
+</section>
+{% endblock %}

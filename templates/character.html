@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ character.name }} | {{ game.title }}{% endblock %}
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ url_for('games') }}">Games</a>
+  <span aria-hidden="true">/</span>
+  <a href="{{ url_for('game_detail', game_slug=game.slug) }}">{{ game.title }}</a>
+  <span aria-hidden="true">/</span>
+  <span>{{ character.name }}</span>
+</nav>
+
+<section class="character-page">
+  <div class="character-portrait {% if not character.art_url %}portrait-fallback{% endif %}" {% if not character.art_url %}role="img" aria-label="Artwork unavailable for {{ character.name }}"{% endif %}>
+    {% if character.art_url %}
+      <img src="{{ character.art_url }}" alt="{{ character.art_alt or character.name ~ ' from ' ~ game.title }}">
+    {% else %}
+      <span aria-hidden="true">{{ character.name[0] }}</span>
+      <small>Artwork unavailable</small>
+    {% endif %}
+  </div>
+  <div class="character-copy">
+    <p class="kicker">{{ game.title }}</p>
+    <h1>{{ character.name }}</h1>
+    <p class="mission">Complete every combo trial for this character.</p>
+    {% if character.description %}
+      <p class="description">{{ character.description }}</p>
+    {% else %}
+      <p class="missing-copy">Description not available.</p>
+    {% endif %}
+    <div class="source-links">
+      {% if character.description_source_url %}<a href="{{ character.description_source_url }}" target="_blank" rel="noreferrer">Description source</a>{% endif %}
+      {% if character.art_source_url %}<a href="{{ character.art_source_url }}" target="_blank" rel="noreferrer">Artwork source</a>{% endif %}
+      {% if game.trial_source_url %}<a href="{{ game.trial_source_url }}" target="_blank" rel="noreferrer">Game reference</a>{% endif %}
+    </div>
+    <a class="button button-primary inline-button" href="{{ url_for('game_detail', game_slug=game.slug) }}">Back to {{ game.title }}</a>
+  </div>
+</section>
+{% endblock %}

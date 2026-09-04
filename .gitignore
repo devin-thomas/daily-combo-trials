@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.env.*
+!.env.example
+.vercel/
+.playwright-cli/
+data/history.sqlite3
+output/
+download.json
+fg.js

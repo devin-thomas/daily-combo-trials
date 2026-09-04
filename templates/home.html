@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}{% if is_alternate %}Alternate challenge{% else %}Today's challenge{% endif %} | Daily Combo Trials{% endblock %}
+{% block content %}
+<section class="home-intro">
+  <div>
+    <p class="kicker">{{ day.strftime('%A, %B') }} {{ day.day }}, {{ day.year }}</p>
+    <h1>{% if is_alternate %}Alternate challenge{% else %}Today's challenge{% endif %}</h1>
+  </div>
+</section>
+
+<section class="challenge-card {% if is_alternate %}is-alternate{% endif %}" aria-labelledby="challenge-title">
+  <div class="challenge-art" {% if not challenge.character.art_url %}aria-label="Artwork unavailable for {{ challenge.character.name }}" role="img"{% endif %}>
+    {% if challenge.character.art_url %}
+      <img src="{{ challenge.character.art_url }}" alt="{{ challenge.character.art_alt or challenge.character.name ~ ' from ' ~ challenge.game.title }}">
+    {% else %}
+      <div class="monogram" aria-hidden="true">{{ challenge.character.name[0] }}</div>
+      <span class="art-status">Artwork unavailable</span>
+    {% endif %}
+  </div>
+
+  <div class="challenge-copy">
+    <div class="challenge-label">{% if is_alternate %}Temporary alternate{% else %}Daily recommendation{% endif %}</div>
+    <p class="game-name">{{ challenge.game.title }}</p>
+    <h2 id="challenge-title">{{ challenge.character.name }}</h2>
+    <p class="mission">Complete every combo trial for this character.</p>
+    {% if challenge.character.description %}
+      <p class="description">{{ challenge.character.description }}</p>
+    {% else %}
+      <p class="missing-copy">Description not available.</p>
+    {% endif %}
+
+    <div class="source-links">
+      {% if challenge.character.description_source_url %}<a href="{{ challenge.character.description_source_url }}" target="_blank" rel="noreferrer">Description source</a>{% endif %}
+      {% if challenge.character.art_source_url %}<a href="{{ challenge.character.art_source_url }}" target="_blank" rel="noreferrer">Artwork source</a>{% endif %}
+      {% if challenge.game.trial_source_url %}<a href="{{ challenge.game.trial_source_url }}" target="_blank" rel="noreferrer">Game reference</a>{% endif %}
+    </div>
+
+    <div class="challenge-actions">
+      {% if is_alternate %}
+        <form method="post" action="{{ url_for('daily') }}">
+          <button class="button button-secondary" type="submit">Back to today's challenge</button>
+        </form>
+      {% endif %}
+      <form method="post" action="{{ url_for('randomize') }}">
+        <button class="button button-primary" type="submit">Randomize</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="home-links" aria-label="Explore">
+  <a class="link-card" href="{{ url_for('history') }}">
+    <span class="link-card-title">Recommendation history</span>
+    <span class="link-card-detail">See what was recommended on earlier days.</span>
+  </a>
+  <a class="link-card" href="{{ url_for('games') }}">
+    <span class="link-card-title">Browse {{ game_count }} games</span>
+    <span class="link-card-detail">Open a game, then choose a character.</span>
+  </a>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ game.title }} | Daily Combo Trials{% endblock %}
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{ url_for('games') }}">Games</a><span aria-hidden="true">/</span><span>{{ game.title }}</span></nav>
+<section class="page-heading game-heading">
+  <p class="kicker">{{ game.eligible_characters|length }} characters</p>
+  <h1>{{ game.title }}</h1>
+  {% if game.trial_source_url %}<a class="text-link" href="{{ game.trial_source_url }}" target="_blank" rel="noreferrer">Open game reference</a>{% endif %}
+</section>
+
+<section class="character-grid" aria-label="Characters in {{ game.title }}">
+  {% for character in game.eligible_characters %}
+    <a class="character-tile" href="{{ url_for('character_detail', game_slug=game.slug, character_slug=character.slug) }}">
+      <span class="character-initial" aria-hidden="true">{{ character.name[0] }}</span>
+      <span class="character-tile-name">{{ character.name }}</span>
+      {% if character.art_url %}<span class="metadata-dot has-art" title="Artwork available" aria-label="Artwork available"></span>{% endif %}
+    </a>
+  {% endfor %}
+</section>
+{% endblock %}
