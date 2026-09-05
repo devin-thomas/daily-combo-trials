@@ -1,5 +1,4 @@
 {% if request.state.web_analytics %}
-  <script id="web-analytics-config" type="application/json">{{ request.state.analytics_config | tojson }}</script>
   <script src="{{ url_for('static', path='analytics.js') }}"></script>
   <script defer src="/_vercel/insights/script.js"></script>
   {% if request.state.cloudflare_beacon.token %}

@@ -37,15 +37,6 @@ class ScriptParser(HTMLParser):
             self.current = None
 
 
-def analytics_config(document):
-    configs = [
-        script for script in ScriptParser(document).scripts
-        if script["attrs"].get("id") == "web-analytics-config"
-    ]
-    assert len(configs) == 1
-    return json.loads(configs[0]["text"])
-
-
 def assert_no_analytics(document):
     for marker in (
         "analytics.js", VERCEL_SCRIPT, CLOUDFLARE_SCRIPT,
@@ -88,7 +79,8 @@ def test_public_pages_share_one_integration(analytics_client):
         assert sources.count(CLOUDFLARE_SCRIPT) == 1
         assert sum(src.endswith("/static/analytics.js") for src in sources) == 1
         assert sum(src.endswith("/static/site.js") for src in sources) == 1
-        assert analytics_config(response.text)["custom_events"] is False
+        assert "data-analytics-event" not in response.text
+        assert "web-analytics-config" not in response.text
 
 
 @pytest.mark.parametrize("environment", [None, "", "preview", "development", "Production"])
@@ -160,14 +152,15 @@ def test_local_private_setup_has_no_analytics(analytics_client, monkeypatch):
     assert_no_analytics(response.text)
 
 
-@pytest.mark.parametrize("value,enabled", [(None, False), ("0", False), ("true", False), ("1", True)])
-def test_custom_event_configuration(analytics_client, monkeypatch, value, enabled):
+@pytest.mark.parametrize("value", [None, "0", "true", "1"])
+def test_retired_custom_event_flag_has_no_effect(analytics_client, monkeypatch, value):
     if value is None:
         monkeypatch.delenv("VERCEL_CUSTOM_EVENTS_ENABLED", raising=False)
     else:
         monkeypatch.setenv("VERCEL_CUSTOM_EVENTS_ENABLED", value)
     response = analytics_client.get("/")
-    assert analytics_config(response.text)["custom_events"] is enabled
+    assert "web-analytics-config" not in response.text
+    assert "data-analytics-event" not in response.text
     assert VERCEL_SCRIPT in response.text
     assert analytics_client.post("/randomize", follow_redirects=False).status_code == 303
     assert analytics_client.get("/").status_code == 200

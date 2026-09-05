@@ -33,19 +33,19 @@
 
     <div class="source-links">
       {{ source_links([
-        {'url': challenge.character.description_source_url, 'label': 'Description source', 'kind': 'description_source'},
-        {'url': challenge.character.art_source_url, 'label': 'Artwork source', 'kind': 'artwork_source'},
-        {'url': challenge.game.trial_source_url, 'kind': 'game_reference', 'label': game_reference_label(challenge.game.trial_source_url)}
+        {'url': challenge.character.description_source_url, 'label': 'Description source'},
+        {'url': challenge.character.art_source_url, 'label': 'Artwork source'},
+        {'url': challenge.game.trial_source_url, 'label': game_reference_label(challenge.game.trial_source_url)}
       ]) }}
     </div>
 
     <div class="challenge-actions">
       {% if is_alternate %}
-        <form data-analytics-event="back_to_daily" method="post" action="{{ url_for('daily') }}">
+        <form method="post" action="{{ url_for('daily') }}">
           <button class="button button-secondary" type="submit">{{ icon('calendar-days') }}<span>Back to today's challenge</span></button>
         </form>
       {% endif %}
-      <form data-analytics-event="randomize" method="post" action="{{ url_for('randomize') }}">
+      <form method="post" action="{{ url_for('randomize') }}">
         <button class="button button-primary" type="submit">{{ icon('dices') }}<span>Randomize</span></button>
       </form>
     </div>
@@ -53,7 +53,7 @@
 </section>
 
 <section class="home-links" aria-label="Explore">
-  <a data-analytics-event="open_history" class="link-card" href="{{ url_for('history') }}">
+  <a class="link-card" href="{{ url_for('history') }}">
     <span class="link-card-icon">{{ icon('history') }}</span>
     <span class="link-card-title">Recommendation history</span>
     <span class="link-card-arrow">{{ icon('arrow-up-right') }}</span>

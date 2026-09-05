@@ -106,7 +106,6 @@ environment, then deploy through its GitHub `main` integration:
 | --- | --- |
 | `WEB_ANALYTICS_ENABLED` | `1` enables the shared gate; absent or `0` disables both |
 | `CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Actual generated site beacon token from Uppercut Labs |
-| `VERCEL_CUSTOM_EVENTS_ENABLED` | `0`; use `1` only after confirming existing Pro/Enterprise entitlement |
 
 Do not manually set Vercel system variables. Confirm automatic system-variable
 exposure in project settings and the production gate in the deployed HTML.
@@ -125,29 +124,35 @@ hostname as a **non-proxied Web Analytics site**. Use its generated beacon token
 Do not alter DNS, hosting, domains, proxy settings, or configure path Rules.
 Cloudflare supplies standard pageview/performance reporting only.
 
-The four implemented Vercel hooks are disabled by default:
+### What we measure
 
-| Event | Interaction | Custom properties |
+The scope is pageviews and the providers' existing reports. Use the dashboards
+already available; no custom events, event receiver, analytics database, new
+Cloudflare product, paid upgrade, or custom dashboard is planned.
+
+| Question | Existing report | Interpretation |
 | --- | --- | --- |
-| `randomize` | Randomize form submission, including keyboard | None |
-| `back_to_daily` | Back to today's challenge form submission | None |
-| `open_history` | History navigation link or recommendation-history card | None |
-| `outbound_source_click` | Curated source/reference link activation | `host`, `kind` |
+| Is the site getting traffic? | Pageviews and provider-reported visitors/visits | Watch trends within each provider; these are not verified people |
+| Which content gets viewed? | Pages/paths for home, history, games, and characters | A pageview means a page loaded; it does not prove a particular link was clicked |
+| Where does traffic come from? | Referrers, countries, browsers, and devices | Use available aggregate breakdowns; missing referrers do not prove direct entry |
+| Are pages loading well? | Cloudflare page load time and Core Web Vitals | Low traffic may leave some performance metrics unavailable |
 
-Outbound hostnames are lowercase with trailing dot and leading `www.` removed;
-`kind` is `description_source`, `artwork_source`, `game_reference`, or
-`combined_source`. Collapsed links emit one event. Footer/social links and
-ordinary game/character navigation emit no custom events. Events measure
-interaction attempts, never practice completion. Delivery is best effort and
-does not delay or replace navigation/forms. Disabled hooks queue no custom calls.
+Check the same date range in each dashboard when reviewing trends. Use Vercel
+for a quick view of popular pages and Cloudflare for page loading performance.
+Keep each provider's totals separate. Refreshes and post-form page loads can
+contribute pageviews; do not interpret them as Randomize or Back to daily counts.
+History views do not distinguish the navigation link from the homepage card.
+Source clicks and completed combo trials are not measured.
 
-On September 5, 2026, the linked team `devint` was rechecked as **Hobby**:
-50,000 monthly analytics events across the team and a one-month reporting window;
-custom events require Pro/Enterprise. No upgrade, trial, payment, or add-on is
-authorized. Custom-event activation remains pending an owner decision.
-See [Vercel pricing](https://vercel.com/docs/analytics/limits-and-pricing),
-[HTML setup](https://vercel.com/docs/analytics/quickstart), and
-[Cloudflare setup](https://developers.cloudflare.com/web-analytics/get-started/).
+On September 5, 2026, the owner replaced the four-custom-event requirement with
+this smaller scope. The custom-event hooks, attributes, and runtime flag were
+removed. `VERCEL_CUSTOM_EVENTS_ENABLED` is retired and has no effect, even if an
+old deployment setting remains. There is no pending paid activation requirement.
+Vercel's current Hobby allowance is 50,000 monthly analytics events across the
+team and a one-month reporting window. Cloudflare Web Analytics has a six-month
+reporting window with sampling/aggregation; it does not support custom events.
+See [Vercel pricing](https://vercel.com/docs/analytics/limits-and-pricing) and
+[Cloudflare reporting details](https://developers.cloudflare.com/web-analytics/faq/).
 
 ### Verification and rollback
 
@@ -172,8 +177,7 @@ dashboard confirmation; reporting delay is unverified, not success.
 
 Record the first observed collection timestamp; do not backfill launch traffic,
 interpret runtime requests as visitors, add the providers' totals together, or
-expect their counts to agree. Custom events need a separate live check of all
-four names only after existing entitlement permits activation.
+expect their counts to agree. No interaction-level or completion claims should be inferred from pageview data.
 
 To disable both integrations, set `WEB_ANALYTICS_ENABLED=0` in Production and
 redeploy once. The pre-analytics rollback point is commit `2092379`, deployment
@@ -193,10 +197,11 @@ https://daily-combo-trials.vercel.app.
   under Hobby team `devint`. Safari confirms Web Analytics is already enabled
   and system environment-variable access is checked. The three application
   variables were saved for Production only: master switch `1`, actual generated
-  Cloudflare token, and custom-event switch `0`. Dashboard work uses Safari only.
+  Cloudflare token, and the then-disabled custom-event switch `0`. The latter is
+  now retired. Dashboard work uses Safari only.
 - The existing production legacy script route returned HTTP 200 with
   `application/javascript`. This is script availability, not proof of collection.
-- Local validation: 30 analytics server cases and four offline Chromium scenarios
+- Local validation: 30 analytics server cases and two offline Chromium scenarios
   pass. The portable suite passes; the existing Windows DPAPI test fails on macOS,
   also reproduced against the pre-change application code.
 - Browser fixtures use isolated SQLite. An initial harness attempt used a mocked
@@ -217,6 +222,6 @@ https://daily-combo-trials.vercel.app.
   and `no-referrer` throughout. Local, preview, and alias omission are tested
   offline; the live deployment alias is protected. Successful production rendering
   confirms runtime system-variable exposure without manually setting system vars.
-- **Pageview setup complete; custom-event activation blocked by Vercel plan.**
-  All four events are **implemented but disabled**. The approved event requirement
-  remains pending an owner entitlement decision; the full goal is not complete.
+- Pageview collection is verified. The revised scope requires no custom-event
+  activation. The final simplification keeps the same provider initialization,
+  production/setup gate, hosting, public URL, and artwork fallback.

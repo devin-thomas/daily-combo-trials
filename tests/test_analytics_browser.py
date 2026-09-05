@@ -49,28 +49,26 @@ def test_analytics_browser_offline(tmp_path, monkeypatch):
     fixtures = {}
     try:
         with TestClient(app, base_url=f"https://{HOST}") as client:
-            for enabled in (True, False):
-                monkeypatch.setenv("VERCEL_CUSTOM_EVENTS_ENABLED", "1" if enabled else "0")
-                client.post("/daily")
-                daily = client.get("/").text
-                client.post("/randomize")
-                alternate = client.get("/").text
-                game = app.state.catalog.games[0]
-                character_path = next(
+            client.post("/daily")
+            daily = client.get("/").text
+            client.post("/randomize")
+            alternate = client.get("/").text
+            game = app.state.catalog.games[0]
+            character_path = next(
+                f"/games/{item.slug}/characters/{character.slug}"
+                for item in app.state.catalog.games
+                for character in item.eligible_characters
+                if 'Description and artwork source' in client.get(
                     f"/games/{item.slug}/characters/{character.slug}"
-                    for item in app.state.catalog.games
-                    for character in item.eligible_characters
-                    if 'data-analytics-kind="combined_source"' in client.get(
-                        f"/games/{item.slug}/characters/{character.slug}"
-                    ).text
-                )
-                paths = ["/history", "/games", f"/games/{game.slug}", character_path]
-                fixtures[str(enabled).lower()] = {
-                    "daily": daily,
-                    "alternate": alternate,
-                    "pages": {path: client.get(path).text for path in paths},
-                    "characterPath": character_path,
-                }
+                ).text
+            )
+            paths = ["/history", "/games", f"/games/{game.slug}", character_path]
+            fixtures = {
+                "daily": daily,
+                "alternate": alternate,
+                "pages": {path: client.get(path).text for path in paths},
+                "characterPath": character_path,
+            }
     finally:
         database.close()
     fixture_path = tmp_path / "browser-fixtures.json"

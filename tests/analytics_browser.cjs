@@ -11,16 +11,15 @@ const providerStub = `
   window.testBeforeSend = null;
   const consume = (command, payload) => {
     if (command === 'beforeSend') window.testBeforeSend = payload;
-    window.recordAnalytics({command, payload: command === 'beforeSend' ? null : payload})
-      .then(() => { if (command === 'event') window.testRecordedEvent = payload.name; });
+    window.recordAnalytics({command, payload: command === 'beforeSend' ? null : payload});
   };
   (window.vaq || []).forEach(args => consume(...args));
   window.va = consume;
   window.recordAnalytics({command: 'automatic_pageview'});
 `;
 
-async function run(browser, enabled, blocked = false) {
-  const fixture = fixtures[String(enabled)];
+async function run(browser, blocked = false) {
+  const fixture = fixtures;
   const context = await browser.newContext({ serviceWorkers: 'block' });
   const calls = [];
   const errors = [];
@@ -55,7 +54,11 @@ async function run(browser, enabled, blocked = false) {
       return blocked ? route.abort() : route.fulfill({ contentType: 'application/javascript', body: 'window.cloudflareStubLoaded = true;' });
     }
     // Never pass any request through to the internet, including images and new tabs.
-    if (url.origin !== origin) return route.abort();
+    if (url.origin !== origin) {
+      return request.resourceType() === 'document'
+        ? route.fulfill({ contentType: 'text/html', body: '<p>Offline source fixture</p>' })
+        : route.abort();
+    }
     if (request.method() === 'POST') {
       assert.ok(['/randomize', '/daily'].includes(url.pathname));
       submissions.push(url.pathname);
@@ -80,9 +83,6 @@ async function run(browser, enabled, blocked = false) {
     if (!blocked) await page.waitForFunction(() => window.testBeforeSend);
   };
   const events = () => calls.filter(call => call.command === 'event').map(call => call.payload);
-  const expectEvent = (name, count) => {
-    assert.equal(events().filter(event => event.name === name).length, enabled && !blocked ? count : 0);
-  };
   await load();
   if (!blocked) {
     assert.equal(await page.evaluate(() => window.cloudflareStubLoaded), true);
@@ -94,46 +94,39 @@ async function run(browser, enabled, blocked = false) {
   }
   await page.locator('[data-art-image]').first().waitFor({ state: 'hidden' });
   await page.locator('#challenge-art-fallback').waitFor({ state: 'visible' });
-  for (const [name, endpoint] of [['randomize', '/randomize'], ['back_to_daily', '/daily']]) {
-    const button = page.locator(`form[data-analytics-event="${name}"] button`);
+  for (const endpoint of ['/randomize', '/daily']) {
+    const button = page.locator(`form[action="${origin}${endpoint}"] button`);
     await button.focus();
     await Promise.all([page.waitForNavigation(), page.keyboard.press('Enter')]);
     if (!blocked) await page.waitForFunction(() => window.testBeforeSend);
     assert.equal(submissions.at(-1), endpoint);
-    expectEvent(name, 1);
   }
   assert.deepEqual(submissions, ['/randomize', '/daily']);
-  for (const [index, selector] of ['.site-nav', '.home-links'].entries()) {
+  for (const selector of ['.site-nav', '.home-links']) {
     await load();
     await Promise.all([
       page.waitForURL(origin + '/history'),
-      page.locator(`${selector} [data-analytics-event="open_history"]`).click(),
+      page.locator(`${selector} a[href="${origin}/history"]`).click(),
     ]);
     if (!blocked) await page.waitForFunction(() => window.testBeforeSend);
-    expectEvent('open_history', index + 1);
   }
   await load(fixture.characterPath);
-  const source = page.locator('[data-analytics-kind="combined_source"]').first();
-  const destination = new URL(await source.getAttribute('href'));
+  const source = page.getByRole('link', { name: /Description and artwork source/ }).first();
+  const destination = await source.getAttribute('href');
+  const popupPromise = page.waitForEvent('popup');
   await source.click();
-  if (enabled && !blocked) {
-    await page.waitForFunction(() => window.testRecordedEvent === 'outbound_source_click');
-    const outbound = events().filter(event => event.name === 'outbound_source_click');
-    assert.deepEqual(outbound, [{ name: 'outbound_source_click', data: {
-      host: destination.hostname.toLowerCase().replace(/\.$/, '').replace(/^www\./, ''),
-      kind: 'combined_source',
-    } }]);
-  }
-  expectEvent('outbound_source_click', 1);
+  const popup = await popupPromise;
+  assert.equal(popup.url(), destination);
+  await popup.close();
   await load('/games');
-  assert.equal(events().length, enabled && !blocked ? 5 : 0);
+  assert.equal(events().length, 0);
   assert.equal(calls.filter(call => call.command === 'pageview').length, 0);
   if (!blocked) {
     const pageviews = calls.filter(call => call.command === 'automatic_pageview').length;
     assert.ok(pageviews >= 7);
     assert.equal(pageviews, calls.filter(call => call.command === 'beforeSend').length);
   }
-  if (!enabled) {
+  {
     assert.ok(calls.filter(call => call.command === 'queue_check').length >= 5);
     assert.ok(calls.filter(call => call.command === 'queue_check').every(call => call.payload === 0));
     assert.equal(await page.evaluate(() => (window.vaq || []).filter(args => args[0] === 'event').length), 0);
@@ -145,10 +138,8 @@ async function run(browser, enabled, blocked = false) {
 (async () => {
   const browser = await chromium.launch({ headless: true });
   try {
+    await run(browser);
     await run(browser, true);
-    await run(browser, false);
-    await run(browser, false, true);
-    await run(browser, true, true);
     console.log('Offline Chromium analytics interactions, exclusions, and blocked-provider behavior passed.');
   } finally {
     await browser.close();

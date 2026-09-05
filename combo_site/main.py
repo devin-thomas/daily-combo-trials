@@ -159,9 +159,6 @@ def create_app(
     @app.middleware("http")
     async def analytics_context(request: Request, call_next):
         request.state.web_analytics = _analytics_allowed(request)
-        request.state.analytics_config = {
-            "custom_events": os.getenv("VERCEL_CUSTOM_EVENTS_ENABLED") == "1",
-        }
         request.state.cloudflare_beacon = {
             "token": os.getenv("CLOUDFLARE_WEB_ANALYTICS_TOKEN", "").strip(),
         }

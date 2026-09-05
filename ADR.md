@@ -140,38 +140,44 @@
 
 **Consequences:** The user still completes provider dashboard authentication, then can paste the copied placeholder URI and enter the password separately. The agent can later read the encrypted value locally for a Vercel environment handoff without printing it. A process running as the same Windows user remains within the DPAPI trust boundary, so the setup page should be disabled after one-time use when practical.
 
-## ADR-015 - Gate two browser analytics providers to canonical production
+## ADR-015 - Use existing production pageview and performance reports
 
-**Status:** Accepted; both pageview integrations verified live September 5, 2026.
-Custom-event activation remains pending the Vercel entitlement gate.
+**Status:** Accepted; revised September 5, 2026 by owner direction to limit scope.
+Both providers' pageview collection was verified live before this simplification.
 
-**Decision:** Keep FastAPI/Jinja, Vercel hosting, Supabase, and the public URL.
-Use one Python request gate and shared template inclusion for automatic Vercel
-pageviews and Uppercut Labs Cloudflare non-proxied Web Analytics pageviews and
-performance. A small plain JavaScript file initializes Vercel's documented queue
-and beforeSend filter. No npm application toolchain, manual pageviews, new
-identifiers/cookies, database, DNS changes, or Cloudflare path Rules are added.
+**Decision:** Keep Vercel Web Analytics automatic pageviews and Uppercut Labs
+Cloudflare non-proxied Web Analytics pageviews/performance. Use their existing
+pages, traffic-source, device, and performance reports. No custom events,
+analytics backend/database, new provider or Cloudflare product, paid activation,
+or custom dashboard. The former four-event requirement is cancelled; remove its
+hooks and semantic metadata rather than retain a dormant paid feature.
 
-**Boundaries:** Require `WEB_ANALYTICS_ENABLED=1`, system `VERCEL_ENV=production`,
-and hostname `daily-combo-trials.vercel.app`; exclude `/setup` and descendants
-with no-referrer responses while preserving Vercel setup denial. Missing
-`CLOUDFLARE_WEB_ANALYTICS_TOKEN` omits only Cloudflare. Set application variables
-only in Vercel Production. Never set system variables manually.
+**Boundaries:** One Python gate requires `WEB_ANALYTICS_ENABLED=1`, system
+`VERCEL_ENV=production`, and exact hostname `daily-combo-trials.vercel.app`.
+Exclude `/setup` and descendants, including denied responses/redirects, with
+`Referrer-Policy: no-referrer`. Preserve FastAPI/Jinja, Vercel hosting, routes,
+daily/reroll behavior, Supabase, public URL, and artwork fallback. Hosting logs
+are outside this browser exclusion. No manual pageviews or app identifiers.
 
-**Events and entitlement:** `VERCEL_CUSTOM_EVENTS_ENABLED` defaults off. The
-approved hooks are `randomize` and `back_to_daily` on form submit, `open_history`
-on either History link, and `outbound_source_click` on curated source activation.
-Only outbound events have properties: normalized `host` and semantic `kind`
-(`description_source`, `artwork_source`, `game_reference`, `combined_source`).
-Collapsed links emit once. Events are best-effort attempts, not completed trials.
-The September 5, 2026 account check confirms devint Hobby: 50,000 monthly events,
-one-month reporting window, no custom events. Activation remains pending an
-owner decision; no paid change or substitute provider is authorized.
+**Configuration:** Set only the master switch and actual
+`CLOUDFLARE_WEB_ANALYTICS_TOKEN` in Production; missing token omits Cloudflare
+without affecting Vercel. Serialize the public token safely. System variables
+are exposed automatically, not manually set. `VERCEL_CUSTOM_EVENTS_ENABLED` is
+retired and ignored. No npm app toolchain, DNS/proxy changes, or path Rules.
 
-**Verification and rollback:** Isolated SQLite/fixed-time tests cover gates and
-rendering; intercepted browser tests cover event delivery and normal navigation.
-Live network acceptance and each dashboard must be reported separately, with
-collection start recorded only when observed. Keep provider totals separate and
-never backfill unmeasured traffic. Disable with the master switch and redeploy;
-pre-change deployment is `dpl_G9oGRKsWPYBDPLrYKZry8p4dwsvT`, commit `2092379`.
-README records rollout evidence and remaining account/plan blockers.
+**Interpretation and limits:** A History pageview is a loaded page, not a count
+of History link clicks. Reloads after forms cannot measure Randomize or Back to
+daily attempts. Outbound clicks and trial completion are not measured. Keep
+provider totals separate; do not infer human visitors from runtime requests or
+backfill launch traffic. Current Vercel Hobby reporting is 50,000 monthly events
+and one month of history. Cloudflare offers six months with sampling/aggregation;
+performance metrics may need more traffic. README links provider documentation.
+
+**Verification and rollback:** Temporary SQLite/fixed-time server tests cover
+shared rendering, missing configuration, and local/preview/alias/setup gates.
+Offline browser tests stub providers, verify automatic pageviews only, and check
+keyboard forms, both History links, external links, and artwork fallback with
+providers loaded or blocked. Live Safari evidence: Vercel POST 200 at
+2026-09-05 16:47:28 UTC, Cloudflare POST 204 at 16:47:31 UTC; each dashboard
+confirmed pageviews separately. Disable with the master switch and redeploy.
+Pre-analytics rollback: `dpl_G9oGRKsWPYBDPLrYKZry8p4dwsvT`, commit `2092379`.

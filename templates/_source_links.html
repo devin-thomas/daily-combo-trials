@@ -1,11 +1,11 @@
 {% from "_icons.html" import icon with context %}
 
-{% macro source_link(url, label, class_name='source-link', detail_label=None, kind=None) -%}
+{% macro source_link(url, label, class_name='source-link', detail_label=None) -%}
   {% if url %}
     {% set brand_icon = source_icon_name(url) %}
     {% set brand_name = source_brand_name(url) %}
     {% set metadata_label = detail_label or label %}
-    <a {% if kind %}data-analytics-event="outbound_source_click" data-analytics-kind="{{ kind }}" {% endif %}class="{{ class_name }}" href="{{ url }}" target="_blank" rel="noreferrer" title="{{ metadata_label }} - {{ brand_name }}" aria-label="{{ metadata_label }} - {{ brand_name }}">
+    <a class="{{ class_name }}" href="{{ url }}" target="_blank" rel="noreferrer" title="{{ metadata_label }} - {{ brand_name }}" aria-label="{{ metadata_label }} - {{ brand_name }}">
       {{ icon(brand_icon, class_name='source-brand-icon ' ~ brand_icon) }}<span>{{ label }}</span>{{ icon('external-link', class_name='source-external-icon') }}
     </a>
   {% endif %}
@@ -13,10 +13,10 @@
 
 {% macro source_links(items, class_name='source-link') -%}
   {% for item in collapse_source_links(items) %}
-    {{ source_link(item['url'], item['label'], class_name, item['detail_label'], item.get('kind')) }}
+    {{ source_link(item['url'], item['label'], class_name, item['detail_label']) }}
   {% endfor %}
 {%- endmacro %}
 
 {% macro game_reference_link(game, class_name='source-link') -%}
-  {{ source_link(game.trial_source_url, game_reference_label(game.trial_source_url), class_name, kind='game_reference') }}
+  {{ source_link(game.trial_source_url, game_reference_label(game.trial_source_url), class_name) }}
 {%- endmacro %}
