@@ -3,6 +3,6 @@
   <script src="{{ url_for('static', path='analytics.js') }}"></script>
   <script defer src="/_vercel/insights/script.js"></script>
   {% if request.state.cloudflare_beacon.token %}
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{ request.state.cloudflare_beacon | tojson }}'></script>
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{ request.state.cloudflare_beacon | tojson }}'></script>
   {% endif %}
 {% endif %}

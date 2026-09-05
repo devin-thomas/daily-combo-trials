@@ -181,5 +181,6 @@ def test_beacon_configuration_is_safely_serialized(analytics_client, monkeypatch
     scripts = ScriptParser(response.text).scripts
     beacons = [s for s in scripts if s["attrs"].get("src") == CLOUDFLARE_SCRIPT]
     assert len(beacons) == 1
+    assert beacons[0]["attrs"]["type"] == "module"
     assert json.loads(beacons[0]["attrs"]["data-cf-beacon"])["token"] == token
     assert not any('alert("unsafe")' in s["text"] for s in scripts)
