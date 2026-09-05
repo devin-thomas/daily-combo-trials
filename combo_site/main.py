@@ -16,7 +16,12 @@ from fastapi.templating import Jinja2Templates
 
 from .catalog import Catalog, Character, Game, load_catalog
 from .database import Database, assignment_ref
-from .links import collapse_source_links, game_reference_label, source_brand_name, source_icon_name
+from .links import (
+    collapse_source_links,
+    game_reference_label,
+    source_brand_name,
+    source_icon_name,
+)
 from .secret_store import SecretStore, SecretStoreError, compose_database_url
 from .selection import ChallengeRef, choose_challenge
 

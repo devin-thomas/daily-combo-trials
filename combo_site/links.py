@@ -62,12 +62,27 @@ def game_reference_label(url: str | None) -> str:
     return "Open on Steam" if source_icon_name(url) == "brand-steam" else "Open game reference"
 
 
+def _source_collapse_key(url: str) -> str:
+    """Group only known alternate URLs that describe the same source destination."""
+    parsed = urlsplit(url)
+    host = _source_host(url)
+    path = parsed.path.rstrip("/").casefold()
+
+    if host == "tekken.com" and (path == "/fighters" or path.startswith("/fighters/")):
+        return "tekken:fighters"
+
+    if host in {"playstation.com", "blog.playstation.com"} and "marvel-tokon-fighting-souls" in path:
+        return "playstation:marvel-tokon-fighting-souls"
+
+    return url
+
+
 def collapse_source_links(
     items: Iterable[Mapping[str, str | None]],
 ) -> list[dict[str, str]]:
-    """Render one source link per exact URL while retaining every purpose label."""
+    """Render one source link per exact or known-equivalent URL group."""
     collapsed: list[dict[str, str]] = []
-    index_by_url: dict[str, int] = {}
+    index_by_key: dict[str, int] = {}
 
     for item in items:
         url = item.get("url")
@@ -75,9 +90,10 @@ def collapse_source_links(
         if not url or not label:
             continue
 
-        existing_index = index_by_url.get(url)
+        collapse_key = _source_collapse_key(url)
+        existing_index = index_by_key.get(collapse_key)
         if existing_index is None:
-            index_by_url[url] = len(collapsed)
+            index_by_key[collapse_key] = len(collapsed)
             collapsed.append({"url": url, "label": label})
             continue
 
