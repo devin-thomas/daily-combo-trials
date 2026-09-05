@@ -139,3 +139,38 @@
 **Rationale:** The missing production value is account-owned and cannot be safely requested through chat. Tailscale Serve provides a private HTTPS path from the user's phone while keeping the local listener on loopback; DPAPI avoids a plaintext credential file.
 
 **Consequences:** The user still completes provider dashboard authentication, then can paste the copied placeholder URI and enter the password separately. The agent can later read the encrypted value locally for a Vercel environment handoff without printing it. A process running as the same Windows user remains within the DPAPI trust boundary, so the setup page should be disabled after one-time use when practical.
+
+## ADR-015 - Gate two browser analytics providers to canonical production
+
+**Status:** Accepted implementation; activation and collection verification pending.
+
+**Decision:** Keep FastAPI/Jinja, Vercel hosting, Supabase, and the public URL.
+Use one Python request gate and shared template inclusion for automatic Vercel
+pageviews and Uppercut Labs Cloudflare non-proxied Web Analytics pageviews and
+performance. A small plain JavaScript file initializes Vercel's documented queue
+and beforeSend filter. No npm application toolchain, manual pageviews, new
+identifiers/cookies, database, DNS changes, or Cloudflare path Rules are added.
+
+**Boundaries:** Require `WEB_ANALYTICS_ENABLED=1`, system `VERCEL_ENV=production`,
+and hostname `daily-combo-trials.vercel.app`; exclude `/setup` and descendants
+with no-referrer responses while preserving Vercel setup denial. Missing
+`CLOUDFLARE_WEB_ANALYTICS_TOKEN` omits only Cloudflare. Set application variables
+only in Vercel Production. Never set system variables manually.
+
+**Events and entitlement:** `VERCEL_CUSTOM_EVENTS_ENABLED` defaults off. The
+approved hooks are `randomize` and `back_to_daily` on form submit, `open_history`
+on either History link, and `outbound_source_click` on curated source activation.
+Only outbound events have properties: normalized `host` and semantic `kind`
+(`description_source`, `artwork_source`, `game_reference`, `combined_source`).
+Collapsed links emit once. Events are best-effort attempts, not completed trials.
+The September 5, 2026 account check confirms devint Hobby: 50,000 monthly events,
+one-month reporting window, no custom events. Activation remains pending an
+owner decision; no paid change or substitute provider is authorized.
+
+**Verification and rollback:** Isolated SQLite/fixed-time tests cover gates and
+rendering; intercepted browser tests cover event delivery and normal navigation.
+Live network acceptance and each dashboard must be reported separately, with
+collection start recorded only when observed. Keep provider totals separate and
+never backfill unmeasured traffic. Disable with the master switch and redeploy;
+pre-change deployment is `dpl_G9oGRKsWPYBDPLrYKZry8p4dwsvT`, commit `2092379`.
+README records rollout evidence and remaining account/plan blockers.
