@@ -34,9 +34,18 @@
         {% block content %}{% endblock %}
       </main>
 
-      {% if request.url.path != '/setup' and request.app.state.setup_enabled %}
+      {% if request.url.path != '/setup' %}
         <footer class="site-footer">
-          <a href="{{ url_for('setup') }}">{{ icon('database') }}<span>Private setup</span></a>
+          <div class="site-attribution">
+            <img class="site-attribution-logo" src="{{ url_for('static', path='brand/uppercut-labs.jpg') }}" alt="Uppercut Labs">
+            <div class="site-attribution-copy">
+              <span>Developed by Lil Gohan of Uppercut Labs</span>
+              <a href="https://x.com/gohan__fgc" target="_blank" rel="noreferrer">x @gohan__fgc</a>
+            </div>
+          </div>
+          {% if request.app.state.setup_enabled %}
+            <a class="site-footer-setup" href="{{ url_for('setup') }}">{{ icon('database') }}<span>Private setup</span></a>
+          {% endif %}
         </footer>
       {% endif %}
     </div>

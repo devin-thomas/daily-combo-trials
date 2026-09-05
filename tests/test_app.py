@@ -177,6 +177,9 @@ def test_home_history_and_stable_character_routes(local_test_dir: Path) -> None:
         assert home.status_code == 200
         assert "Daily Combo Trials" in home.text
         assert "Complete every combo trial for this character." in home.text
+        assert "Developed by Lil Gohan of Uppercut Labs" in home.text
+        assert 'href="https://x.com/gohan__fgc"' in home.text
+        assert "/static/brand/uppercut-labs.jpg" in home.text
 
         with database.session() as session:
             record = session.get(DailyAssignment, "2026-09-04")
