@@ -33,9 +33,9 @@
     {% endif %}
     <div class="source-links">
       {{ source_links([
-        {'url': character.description_source_url, 'label': 'Description source'},
-        {'url': character.art_source_url, 'label': 'Artwork source'},
-        {'url': game.trial_source_url, 'label': game_reference_label(game.trial_source_url)}
+        {'url': character.description_source_url, 'label': 'Description source', 'kind': 'description_source'},
+        {'url': character.art_source_url, 'label': 'Artwork source', 'kind': 'artwork_source'},
+        {'url': game.trial_source_url, 'kind': 'game_reference', 'label': game_reference_label(game.trial_source_url)}
       ]) }}
     </div>
     <a class="button button-primary inline-button" href="{{ url_for('game_detail', game_slug=game.slug) }}">{{ icon('arrow-left') }}<span>Back to {{ game.title }}</span></a>

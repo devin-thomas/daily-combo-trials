@@ -112,6 +112,7 @@ def collapse_source_links(
     for item in items:
         url = item.get("url")
         label = item.get("label")
+        kind = item.get("kind")
         if not url or not label:
             continue
 
@@ -127,10 +128,16 @@ def collapse_source_links(
                     "detail_label": _source_detail_label(labels),
                 }
             )
+            if kind:
+                collapsed[-1]["kind"] = kind
             labels_by_index.append(labels)
             continue
 
         current = collapsed[existing_index]
+        if kind:
+            current["kind"] = (
+                "combined_source" if current.get("kind", kind) != kind else kind
+            )
         labels = labels_by_index[existing_index]
         labels.append(label)
         current["label"] = _source_display_label(collapse_key, labels)

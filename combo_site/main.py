@@ -31,6 +31,20 @@ CATALOG_PATH = ROOT / "data" / "catalog.json"
 CENTRAL = ZoneInfo("America/Chicago")
 REROLL_COOKIE = "combo_trial_reroll"
 SETUP_CSRF_COOKIE = "daily_combo_setup_csrf"
+ANALYTICS_HOST = "daily-combo-trials.vercel.app"
+
+
+def _is_setup_path(path: str) -> bool:
+    return path == "/setup" or path.startswith("/setup/")
+
+
+def _analytics_allowed(request: Request) -> bool:
+    return (
+        os.getenv("WEB_ANALYTICS_ENABLED") == "1"
+        and os.getenv("VERCEL_ENV") == "production"
+        and request.url.hostname == ANALYTICS_HOST
+        and not _is_setup_path(request.url.path)
+    )
 
 
 def _default_catalog() -> Catalog:
@@ -141,6 +155,20 @@ def create_app(
     app.state.setup_enabled = _setup_enabled()
     app.state.now_provider = now_provider
     app.mount("/static", StaticFiles(directory=str(ROOT / "static")), name="static")
+
+    @app.middleware("http")
+    async def analytics_context(request: Request, call_next):
+        request.state.web_analytics = _analytics_allowed(request)
+        request.state.analytics_config = {
+            "custom_events": os.getenv("VERCEL_CUSTOM_EVENTS_ENABLED") == "1",
+        }
+        request.state.cloudflare_beacon = {
+            "token": os.getenv("CLOUDFLARE_WEB_ANALYTICS_TOKEN", "").strip(),
+        }
+        response = await call_next(request)
+        if _is_setup_path(request.url.path):
+            response.headers["Referrer-Policy"] = "no-referrer"
+        return response
 
     def today_assignment():
         day = _central_day(now_provider)

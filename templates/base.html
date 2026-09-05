@@ -24,7 +24,7 @@
         {% if request.url.path != '/setup' %}
           <nav class="site-nav" aria-label="Primary navigation">
             <a href="{{ url_for('home') }}" {% if request.url.path == '/' %}aria-current="page"{% endif %}>{{ icon('house') }}<span>Today</span></a>
-            <a href="{{ url_for('history') }}" {% if request.url.path == '/history' %}aria-current="page"{% endif %}>{{ icon('history') }}<span>History</span></a>
+            <a data-analytics-event="open_history" href="{{ url_for('history') }}" {% if request.url.path == '/history' %}aria-current="page"{% endif %}>{{ icon('history') }}<span>History</span></a>
             <a href="{{ url_for('games') }}" {% if request.url.path.startswith('/games') %}aria-current="page"{% endif %}>{{ icon('gamepad-2') }}<span>Games</span></a>
           </nav>
         {% endif %}
@@ -49,5 +49,6 @@
         </footer>
       {% endif %}
     </div>
+    {% include "_analytics.html" %}
   </body>
 </html>
