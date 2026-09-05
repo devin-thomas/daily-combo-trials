@@ -142,7 +142,8 @@
 
 ## ADR-015 - Gate two browser analytics providers to canonical production
 
-**Status:** Accepted implementation; activation and collection verification pending.
+**Status:** Accepted; both pageview integrations verified live September 5, 2026.
+Custom-event activation remains pending the Vercel entitlement gate.
 
 **Decision:** Keep FastAPI/Jinja, Vercel hosting, Supabase, and the public URL.
 Use one Python request gate and shared template inclusion for automatic Vercel
