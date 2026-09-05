@@ -77,12 +77,37 @@ def _source_collapse_key(url: str) -> str:
     return url
 
 
+def _source_display_label(collapse_key: str, labels: list[str]) -> str:
+    if collapse_key == "tekken:fighters":
+        return "Official fighter page"
+    if collapse_key == "playstation:marvel-tokon-fighting-souls":
+        return "Official game page"
+    if {"Description source", "Artwork source"}.issubset(labels):
+        return "Character source"
+    return labels[0] if len(labels) == 1 else "Source"
+
+
+def _source_detail_label(labels: list[str]) -> str:
+    detail_labels = list(labels)
+    if {"Description source", "Artwork source"}.issubset(detail_labels):
+        detail_labels = [
+            "Description and artwork source",
+            *(
+                label
+                for label in detail_labels
+                if label not in {"Description source", "Artwork source"}
+            ),
+        ]
+    return "; ".join(detail_labels)
+
+
 def collapse_source_links(
     items: Iterable[Mapping[str, str | None]],
 ) -> list[dict[str, str]]:
     """Render one source link per exact or known-equivalent URL group."""
     collapsed: list[dict[str, str]] = []
     index_by_key: dict[str, int] = {}
+    labels_by_index: list[list[str]] = []
 
     for item in items:
         url = item.get("url")
@@ -94,10 +119,21 @@ def collapse_source_links(
         existing_index = index_by_key.get(collapse_key)
         if existing_index is None:
             index_by_key[collapse_key] = len(collapsed)
-            collapsed.append({"url": url, "label": label})
+            labels = [label]
+            collapsed.append(
+                {
+                    "url": url,
+                    "label": _source_display_label(collapse_key, labels),
+                    "detail_label": _source_detail_label(labels),
+                }
+            )
+            labels_by_index.append(labels)
             continue
 
         current = collapsed[existing_index]
-        current["label"] = f'{current["label"]} and {label}'
+        labels = labels_by_index[existing_index]
+        labels.append(label)
+        current["label"] = _source_display_label(collapse_key, labels)
+        current["detail_label"] = _source_detail_label(labels)
 
     return collapsed

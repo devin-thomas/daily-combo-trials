@@ -228,15 +228,16 @@ def test_external_links_show_brand_and_keep_game_reference_copy_honest(local_tes
         assert "/static/icons/brands/supercombo.svg" in character.text
         assert "/static/icons/brands/steam.svg" in character.text
         assert character.text.count("/static/icons/lucide-external-link.svg") == 2
-        assert "Description source and Artwork source" in character.text
-        assert 'aria-label="Description source and Artwork source - SuperCombo"' in character.text
+        assert "Character source" in character.text
+        assert 'aria-label="Description and artwork source - SuperCombo"' in character.text
         assert 'aria-label="Artwork source - SuperCombo"' not in character.text
         assert "Open on Steam" in character.text
 
         tokon = client.get("/games/marvel-tokon-fighting-souls/characters/carnage")
         assert tokon.status_code == 200
         assert tokon.text.count("/static/icons/lucide-external-link.svg") == 1
-        assert "Description source and Artwork source and Open game reference" in tokon.text
+        assert "Official game page" in tokon.text
+        assert 'aria-label="Description and artwork source; Open game reference - PlayStation"' in tokon.text
         assert tokon.text.count(
             'href="https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/"'
         ) == 1
@@ -247,7 +248,8 @@ def test_external_links_show_brand_and_keep_game_reference_copy_honest(local_tes
         )
         assert tekken_character.status_code == 200
         assert tekken_character.text.count("/static/icons/lucide-external-link.svg") == 1
-        assert "Description source and Artwork source and Open game reference" in tekken_character.text
+        assert "Official fighter page" in tekken_character.text
+        assert 'aria-label="Description and artwork source; Open game reference - TEKKEN"' in tekken_character.text
         assert 'href="https://tekken.com/fighters/alisa-bosconovitch"' in tekken_character.text
         assert 'href="https://tekken.com/fighters"' not in tekken_character.text
 
@@ -273,9 +275,14 @@ def test_collapse_source_links_keeps_each_exact_url_once() -> None:
     ) == [
         {
             "url": "https://example.test/source",
-            "label": "Description source and Artwork source",
+            "label": "Character source",
+            "detail_label": "Description and artwork source",
         },
-        {"url": "https://example.test/game", "label": "Open game reference"},
+        {
+            "url": "https://example.test/game",
+            "label": "Open game reference",
+            "detail_label": "Open game reference",
+        },
     ]
 
 
@@ -299,11 +306,13 @@ def test_collapse_source_links_groups_tokon_and_tekken_alternate_urls() -> None:
     ) == [
         {
             "url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/",
-            "label": "Description and artwork source and Open game reference",
+            "label": "Official game page",
+            "detail_label": "Description and artwork source; Open game reference",
         },
         {
             "url": "https://tekken.com/fighters/alisa-bosconovitch",
-            "label": "Description and artwork source and Open game reference",
+            "label": "Official fighter page",
+            "detail_label": "Description and artwork source; Open game reference",
         },
     ]
 
