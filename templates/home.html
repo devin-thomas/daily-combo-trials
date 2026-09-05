@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% from "_icons.html" import icon with context %}
-{% from "_source_links.html" import source_link, game_reference_link with context %}
+{% from "_source_links.html" import source_links with context %}
 {% block title %}{% if is_alternate %}Alternate challenge{% else %}Today's challenge{% endif %} | Daily Combo Trials{% endblock %}
 {% block content %}
 <section class="home-intro">
@@ -32,9 +32,11 @@
     {% endif %}
 
     <div class="source-links">
-      {{ source_link(challenge.character.description_source_url, 'Description source') }}
-      {{ source_link(challenge.character.art_source_url, 'Artwork source') }}
-      {{ game_reference_link(challenge.game) }}
+      {{ source_links([
+        {'url': challenge.character.description_source_url, 'label': 'Description source'},
+        {'url': challenge.character.art_source_url, 'label': 'Artwork source'},
+        {'url': challenge.game.trial_source_url, 'label': game_reference_label(challenge.game.trial_source_url)}
+      ]) }}
     </div>
 
     <div class="challenge-actions">

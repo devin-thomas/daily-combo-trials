@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Iterable, Mapping
 from urllib.parse import urlsplit
 
 
@@ -59,3 +60,28 @@ def source_brand_name(url: str | None) -> str:
 def game_reference_label(url: str | None) -> str:
     """Name Steam destinations explicitly while preserving honest fallback copy."""
     return "Open on Steam" if source_icon_name(url) == "brand-steam" else "Open game reference"
+
+
+def collapse_source_links(
+    items: Iterable[Mapping[str, str | None]],
+) -> list[dict[str, str]]:
+    """Render one source link per exact URL while retaining every purpose label."""
+    collapsed: list[dict[str, str]] = []
+    index_by_url: dict[str, int] = {}
+
+    for item in items:
+        url = item.get("url")
+        label = item.get("label")
+        if not url or not label:
+            continue
+
+        existing_index = index_by_url.get(url)
+        if existing_index is None:
+            index_by_url[url] = len(collapsed)
+            collapsed.append({"url": url, "label": label})
+            continue
+
+        current = collapsed[existing_index]
+        current["label"] = f'{current["label"]} and {label}'
+
+    return collapsed

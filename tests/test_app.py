@@ -9,7 +9,7 @@ import pytest
 
 from combo_site.catalog import Catalog, Character, Game, load_catalog
 from combo_site.database import DailyAssignment, Database
-from combo_site.links import game_reference_label, source_brand_name, source_icon_name
+from combo_site.links import collapse_source_links, game_reference_label, source_brand_name, source_icon_name
 from combo_site.main import _central_day, create_app
 from combo_site.secret_store import SecretStore, compose_database_url
 from combo_site.selection import ChallengeRef, choose_challenge
@@ -222,9 +222,11 @@ def test_external_links_show_brand_and_keep_game_reference_copy_honest(local_tes
         assert character.status_code == 200
         assert "/static/icons/brands/supercombo.svg" in character.text
         assert "/static/icons/brands/steam.svg" in character.text
-        assert character.text.count("/static/icons/lucide-external-link.svg") >= 3
+        assert character.text.count("/static/icons/lucide-external-link.svg") == 2
+        assert "Description source and Artwork source" in character.text
+        assert 'aria-label="Description source and Artwork source - SuperCombo"' in character.text
+        assert 'aria-label="Artwork source - SuperCombo"' not in character.text
         assert "Open on Steam" in character.text
-        assert 'aria-label="Description source - SuperCombo"' in character.text
 
         tekken = client.get("/games/tekken-8")
         assert tekken.status_code == 200
@@ -235,6 +237,23 @@ def test_external_links_show_brand_and_keep_game_reference_copy_honest(local_tes
     finally:
         client.close()
         database.close()
+
+
+def test_collapse_source_links_keeps_each_exact_url_once() -> None:
+    assert collapse_source_links(
+        [
+            {"url": "https://example.test/source", "label": "Description source"},
+            {"url": "https://example.test/source", "label": "Artwork source"},
+            {"url": "https://example.test/game", "label": "Open game reference"},
+            {"url": None, "label": "Missing source"},
+        ]
+    ) == [
+        {
+            "url": "https://example.test/source",
+            "label": "Description source and Artwork source",
+        },
+        {"url": "https://example.test/game", "label": "Open game reference"},
+    ]
 
 
 def test_source_brand_mapping_covers_catalog_domains() -> None:

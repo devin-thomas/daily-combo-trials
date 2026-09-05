@@ -10,6 +10,12 @@
   {% endif %}
 {%- endmacro %}
 
+{% macro source_links(items, class_name='source-link') -%}
+  {% for item in collapse_source_links(items) %}
+    {{ source_link(item['url'], item['label'], class_name) }}
+  {% endfor %}
+{%- endmacro %}
+
 {% macro game_reference_link(game, class_name='source-link') -%}
   {{ source_link(game.trial_source_url, game_reference_label(game.trial_source_url), class_name) }}
 {%- endmacro %}
