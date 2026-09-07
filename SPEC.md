@@ -2,7 +2,7 @@
 
 ## Objective
 
-Create a low-complexity, server-rendered FastAPI site that turns the user's curated Steam fighting-game library into a daily combo-trial challenge. Each challenge names one included game and one eligible character and instructs the user to complete that character's in-game combo trials.
+Create a low-complexity, server-rendered FastAPI site that turns the user's curated fighting-game library into a daily combo-trial challenge. Each challenge names one included game and one eligible character and instructs the user to complete that character's in-game combo trials.
 
 The site should feel like a useful FGC practice ritual: visually immediate, character-led, and easy to revisit. It should teach FastAPI routes, templates, validation, cookies, persistence, and deployment to Vercel without introducing a frontend framework.
 
@@ -11,7 +11,7 @@ The site should feel like a useful FGC practice ritual: visually immediate, char
 ### Required
 
 - Use the supplied `download.json` Steam export and `fg.js` curated game IDs as source inputs.
-- Use the 17-game `comboTrialGameAppIds` list in `fg.js` as the initial game boundary.
+- Use the 17-game `comboTrialGameAppIds` list in `fg.js` as the initial Steam game boundary, then allow explicitly curated non-Steam games as first-class catalog entries.
 - Maintain a curated catalog covering every included game's eligible playable roster, including DLC and guest characters when the game provides in-game combo trials.
 - Select one game uniformly, then one character uniformly from that game's eligible roster.
 - Create one immutable daily assignment per calendar date in the `America/Chicago` time zone.
@@ -51,9 +51,9 @@ The site should feel like a useful FGC practice ritual: visually immediate, char
 
 - `slug`: stable URL identifier.
 - `title`: display name.
-- `steam_appid`: source Steam application ID.
+- `steam_appid`: optional source Steam application ID; non-Steam games omit it and use their stable slug for local asset storage.
 - `trial_source_url`: optional link to a trial or game reference.
-- `characters`: ordered list of eligible `Character` records.
+- `characters`: ordered list of roster `Character` records; daily selection uses the eligible subset.
 
 ### Character
 

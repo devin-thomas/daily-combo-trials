@@ -25,7 +25,11 @@
   <div class="character-copy">
     <p class="game-context">{{ icon('gamepad-2') }}<span>{{ game.title }}</span></p>
     <h1>{{ character.name }}</h1>
-    <p class="mission">{{ icon('target') }}<span>Complete every combo trial for this character.</span></p>
+    {% if character.trial_eligible %}
+      <p class="mission">{{ icon('target') }}<span>Complete every combo trial for this character.</span></p>
+    {% else %}
+      <p class="mission mission-unavailable">{{ icon('info') }}<span>No combo trials yet.</span></p>
+    {% endif %}
     {% if character.description %}
       <p class="description">{{ character.description }}</p>
     {% else %}

@@ -86,10 +86,10 @@ def test_compose_database_url_encodes_separate_password() -> None:
         compose_database_url(template)
 
 
-def test_catalog_contains_all_initial_games_and_playable_rosters() -> None:
+def test_catalog_contains_all_games_and_playable_rosters() -> None:
     catalog = load_catalog(CATALOG_PATH)
 
-    assert len(catalog.games) == 17
+    assert len(catalog.games) == 18
     assert all(game.eligible_characters for game in catalog.games)
     assert len(catalog.candidates) > len(catalog.games)
 
@@ -114,7 +114,7 @@ def test_catalog_rosters_are_alphabetized_and_every_character_has_art_and_descri
             ),
         )
         for character in game.eligible_characters:
-            expected_url = f"/static/art/{game.steam_appid}/{character.slug}.webp"
+            expected_url = f"/static/art/{game.art_key}/{character.slug}.webp"
             assert character.art_url == expected_url
             art_path = ROOT / "static" / expected_url.removeprefix("/static/")
             assert art_path.is_file()
@@ -342,6 +342,21 @@ def test_source_brand_mapping_covers_catalog_domains() -> None:
     assert game_reference_label("https://tekken.com/fighters") == "Open game reference"
 
 
+def test_2xko_is_non_steam_and_keeps_samira_visible_without_trials() -> None:
+    catalog = load_catalog(CATALOG_PATH)
+    game = catalog.get_game("2xko")
+
+    assert game is not None
+    assert game.steam_appid is None
+    assert game.art_key == "2xko"
+    assert len(game.characters) == 17
+    assert len(game.eligible_characters) == 16
+    assert [character.name for character in game.characters].count("Samira") == 1
+    samira = game.get_character("samira")
+    assert samira is not None
+    assert not samira.trial_eligible
+
+
 def test_every_catalog_game_and_character_has_a_route(local_test_dir: Path) -> None:
     client, database = make_client(local_test_dir)
     catalog = load_catalog(CATALOG_PATH)
@@ -349,11 +364,32 @@ def test_every_catalog_game_and_character_has_a_route(local_test_dir: Path) -> N
         for game in catalog.games:
             game_response = client.get(f"/games/{game.slug}")
             assert game_response.status_code == 200
-            for character in game.eligible_characters:
+            for character in game.characters:
                 character_response = client.get(
                     f"/games/{game.slug}/characters/{character.slug}"
                 )
                 assert character_response.status_code == 200
+    finally:
+        client.close()
+        database.close()
+
+
+def test_2xko_page_shows_full_roster_and_trial_status(local_test_dir: Path) -> None:
+    client, database = make_client(local_test_dir)
+    try:
+        response = client.get("/games/2XKO")
+        assert response.status_code == 200
+        assert "2XKO" in response.text
+        assert "17 characters" in response.text
+        assert "16 with trials" in response.text
+        assert "Lux" in response.text
+        assert "Samira" in response.text
+        assert "No combo trials yet" in response.text
+
+        samira = client.get("/games/2xko/characters/samira")
+        assert samira.status_code == 200
+        assert "No combo trials yet." in samira.text
+        assert "Complete every combo trial for this character." not in samira.text
     finally:
         client.close()
         database.close()

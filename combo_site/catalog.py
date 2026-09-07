@@ -28,9 +28,13 @@ class Character:
 class Game:
     slug: str
     title: str
-    steam_appid: int
+    steam_appid: int | None
     trial_source_url: str | None
     characters: tuple[Character, ...]
+
+    @property
+    def art_key(self) -> str:
+        return str(self.steam_appid) if self.steam_appid is not None else self.slug
 
     @property
     def eligible_characters(self) -> tuple[Character, ...]:
@@ -152,8 +156,8 @@ def load_catalog(path: Path) -> Catalog:
         game_slugs.add(slug)
 
         appid = raw_game.get("steam_appid")
-        if not isinstance(appid, int) or appid <= 0:
-            raise CatalogError(f"{context} requires a positive integer steam_appid")
+        if appid is not None and (isinstance(appid, bool) or not isinstance(appid, int) or appid <= 0):
+            raise CatalogError(f"{context} has an invalid steam_appid")
 
         raw_characters = raw_game.get("characters")
         if not isinstance(raw_characters, list) or not raw_characters:

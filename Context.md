@@ -39,7 +39,7 @@ The site is primarily a personal FGC practice prompt. The user wants to learn ho
 
 - `download.json` is the exported Steam library payload.
 - `fg.js` contains the current manually curated `fightingGameAppIds` list.
-- `fg.js` also contains the narrower `comboTrialGameAppIds` list, currently covering 17 candidate games. This is the initial eligibility input for the challenge catalog.
+- `fg.js` also contains the narrower `comboTrialGameAppIds` list, currently covering 17 Steam candidate games. This is the initial eligibility input for the challenge catalog; explicitly curated non-Steam games may be added alongside it.
 - Character rosters and trial coverage still need to be modeled. The content policy is build-time curation with source and credit links.
 
 ## Provisional system model

@@ -6,18 +6,24 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{ url_for('games') }}">{{ icon('gamepad-2') }}<span>Games</span></a>{{ icon('chevron-right') }}<span>{{ game.title }}</span></nav>
 <section class="page-heading game-heading">
   <div class="heading-line">{{ icon('gamepad-2') }}<h1>{{ game.title }}</h1></div>
-  <p class="heading-support">{{ icon('user-round') }}<span>{{ game.eligible_characters|length }} characters</span></p>
+  <p class="heading-support">{{ icon('user-round') }}<span>{{ game.characters|length }} characters{% if game.eligible_characters|length != game.characters|length %} · {{ game.eligible_characters|length }} with trials{% endif %}</span></p>
   {{ game_reference_link(game, 'text-link') }}
 </section>
 
 <section class="character-grid" aria-label="Characters in {{ game.title }}">
-  {% for character in game.eligible_characters %}
-    <a class="character-tile" href="{{ url_for('character_detail', game_slug=game.slug, character_slug=character.slug) }}">
+  {% for character in game.characters %}
+    <a class="character-tile{% if not character.trial_eligible %} is-unavailable{% endif %}" href="{{ url_for('character_detail', game_slug=game.slug, character_slug=character.slug) }}">
       <span class="character-tile-top">
         <span class="character-initial" aria-hidden="true">{{ character.name[0] }}</span>
         {% if character.art_url %}<span class="art-indicator" title="Artwork available" aria-label="Artwork available">{{ icon('image') }}</span>{% endif %}
       </span>
-      <span class="character-tile-bottom"><span class="character-tile-name">{{ character.name }}</span>{{ icon('chevron-right') }}</span>
+      <span class="character-tile-bottom">
+        <span class="character-tile-copy">
+          <span class="character-tile-name">{{ character.name }}</span>
+          {% if not character.trial_eligible %}<span class="character-tile-status">No combo trials yet</span>{% endif %}
+        </span>
+        {{ icon('chevron-right') }}
+      </span>
     </a>
   {% endfor %}
 </section>

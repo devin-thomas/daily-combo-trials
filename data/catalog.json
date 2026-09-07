@@ -4842,6 +4842,164 @@
           "description_source_url": "https://www.playstation.com/en-us/games/marvel-tokon-fighting-souls/"
         }
       ]
+    },
+    {
+      "slug": "2xko",
+      "title": "2XKO",
+      "trial_source_url": "https://2xko.riotgames.com/en-us/",
+      "characters": [
+        {
+          "slug": "ahri",
+          "name": "Ahri",
+          "art_url": "/static/art/2xko/ahri.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/ahri/",
+          "art_alt": "Ahri from 2XKO",
+          "description": "Ahri turns spirit magic and fast movement into layered rushdown from changing angles.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/ahri/"
+        },
+        {
+          "slug": "akali",
+          "name": "Akali",
+          "art_url": "/static/art/2xko/akali.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/akali/",
+          "art_alt": "Akali from 2XKO",
+          "description": "Akali uses smoke, teleports, and sharp close-range attacks to slip through defenses and keep pressure moving.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/akali/"
+        },
+        {
+          "slug": "blitzcrank",
+          "name": "Blitzcrank",
+          "art_url": "/static/art/2xko/blitzcrank.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/blitzcrank/",
+          "art_alt": "Blitzcrank from 2XKO",
+          "description": "Blitzcrank turns rocket-fist pulls into command-grab pressure and explosive close-range conversions.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/blitzcrank/"
+        },
+        {
+          "slug": "braum",
+          "name": "Braum",
+          "art_url": "/static/art/2xko/braum.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/braum/",
+          "art_alt": "Braum from 2XKO",
+          "description": "Braum combines a broad shield, defensive utility, and close-range strikes to protect space and punish approaches.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/braum/"
+        },
+        {
+          "slug": "caitlyn",
+          "name": "Caitlyn",
+          "art_url": "/static/art/2xko/caitlyn.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/caitlyn/",
+          "art_alt": "Caitlyn from 2XKO",
+          "description": "Caitlyn controls long range with rifle shots and traps that funnel opponents into carefully timed punishments.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/caitlyn/"
+        },
+        {
+          "slug": "darius",
+          "name": "Darius",
+          "art_url": "/static/art/2xko/darius.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/darius/",
+          "art_alt": "Darius from 2XKO",
+          "description": "Darius is a mid-range bruiser whose axe swings and brutal follow-ups reward commanding space.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/darius/"
+        },
+        {
+          "slug": "ekko",
+          "name": "Ekko",
+          "art_url": "/static/art/2xko/ekko.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/ekko/",
+          "art_alt": "Ekko from 2XKO",
+          "description": "Ekko uses time-bending mobility and burst mixups to turn a single opening into sustained pressure.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/ekko/"
+        },
+        {
+          "slug": "illaoi",
+          "name": "Illaoi",
+          "art_url": "/static/art/2xko/illaoi.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/illaoi/",
+          "art_alt": "Illaoi from 2XKO",
+          "description": "Illaoi overwhelms opponents with heavy totem strikes and spectral tentacles that lock down the screen.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/illaoi/"
+        },
+        {
+          "slug": "jinx",
+          "name": "Jinx",
+          "art_url": "/static/art/2xko/jinx.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/jinx/",
+          "art_alt": "Jinx from 2XKO",
+          "description": "Jinx keeps opponents out with guns, traps, and explosives before cashing out a chaotic opening.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/jinx/"
+        },
+        {
+          "slug": "lux",
+          "name": "Lux",
+          "art_url": "/static/art/2xko/lux.webp",
+          "art_source_url": "https://www.youtube.com/watch?v=ll9DI1Vx3H0",
+          "art_alt": "Lux from 2XKO",
+          "description": "Lux is an all-rounder who pairs a fireball, reliable anti-air, and air dash with straightforward fundamentals.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/news/announcements/so-what-happens-now-patch-131-pre-preview/"
+        },
+        {
+          "slug": "samira",
+          "name": "Samira",
+          "trial_eligible": false,
+          "description": "Samira is an upcoming champion whose combo-trial coverage will be added after her release.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/news/announcements/so-what-happens-now-patch-131-pre-preview/"
+        },
+        {
+          "slug": "senna",
+          "name": "Senna",
+          "art_url": "/static/art/2xko/senna.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/senna/",
+          "art_alt": "Senna from 2XKO",
+          "description": "Senna shifts between cannon range and wraith-like rushdown, giving her two distinct ways to control a round.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/senna/"
+        },
+        {
+          "slug": "teemo",
+          "name": "Teemo",
+          "art_url": "/static/art/2xko/teemo.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/teemo/",
+          "art_alt": "Teemo from 2XKO",
+          "description": "Teemo disguises a tricky ranged game behind traps, gadgets, and deceptive movement.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/teemo/"
+        },
+        {
+          "slug": "thresh",
+          "name": "Thresh",
+          "art_url": "/static/art/2xko/thresh.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/thresh/",
+          "art_alt": "Thresh from 2XKO",
+          "description": "Thresh uses chain reach, lantern movement, and unusual angles to make every approach hard to read.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/thresh/"
+        },
+        {
+          "slug": "vi",
+          "name": "Vi",
+          "art_url": "/static/art/2xko/vi.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/vi/",
+          "art_alt": "Vi from 2XKO",
+          "description": "Vi closes distance with boxing footwork and hextech gauntlets, turning clean hits into heavy pressure.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/vi/"
+        },
+        {
+          "slug": "warwick",
+          "name": "Warwick",
+          "art_url": "/static/art/2xko/warwick.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/warwick/",
+          "art_alt": "Warwick from 2XKO",
+          "description": "Warwick hunts from changing angles with relentless rushdown, claws, and unpredictable bite-based attacks.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/warwick/"
+        },
+        {
+          "slug": "yasuo",
+          "name": "Yasuo",
+          "art_url": "/static/art/2xko/yasuo.webp",
+          "art_source_url": "https://2xko.riotgames.com/en-us/champions/yasuo/",
+          "art_alt": "Yasuo from 2XKO",
+          "description": "Yasuo combines wind barriers, sword attacks, and dash movement to contest mid-range and deny projectiles.",
+          "description_source_url": "https://2xko.riotgames.com/en-us/champions/yasuo/"
+        }
+      ]
     }
   ]
 }

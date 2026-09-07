@@ -330,7 +330,7 @@ def create_app(
 
     @app.get("/games/{game_slug}", response_class=HTMLResponse, name="game_detail")
     def game_detail(request: Request, game_slug: str) -> HTMLResponse:
-        game = site_catalog.get_game(game_slug)
+        game = site_catalog.get_game(game_slug.casefold())
         if game is None:
             raise HTTPException(status_code=404)
         return templates.TemplateResponse(
@@ -345,7 +345,7 @@ def create_app(
         name="character_detail",
     )
     def character_detail(request: Request, game_slug: str, character_slug: str) -> HTMLResponse:
-        resolved = site_catalog.get_character(game_slug, character_slug)
+        resolved = site_catalog.get_character(game_slug.casefold(), character_slug.casefold())
         if resolved is None:
             raise HTTPException(status_code=404)
         game, character = resolved

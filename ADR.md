@@ -14,11 +14,11 @@
 
 **Status:** Accepted
 
-**Decision:** The initial challenge catalog starts from `comboTrialGameAppIds` in `fg.js`, rather than trying to infer fighting games or combo-trial support from the full Steam export.
+**Decision:** The initial Steam portion of the challenge catalog starts from `comboTrialGameAppIds` in `fg.js`, rather than trying to infer fighting games or combo-trial support from the full Steam export. Explicitly curated non-Steam games can also be represented when their roster and trial state are supported honestly.
 
 **Rationale:** The user has already performed the domain-specific filtering and supplied the narrower list as the intended source for games with combo trials.
 
-**Consequences:** The catalog still needs verified character rosters and trial coverage. A game may be excluded from the final eligible set if its character/trial metadata cannot be supported honestly.
+**Consequences:** The catalog still needs verified character rosters and trial coverage. A game may be excluded from the final eligible set if its character/trial metadata cannot be supported honestly. Non-Steam games omit `steam_appid` and use their stable slug for local asset storage.
 
 ## ADR-003 - Central time defines the daily boundary
 
