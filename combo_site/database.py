@@ -6,7 +6,8 @@ import os
 from pathlib import Path
 from typing import Iterator
 
-from sqlalchemy import DateTime, String, create_engine, desc, select
+from sqlalchemy import DateTime, String, Table, create_engine, desc, event, select, text
+from sqlalchemy.engine import Connection
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
 
@@ -25,6 +26,26 @@ class DailyAssignment(Base):
     game_slug: Mapped[str] = mapped_column(String(120), nullable=False)
     character_slug: Mapped[str] = mapped_column(String(120), nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+
+
+@event.listens_for(DailyAssignment.__table__, "after_create")
+def _secure_daily_assignments(table: Table, connection: Connection, **_: object) -> None:
+    if connection.dialect.name != "postgresql":
+        return
+
+    # Only the backend accesses history; Supabase client roles need no table access.
+    quote = connection.dialect.identifier_preparer
+    table_name = quote.format_table(table)
+    connection.exec_driver_sql(f"ALTER TABLE {table_name} ENABLE ROW LEVEL SECURITY")
+    connection.exec_driver_sql(f"REVOKE ALL PRIVILEGES ON TABLE {table_name} FROM PUBLIC")
+    roles = connection.scalars(
+        text("SELECT rolname FROM pg_roles WHERE rolname IN ('anon', 'authenticated')")
+    ).all()
+    if roles:
+        role_names = ", ".join(quote.quote(role) for role in roles)
+        connection.exec_driver_sql(
+            f"REVOKE ALL PRIVILEGES ON TABLE {table_name} FROM {role_names}"
+        )
 
 
 def _database_url(raw_url: str | None) -> str:
@@ -52,7 +73,8 @@ class Database:
             connect_args = {"prepare_threshold": None}
         self.engine = create_engine(url, connect_args=connect_args, pool_pre_ping=True)
         self.session_factory = sessionmaker(bind=self.engine, expire_on_commit=False)
-        Base.metadata.create_all(self.engine)
+        with self.engine.begin() as connection:
+            Base.metadata.create_all(connection)
 
     def close(self) -> None:
         self.engine.dispose()

@@ -65,6 +65,20 @@ $env:DATABASE_URL = "postgresql://postgres.<project-ref>:<password>@<pooler-host
 
 Do not commit a real connection string. .env.example documents the non-secret project reference, and .env.local/.env files are ignored.
 
+The history table is server-only. New PostgreSQL history tables are created with Row Level
+Security enabled and table privileges revoked from `PUBLIC`, `anon`, and
+`authenticated`. The backend connects as the table owner; no client policies are
+needed. Existing installations must run
+`migrations/20260908_secure_daily_assignments.sql` once through the Supabase SQL
+Editor or an owner connection. Refresh Security Advisor afterward. Routine app
+startup does not change permissions on existing tables.
+
+The PostgreSQL security tests require a fresh local PostgreSQL instance with a
+database named `daily_combo_trials_security_test`. Set `TEST_POSTGRES_URL` to its loopback
+connection URL, then run `.venv\Scripts\python -m pytest tests/test_database_security.py`.
+These tests recreate the history table and temporary client roles; never point
+them at a shared instance. The normal SQLite suite runs without this setting.
+
 ## GitHub and Vercel
 
 The intended repository is devin-thomas/daily-combo-trials.
