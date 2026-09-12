@@ -27,7 +27,6 @@ html {
 }
 
 body {
-  min-width: 320px;
   margin: 0;
   color: var(--paper);
   background:
@@ -621,6 +620,12 @@ h1 {
   background: transparent;
 }
 
+.error-page .button-secondary {
+  color: var(--paper);
+  background: var(--panel);
+  border-color: var(--line-strong);
+}
+
 .button-secondary:hover,
 .button-secondary:focus-visible {
   color: var(--ink);
@@ -679,6 +684,7 @@ h1 {
   font: 1.95rem/0.9 var(--display);
   letter-spacing: -0.04em;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .link-card-arrow {
@@ -1320,6 +1326,10 @@ h1 {
   }
 
   .setup-heading h1 { font-size: clamp(3.4rem, 16vw, 5.5rem); }
+}
+
+@media (max-width: 360px) {
+  .site-nav { gap: 0.2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

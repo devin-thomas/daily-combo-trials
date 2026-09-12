@@ -223,6 +223,22 @@ def test_public_copy_has_no_redundant_labels(local_test_dir: Path) -> None:
         database.close()
 
 
+def test_responsive_css_covers_narrow_wrapping_and_error_actions() -> None:
+    stylesheet = (ROOT / "static" / "style.css").read_text(encoding="utf-8")
+    body_rule = re.search(r"body\s*{([^}]*)}", stylesheet)
+    link_card_rule = re.search(r"\.link-card-title\s*{([^}]*)}", stylesheet)
+    error_button_rule = re.search(r"\.error-page\s+\.button-secondary\s*{([^}]*)}", stylesheet)
+    narrow_nav_rule = re.search(r"@media\s*\(max-width:\s*360px\)\s*{([^}]*)}", stylesheet)
+
+    assert body_rule
+    assert "min-width: 320px" not in body_rule.group(1)
+    assert link_card_rule and "overflow-wrap: anywhere;" in link_card_rule.group(1)
+    assert error_button_rule
+    assert "color: var(--paper);" in error_button_rule.group(1)
+    assert "background: var(--panel);" in error_button_rule.group(1)
+    assert narrow_nav_rule and "gap: 0.2rem;" in narrow_nav_rule.group(1)
+
+
 def test_external_links_show_brand_and_keep_game_reference_copy_honest(local_test_dir: Path) -> None:
     client, database = make_client(local_test_dir)
     try:
