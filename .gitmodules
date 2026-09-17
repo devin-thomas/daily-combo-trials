@@ -1,0 +1,4 @@
+[submodule "shared/fgc-assets"]
+	path = shared/fgc-assets
+	url = https://github.com/devin-thomas/fgc-assets
+	branch = claude/repos-asset-sharing-azogwk
